@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+        android:id="@+id/fl_napomena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/button_oduzmi_kolicinu"
+        android:layout_below="@+id/button_dodaj_kolicinu">
+
+        <EditText
+            android:id="@+id/editText_napomena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Napomena"/>
+    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+    <requestFocus />
+    <Button
+        android:id="@+id/button_oduzmi_kolicinu"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="-" />
+
+    <TextView
+        android:id="@+id/textView_proizvod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fl_napomena"
+        android:layout_alignTop="@+id/button_dodaj_kolicinu"
+        android:text="Proizvod x"
+
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/button_dodaj_stavku"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fl_napomena"
+        android:layout_below="@+id/fl_napomena"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="Dodaj" />
+
+    <Button
+        android:id="@+id/button_dodaj_kolicinu"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_oduzmi_kolicinu"
+        android:layout_alignBottom="@+id/button_oduzmi_kolicinu"
+        android:layout_marginRight="17dp"
+        android:layout_toLeftOf="@+id/button_oduzmi_kolicinu"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/button_odustani"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/fl_napomena"
+        android:text="Odustani" />
+
+</RelativeLayout>

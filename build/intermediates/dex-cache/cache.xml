@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Bata\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="C:\Users\Bata\AndroidStudioProjects\KlijentAndr2\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-4e24d3a1e1fdb3896c452e2e3300731e746351c4.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bata\AndroidStudioProjects\KlijentAndr2\app\build\intermediates\exploded-aar\com.wrapp.floatlabelededittext\library\0.0.6\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="0db8e1dc3097c0db8425b339e5e720ef6e918400">
+        <dex dex="C:\Users\Bata\AndroidStudioProjects\KlijentAndr2\app\build\intermediates\pre-dexed\debug\classes-7832b7dbaeb8d3dd494fac0b3f11ff57002ce373.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bata\AndroidStudioProjects\KlijentAndr2\app\build\intermediates\exploded-aar\com.afollestad\material-dialogs\0.7.5.2\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="fef509122ac2a2a20d5aa6b6ced6aab506eda58e">
+        <dex dex="C:\Users\Bata\AndroidStudioProjects\KlijentAndr2\app\build\intermediates\pre-dexed\debug\classes-e001bd06297b5c9e6a928511e3c1c07fe01a96bc.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bata\AndroidStudioProjects\KlijentAndr2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\Users\Bata\AndroidStudioProjects\KlijentAndr2\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-a516e49e6fbd0f8fdbef694b887f7dd3cd0b670d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bata\AndroidStudioProjects\KlijentAndr2\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="C:\Users\Bata\AndroidStudioProjects\KlijentAndr2\app\build\intermediates\pre-dexed\debug\classes-81d1d5a594a9b543073a0fa3cf87c442a8a720cc.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bata\AndroidStudioProjects\KlijentAndr2\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="C:\Users\Bata\AndroidStudioProjects\KlijentAndr2\app\build\intermediates\pre-dexed\debug\classes-20792478594d1453797cf7ebb42fb8c1133f0e26.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bata\AndroidStudioProjects\KlijentAndr2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="5b37cf49773f7f17aca9830efd3053b0cac56728">
+        <dex dex="C:\Users\Bata\AndroidStudioProjects\KlijentAndr2\app\build\intermediates\pre-dexed\debug\classes-f6463f996f49ed0fab92f5042b7abf0c065a89ce.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bata\AndroidStudioProjects\KlijentAndr2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="C:\Users\Bata\AndroidStudioProjects\KlijentAndr2\app\build\intermediates\pre-dexed\debug\classes-d7b7aa1f4f02f5aa327b8f1771466bbae4f7db80.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bata\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\Users\Bata\AndroidStudioProjects\KlijentAndr2\app\build\intermediates\pre-dexed\debug\library-2.4.0-f2df7232454d17921775b8a47bfa5fb556ffbf03.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bata\AndroidStudioProjects\KlijentAndr2\app\src\main\java\ZajednickiRestoran.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="575d4f4e518155bcd325bdfb9f8d7fa844ac396b">
+        <dex dex="C:\Users\Bata\AndroidStudioProjects\KlijentAndr2\app\build\intermediates\pre-dexed\debug\ZajednickiRestoran-45ae6b4fadec78dd17b10deee525a12f382b0ffe.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bata\AndroidStudioProjects\KlijentAndr2\app\build\intermediates\exploded-aar\com.oguzdev\CircularFloatingActionMenu\1.0.2\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="607d961caf1a59b6e782724654c1f3229e036c20">
+        <dex dex="C:\Users\Bata\AndroidStudioProjects\KlijentAndr2\app\build\intermediates\pre-dexed\debug\classes-92e9fb825e7b88fde52bd503d73c90539f41327e.jar" />
+    </item>
+
+</items>

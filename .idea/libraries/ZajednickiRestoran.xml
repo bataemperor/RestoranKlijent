@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ZajednickiRestoran">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/src/main/java/ZajednickiRestoran.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

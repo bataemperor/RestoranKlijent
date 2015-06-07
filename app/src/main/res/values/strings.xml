@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Konobar klijent</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_first">Lista narudzbina</string>
+    <string name="title_activity_nova_narudzbina">Meni</string>
+    <string name="title_activity_stavke_narudzbine">Nova narudzbina</string>
+    <string name="dialog_title_login">Login</string>
+    <string name="dialog_tekst_login">Molimo sacekajte...</string>
+    <string-array name="brojeviStolova">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+</resources>
