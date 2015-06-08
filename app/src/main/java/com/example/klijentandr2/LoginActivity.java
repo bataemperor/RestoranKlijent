@@ -113,7 +113,19 @@ public class LoginActivity extends AppCompatActivity {
     public void greska() {
 //        Toast.makeText(this, "Neuspesna konekcija", Toast.LENGTH_SHORT).show();
 //        Snackb
-        Snackbar.make(null,"Neuspesna konekcija",Snackbar.LENGTH_SHORT).show();
+//        View view = findViewById(R.layout.activity_login);
+        Snackbar snackbar = Snackbar.make(etPassword,"Neuspesna konekcija",Snackbar.LENGTH_SHORT);
+        View snackBarView = snackbar.getView();
+        snackbar.setAction("Change IP", new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        snackbar.setActionTextColor(Color.parseColor("#009688"));
+//        snackBarView.setBackgroundColor(Color.parseColor("#009688"));
+
+        snackbar.show();
     }
 
     public void logovanje(boolean login) {
