@@ -25,6 +25,7 @@ import komunikacija.Komunikacija;
 import transfer.TransferObjekatOdgovor;
 import transfer.TransferObjekatZahtev;
 import util.Konstante;
+import utility.SnackBarUtility;
 
 
 public class ListaNarudzbinaActivity extends AppCompatActivity{
@@ -110,8 +111,13 @@ public class ListaNarudzbinaActivity extends AppCompatActivity{
 
 		@Override
 		protected void onPostExecute(List<Narudzbina> narudzbinas) {
-			adapter = new ArrayAdapter<Narudzbina>(ListaNarudzbinaActivity.this,android.R.layout.simple_list_item_1,listaNarudzbina);
-			listView.setAdapter(adapter);
+			if (odgovor == null) {
+				SnackBarUtility.prikaziSnackBar((ListView) findViewById(R.id.lista_narudzbina));
+			}
+			else {
+				adapter = new ArrayAdapter<Narudzbina>(ListaNarudzbinaActivity.this, android.R.layout.simple_list_item_1, listaNarudzbina);
+				listView.setAdapter(adapter);
+			}
 		}
 	}
 }

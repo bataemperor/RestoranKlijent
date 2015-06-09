@@ -4,11 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import komunikacija.Komunikacija;
-import transfer.TransferObjekatOdgovor;
-import transfer.TransferObjekatZahtev;
-import util.Konstante;
-import dijalog.stavka.DijalogStavka;
+
 import domen.Proizvod;
 import domen.StavkaNarudzbine;
 import fragment.proizvodi.FragmentDesert;
@@ -16,10 +12,6 @@ import fragment.proizvodi.FragmentDorucak;
 import fragment.proizvodi.FragmentGlavnoJelo;
 import fragment.proizvodi.FragmentPice;
 import fragment.proizvodi.FragmentPredjelo;
-
-import android.app.ActionBar;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -27,7 +19,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -38,7 +29,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class ListaProizvodaActivity extends AppCompatActivity {
@@ -166,36 +156,5 @@ public class ListaProizvodaActivity extends AppCompatActivity {
 
 	}
 
-	private class GetProizvodTask extends AsyncTask<Void, Void, List<Proizvod>> {
-		TransferObjekatZahtev zahtev;
-		TransferObjekatOdgovor odgovor;
-		List<Proizvod> lp;
-
-		@Override
-		protected List<Proizvod> doInBackground(Void... params) {
-			// TODO Auto-generated method stub
-			zahtev = new TransferObjekatZahtev();
-			zahtev.setOperacija(Konstante.VRATI_SVE_PROIZVODE);
-			try {
-				Komunikacija k = new Komunikacija();
-				k.posaljiZahtev(zahtev);
-				odgovor = k.procitajOdgovor();
-				lp = (List<Proizvod>) odgovor.getRezultat();
-			} catch (IOException|ClassNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			return lp;
-		}
-
-		@Override
-		protected void onPostExecute(List<Proizvod> result) {
-			listaProizvoda = result;
-			ProizvodiAdapter proizvodiAdapter = new ProizvodiAdapter(
-					ListaProizvodaActivity.this, listaProizvoda);
-			list.setAdapter(proizvodiAdapter);
-		}
-
-	}
 
 }

@@ -12,6 +12,8 @@ import util.Konstante;
 import com.example.klijentandr2.R;
 
 import domen.Proizvod;
+import utility.SnackBarUtility;
+
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -72,15 +74,19 @@ public class FragmentDesert extends Fragment {
 
 		@Override
 		protected void onPostExecute(List<Proizvod> result) {
-			for (Proizvod proizvod : result) {
-				if (proizvod.getTipProizvoda().equalsIgnoreCase("Desert")) {
-					listaProizvoda.add(proizvod);
+			if (odgovor == null) {
+				SnackBarUtility.prikaziSnackBar((ListView) getView().findViewById(R.id.lista_desert));
+			} else {
+				for (Proizvod proizvod : result) {
+					if (proizvod.getTipProizvoda().equalsIgnoreCase("Desert")) {
+						listaProizvoda.add(proizvod);
+					}
 				}
+				ArrayAdapter<Proizvod> adapter = new ArrayAdapter<Proizvod>(
+						getActivity(), android.R.layout.simple_list_item_1,
+						listaProizvoda);
+				listaDeserta.setAdapter(adapter);
 			}
-			ArrayAdapter<Proizvod> adapter = new ArrayAdapter<Proizvod>(
-					getActivity(), android.R.layout.simple_list_item_1,
-					listaProizvoda);
-			listaDeserta.setAdapter(adapter);
 		}
 	}
 }

@@ -14,6 +14,8 @@ import com.example.klijentandr2.R;
 
 import dijalog.stavka.DijalogStavka;
 import domen.Proizvod;
+import utility.SnackBarUtility;
+
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -89,17 +91,19 @@ public class FragmentPice extends Fragment {
 
 		@Override
 		protected void onPostExecute(List<Proizvod> result) {
-			for (Proizvod proizvod : result) {
-				if (proizvod.getTipProizvoda().equalsIgnoreCase("Pice")) {
-					listaProizvoda.add(proizvod);	
-				}
+			if (odgovor == null) {
+				SnackBarUtility.prikaziSnackBar((ListView) getView().findViewById(R.id.lista_desert));
 			}
-			adapter = new ArrayAdapter<Proizvod>(getActivity(), android.R.layout.simple_list_item_1,listaProizvoda);
-			listaPica.setAdapter(adapter);
+			else{
 
-			
-
-		
+				for (Proizvod proizvod : result) {
+					if (proizvod.getTipProizvoda().equalsIgnoreCase("Pice")) {
+						listaProizvoda.add(proizvod);
+					}
+				}
+				adapter = new ArrayAdapter<Proizvod>(getActivity(), android.R.layout.simple_list_item_1,listaProizvoda);
+				listaPica.setAdapter(adapter);
+			}
 
 	}
 }

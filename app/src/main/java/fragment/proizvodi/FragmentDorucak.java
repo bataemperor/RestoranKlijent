@@ -12,6 +12,8 @@ import util.Konstante;
 import com.example.klijentandr2.R;
 
 import domen.Proizvod;
+import utility.SnackBarUtility;
+
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -73,15 +75,21 @@ public class FragmentDorucak extends Fragment {
 
 		@Override
 		protected void onPostExecute(List<Proizvod> result) {
-			for (Proizvod proizvod : result) {
-				if (proizvod.getTipProizvoda().equalsIgnoreCase("Dorucak")) {
-					listaProizvoda.add(proizvod);
-				}
+			if (odgovor == null) {
+				SnackBarUtility.prikaziSnackBar((ListView) getView().findViewById(R.id.lista_desert));
 			}
-			ArrayAdapter<Proizvod> adapter = new ArrayAdapter<Proizvod>(
-					getActivity(), android.R.layout.simple_list_item_1,
-					listaProizvoda);
-			listaDorucak.setAdapter(adapter);
+			else {
+
+				for (Proizvod proizvod : result) {
+					if (proizvod.getTipProizvoda().equalsIgnoreCase("Dorucak")) {
+						listaProizvoda.add(proizvod);
+					}
+				}
+				ArrayAdapter<Proizvod> adapter = new ArrayAdapter<Proizvod>(
+						getActivity(), android.R.layout.simple_list_item_1,
+						listaProizvoda);
+				listaDorucak.setAdapter(adapter);
+			}
 		}
 	}
 }

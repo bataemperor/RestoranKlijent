@@ -8,6 +8,7 @@ import transfer.TransferObjekatZahtev;
 import util.Konstante;
 import komunikacija.Komunikacija;
 import domen.Konobar;
+import utility.SnackBarUtility;
 
 import android.app.ActionBar;
 import android.app.ProgressDialog;
@@ -23,6 +24,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -111,21 +113,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void greska() {
-//        Toast.makeText(this, "Neuspesna konekcija", Toast.LENGTH_SHORT).show();
-//        Snackb
-//        View view = findViewById(R.layout.activity_login);
-        Snackbar snackbar = Snackbar.make(etPassword,"Neuspesna konekcija",Snackbar.LENGTH_SHORT);
-        View snackBarView = snackbar.getView();
-        snackbar.setAction("Change IP", new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        snackbar.setActionTextColor(Color.parseColor("#009688"));
-//        snackBarView.setBackgroundColor(Color.parseColor("#009688"));
-
-        snackbar.show();
+        RelativeLayout parent = (RelativeLayout)findViewById(R.id.login_layout);
+        SnackBarUtility.prikaziSnackBar(parent);
     }
 
     public void logovanje(boolean login) {
@@ -173,7 +162,6 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         protected void onProgressUpdate(String... values) {
             super.onProgressUpdate();
-//			String poruka = va?ctivity.this, poruka, Toast.LENGTH_SHORT).show();
         }
 
         @Override
