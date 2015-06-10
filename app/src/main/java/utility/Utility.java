@@ -1,5 +1,6 @@
 package utility;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -37,19 +38,19 @@ public class Utility {
 
 //DIALOG
 
-//    public static MaterialDialog getProgressDialogMaterial() {
-//        md = new MaterialDialog.Builder(this)
-//                .title(R.string.dialog_title_login)
-//                .content(R.string.dialog_tekst_login)
-//                .progress(true, 0).show();
-//        return md;
-//    }
-//
-//    public static  void dismissDialogMaterial() {
-//        if (md!=null){
-//            md.setCancelable(false);
-//            md.dismiss();
-//        }
-//    }
+    public static MaterialDialog getProgressDialogMaterial(Context context) {
+        md = new MaterialDialog.Builder(context)
+                .title(R.string.dialog_title_login)
+                .content(R.string.dialog_tekst_login)
+                .progress(true, 0).show();
+        return md;
+    }
+
+    public static  void dismissDialogMaterial() {
+        if (md!=null){
+            md.setCancelable(false);
+            md.dismiss();
+        }
+    }
 
 }

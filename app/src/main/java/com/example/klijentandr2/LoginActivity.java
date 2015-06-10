@@ -9,7 +9,6 @@ import komunikacija.Komunikacija;
 import domen.Konobar;
 import utility.Utility;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -22,12 +21,10 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.afollestad.materialdialogs.MaterialDialog;
 
 public class LoginActivity extends AppCompatActivity {
     Button btnLogin;
     EditText etUserName, etPassword;
-    MaterialDialog md;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,21 +34,6 @@ public class LoginActivity extends AppCompatActivity {
         etUserName = (EditText) findViewById(R.id.etUserName);
         etPassword = (EditText) findViewById(R.id.etPassword);
 
-    }
-
-    public MaterialDialog getProgressDialogMaterial() {
-        md = new MaterialDialog.Builder(this)
-                .title(R.string.dialog_title_login)
-                .content(R.string.dialog_tekst_login)
-                .progress(true, 0).show();
-        return md;
-    }
-
-    public void dismissDialogMaterial() {
-        if (md!=null){
-            md.setCancelable(false);
-            md.dismiss();
-        }
     }
 
     @Override
@@ -115,7 +97,7 @@ public class LoginActivity extends AppCompatActivity {
 
         @Override
         protected void onPreExecute() {
-            getProgressDialogMaterial();
+            Utility.getProgressDialogMaterial(LoginActivity.this);
         }
 
         @Override
@@ -143,7 +125,7 @@ public class LoginActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Boolean result) {
-            dismissDialogMaterial();
+            Utility.dismissDialogMaterial();
             if (toOdgovor == null) {
                 greska();
             } else {
