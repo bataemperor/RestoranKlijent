@@ -9,12 +9,11 @@ import transfer.TransferObjekatOdgovor;
 import transfer.TransferObjekatZahtev;
 import util.Konstante;
 
-import com.example.klijentandr2.ListaProizvodaActivity;
 import com.example.klijentandr2.R;
 
 import dijalog.stavka.DijalogStavka;
 import domen.Proizvod;
-import utility.SnackBarUtility;
+import utility.Utility;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -27,7 +26,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Toast;
 
 public class FragmentPice extends Fragment {
 	ListView listaPica;
@@ -92,7 +90,7 @@ public class FragmentPice extends Fragment {
 		@Override
 		protected void onPostExecute(List<Proizvod> result) {
 			if (odgovor == null) {
-				SnackBarUtility.prikaziSnackBar((ListView) getView().findViewById(R.id.lista_desert),SnackBarUtility.NEUSPESNA_KONEKCIJA,SnackBarUtility.ACTION_CHANGE_IP);
+				Utility.prikaziSnackBar((ListView) getView().findViewById(R.id.lista_desert), Utility.SNACKBAR_NEUSPESNA_KONEKCIJA, Utility.SNACKBAR_ACTION_CHANGE_IP);
 			}
 			else{
 

@@ -24,7 +24,7 @@ import komunikacija.Komunikacija;
 import transfer.TransferObjekatOdgovor;
 import transfer.TransferObjekatZahtev;
 import util.Konstante;
-import utility.SnackBarUtility;
+import utility.Utility;
 
 
 public class ListaNarudzbinaActivity extends AppCompatActivity{
@@ -111,7 +111,7 @@ public class ListaNarudzbinaActivity extends AppCompatActivity{
 		@Override
 		protected void onPostExecute(List<Narudzbina> narudzbinas) {
 			if (odgovor == null) {
-				SnackBarUtility.prikaziSnackBar((FrameLayout) findViewById(R.id.activity_lista_narudzbina),SnackBarUtility.NEUSPESNA_KONEKCIJA);
+				Utility.prikaziSnackBar((FrameLayout) findViewById(R.id.activity_lista_narudzbina), Utility.SNACKBAR_NEUSPESNA_KONEKCIJA);
 			}
 			else {
 				adapter = new ArrayAdapter<Narudzbina>(ListaNarudzbinaActivity.this, android.R.layout.simple_list_item_1, listaNarudzbina);

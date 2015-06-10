@@ -1,30 +1,24 @@
 package com.example.klijentandr2;
 
 import java.io.IOException;
-import java.net.UnknownHostException;
 
 import transfer.TransferObjekatOdgovor;
 import transfer.TransferObjekatZahtev;
 import util.Konstante;
 import komunikacija.Komunikacija;
 import domen.Konobar;
-import utility.SnackBarUtility;
+import utility.Utility;
 
-import android.app.ActionBar;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -33,7 +27,6 @@ import com.afollestad.materialdialogs.MaterialDialog;
 public class LoginActivity extends AppCompatActivity {
     Button btnLogin;
     EditText etUserName, etPassword;
-    ProgressDialog progressDialog;
     MaterialDialog md;
 
     @Override
@@ -44,14 +37,6 @@ public class LoginActivity extends AppCompatActivity {
         etUserName = (EditText) findViewById(R.id.etUserName);
         etPassword = (EditText) findViewById(R.id.etPassword);
 
-    }
-
-    public ProgressDialog getProgressDialog(String message) {
-        if (progressDialog == null) {
-            progressDialog = new ProgressDialog(this);
-        }
-        progressDialog.setMessage(message);
-        return progressDialog;
     }
 
     public MaterialDialog getProgressDialogMaterial() {
@@ -66,13 +51,6 @@ public class LoginActivity extends AppCompatActivity {
         if (md!=null){
             md.setCancelable(false);
             md.dismiss();
-        }
-    }
-
-    public void dismissProgressDialog() {
-        if (progressDialog != null) {
-            progressDialog.setCancelable(false);
-            progressDialog.dismiss();
         }
     }
 
@@ -115,7 +93,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void greska() {
         RelativeLayout parent = (RelativeLayout)findViewById(R.id.login_layout);
-        SnackBarUtility.prikaziSnackBar(parent, SnackBarUtility.NEUSPESNA_KONEKCIJA,SnackBarUtility.ACTION_CHANGE_IP);
+        Utility.prikaziSnackBar(parent, Utility.SNACKBAR_NEUSPESNA_KONEKCIJA, Utility.SNACKBAR_ACTION_CHANGE_IP);
     }
 
     public void logovanje(boolean login) {
@@ -123,11 +101,10 @@ public class LoginActivity extends AppCompatActivity {
 
             Intent intent = new Intent(this, ListaNarudzbinaActivity.class);
             startActivity(intent);
-            Toast.makeText(this, "Uspesno ste se ulogovali", Toast.LENGTH_SHORT)
+            Toast.makeText(this, Utility.SNACKBAR_USPESAN_LOGIN, Toast.LENGTH_SHORT)
                     .show();
-//            SnackBarUtility.prikaziSnackBar((android.support.v4.view.ViewPager)findViewById(R.id.pager),SnackBarUtility.USPESAN_LOGIN);
         } else {
-            SnackBarUtility.prikaziSnackBar((RelativeLayout)findViewById(R.id.login_layout),SnackBarUtility.NEUSPESAN_LOGIN);
+            Utility.prikaziSnackBar(findViewById(R.id.login_layout), Utility.SNACKBAR_NEUSPESAN_LOGIN);
         }
 
     }
@@ -155,7 +132,6 @@ public class LoginActivity extends AppCompatActivity {
                 return (Boolean) toOdgovor.getRezultat();
             } catch (IOException | ClassNotFoundException e) {
                 // TODO Auto-generated catch block
-//					onProgressUpdate("IO exception");
             }
             return null;
         }
