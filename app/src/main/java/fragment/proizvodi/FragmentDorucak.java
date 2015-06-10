@@ -24,72 +24,71 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class FragmentDorucak extends Fragment {
-	private List<Proizvod> listaProizvoda;
-	ListView listaDorucak;
+    private List<Proizvod> listaProizvoda;
+    ListView listaDorucak;
 
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
-		return inflater.inflate(R.layout.fragment_dorucak, container, false);
-	}
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // TODO Auto-generated method stub
+        return inflater.inflate(R.layout.fragment_dorucak, container, false);
+    }
 
-	@Override
-	public void onResume() {
-		// TODO Auto-generated method stub
-		super.onResume();
-		new GetDorucakTask().execute();
-		listaDorucak = (ListView) getView().findViewById(R.id.list_dorucak);
-	}
+    @Override
+    public void onResume() {
+        // TODO Auto-generated method stub
+        super.onResume();
+        new GetDorucakTask().execute();
+        listaDorucak = (ListView) getView().findViewById(R.id.list_dorucak);
+    }
 
-	private class GetDorucakTask extends AsyncTask<Void, Void, List<Proizvod>> {
-		TransferObjekatZahtev zahtev;
-		TransferObjekatOdgovor odgovor;
-		List<Proizvod> lp;
+    private class GetDorucakTask extends AsyncTask<Void, Void, List<Proizvod>> {
+        TransferObjekatZahtev zahtev;
+        TransferObjekatOdgovor odgovor;
+        List<Proizvod> lp;
 
-		@Override
-		protected void onPreExecute() {
-			// TODO Auto-generated method stub
-			listaProizvoda = new ArrayList<Proizvod>();
-		}
+        @Override
+        protected void onPreExecute() {
+            // TODO Auto-generated method stub
+            listaProizvoda = new ArrayList<Proizvod>();
+        }
 
-		@Override
-		protected List<Proizvod> doInBackground(Void... params) {
-			// TODO Auto-generated method stub
-			zahtev = new TransferObjekatZahtev();
-			zahtev.setOperacija(Konstante.VRATI_SVE_PROIZVODE);
-			try {
-				Komunikacija k = new Komunikacija();
-				k.posaljiZahtev(zahtev);
-				odgovor = k.procitajOdgovor();
-				lp = (List<Proizvod>) odgovor.getRezultat();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (ClassNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			return lp;
-		}
+        @Override
+        protected List<Proizvod> doInBackground(Void... params) {
+            // TODO Auto-generated method stub
+            zahtev = new TransferObjekatZahtev();
+            zahtev.setOperacija(Konstante.VRATI_SVE_PROIZVODE);
+            try {
+                Komunikacija k = new Komunikacija();
+                k.posaljiZahtev(zahtev);
+                odgovor = k.procitajOdgovor();
+                lp = (List<Proizvod>) odgovor.getRezultat();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            return lp;
+        }
 
-		@Override
-		protected void onPostExecute(List<Proizvod> result) {
-			if (odgovor == null) {
-				SnackBarUtility.prikaziSnackBar((ListView) getView().findViewById(R.id.lista_desert));
-			}
-			else {
+        @Override
+        protected void onPostExecute(List<Proizvod> result) {
+            if (odgovor == null) {
+                SnackBarUtility.prikaziSnackBar((ListView) getView().findViewById(R.id.lista_desert), SnackBarUtility.NEUSPESNA_KONEKCIJA, SnackBarUtility.ACTION_CHANGE_IP);
+            } else {
 
-				for (Proizvod proizvod : result) {
-					if (proizvod.getTipProizvoda().equalsIgnoreCase("Dorucak")) {
-						listaProizvoda.add(proizvod);
-					}
-				}
-				ArrayAdapter<Proizvod> adapter = new ArrayAdapter<Proizvod>(
-						getActivity(), android.R.layout.simple_list_item_1,
-						listaProizvoda);
-				listaDorucak.setAdapter(adapter);
-			}
-		}
-	}
+                for (Proizvod proizvod : result) {
+                    if (proizvod.getTipProizvoda().equalsIgnoreCase("Dorucak")) {
+                        listaProizvoda.add(proizvod);
+                    }
+                }
+                ArrayAdapter<Proizvod> adapter = new ArrayAdapter<Proizvod>(
+                        getActivity(), android.R.layout.simple_list_item_1,
+                        listaProizvoda);
+                listaDorucak.setAdapter(adapter);
+            }
+        }
+    }
 }

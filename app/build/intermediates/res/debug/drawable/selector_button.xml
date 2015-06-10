@@ -3,4 +3,4 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@drawable/button_action_red_touch" android:state_pressed="true" />
     <item android:drawable="@drawable/button_action_red" android:state_pressed="false" />
-</selector><!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/src/main/res/drawable/selector_button.xml -->
+</selector><!-- From: file:/Users/desko/AndroidStudioProjects/restoran/RestoranKlijent/app/src/main/res/drawable/selector_button.xml -->

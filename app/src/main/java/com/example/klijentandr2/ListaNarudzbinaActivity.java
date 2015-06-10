@@ -1,8 +1,6 @@
 package com.example.klijentandr2;
 
-import android.app.ActionBar;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
+
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
@@ -11,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
 
@@ -112,7 +111,7 @@ public class ListaNarudzbinaActivity extends AppCompatActivity{
 		@Override
 		protected void onPostExecute(List<Narudzbina> narudzbinas) {
 			if (odgovor == null) {
-				SnackBarUtility.prikaziSnackBar((ListView) findViewById(R.id.lista_narudzbina));
+				SnackBarUtility.prikaziSnackBar((FrameLayout) findViewById(R.id.activity_lista_narudzbina),SnackBarUtility.NEUSPESNA_KONEKCIJA);
 			}
 			else {
 				adapter = new ArrayAdapter<Narudzbina>(ListaNarudzbinaActivity.this, android.R.layout.simple_list_item_1, listaNarudzbina);

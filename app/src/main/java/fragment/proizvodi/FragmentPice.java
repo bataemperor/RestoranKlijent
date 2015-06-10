@@ -92,7 +92,7 @@ public class FragmentPice extends Fragment {
 		@Override
 		protected void onPostExecute(List<Proizvod> result) {
 			if (odgovor == null) {
-				SnackBarUtility.prikaziSnackBar((ListView) getView().findViewById(R.id.lista_desert));
+				SnackBarUtility.prikaziSnackBar((ListView) getView().findViewById(R.id.lista_desert),SnackBarUtility.NEUSPESNA_KONEKCIJA,SnackBarUtility.ACTION_CHANGE_IP);
 			}
 			else{
 

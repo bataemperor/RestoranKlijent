@@ -24,6 +24,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -114,7 +115,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void greska() {
         RelativeLayout parent = (RelativeLayout)findViewById(R.id.login_layout);
-        SnackBarUtility.prikaziSnackBar(parent);
+        SnackBarUtility.prikaziSnackBar(parent, SnackBarUtility.NEUSPESNA_KONEKCIJA,SnackBarUtility.ACTION_CHANGE_IP);
     }
 
     public void logovanje(boolean login) {
@@ -124,9 +125,9 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent);
             Toast.makeText(this, "Uspesno ste se ulogovali", Toast.LENGTH_SHORT)
                     .show();
+//            SnackBarUtility.prikaziSnackBar((android.support.v4.view.ViewPager)findViewById(R.id.pager),SnackBarUtility.USPESAN_LOGIN);
         } else {
-            Toast.makeText(this, "Ne postoji takav konobar", Toast.LENGTH_SHORT)
-                    .show();
+            SnackBarUtility.prikaziSnackBar((RelativeLayout)findViewById(R.id.login_layout),SnackBarUtility.NEUSPESAN_LOGIN);
         }
 
     }
