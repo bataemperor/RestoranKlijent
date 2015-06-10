@@ -30,6 +30,7 @@
         android:layout_alignParentTop="true"
         android:text="-" />
     <TextView
+        android:paddingTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:right="@+id/fl_napomena"
@@ -37,6 +38,7 @@
         android:text="Kolicina : "
         android:id="@+id/textView" />
     <TextView
+        android:paddingTop="10dp"
         android:id="@+id/textView_proizvod"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
