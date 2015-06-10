@@ -42,7 +42,6 @@ public class DijalogStavka extends DialogFragment implements View.OnClickListene
 		dodajStavku.setOnClickListener(this);
 		odustani = (Button) view.findViewById(R.id.button_odustani);
 		odustani.setOnClickListener(this);
-		tvProizvod.setText("Kolicina"+ " :" + stavkaNarudzbine.getKolicina());
 		getDialog().setTitle(""+stavkaNarudzbine.getProizvod().getNazivProizvoda());
 
 		return view;
@@ -59,13 +58,13 @@ public class DijalogStavka extends DialogFragment implements View.OnClickListene
 		switch (v.getId()) {
 		case R.id.button_dodaj_kolicinu:
 			stavkaNarudzbine.setKolicina(stavkaNarudzbine.getKolicina() + 1);
-			tvProizvod.setText(stavkaNarudzbine.getProizvod().getNazivProizvoda()
-					+ " x" + stavkaNarudzbine.getKolicina());
+			tvProizvod.setText(""+stavkaNarudzbine.getKolicina());
 			break;
 		case R.id.button_oduzmi_kolicinu:
-			stavkaNarudzbine.setKolicina(stavkaNarudzbine.getKolicina() - 1);
-			tvProizvod.setText(stavkaNarudzbine.getProizvod().getNazivProizvoda()
-					+ " x" + stavkaNarudzbine.getKolicina());
+			if (Integer.parseInt(tvProizvod.getText().toString())>1) {
+				stavkaNarudzbine.setKolicina(stavkaNarudzbine.getKolicina() - 1);
+				tvProizvod.setText(""+stavkaNarudzbine.getKolicina());
+			}
 			break;
 		case R.id.button_dodaj_stavku:
 			stavkaNarudzbine.setNapomena(etNapomena.getText().toString());

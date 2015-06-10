@@ -18,7 +18,7 @@ public class Utility {
     public static final String SNACKBAR_ACTION_CHANGE_IP = "Change IP";
     static MaterialDialog md;
 
-//SNACKBAR
+    //SNACKBAR
 
     public static void prikaziSnackBar(View view,String poruka){
         Snackbar snackbar = Snackbar.make(view,poruka,Snackbar.LENGTH_SHORT);
@@ -36,7 +36,7 @@ public class Utility {
         snackbar.show();
     }
 
-//DIALOG
+    //DIALOG
 
     public static MaterialDialog getProgressDialogMaterial(Context context) {
         md = new MaterialDialog.Builder(context)
@@ -46,7 +46,7 @@ public class Utility {
         return md;
     }
 
-    public static  void dismissDialogMaterial() {
+    public static void dismissDialogMaterial() {
         if (md!=null){
             md.setCancelable(false);
             md.dismiss();
