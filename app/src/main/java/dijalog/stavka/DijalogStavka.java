@@ -68,6 +68,7 @@ public class DijalogStavka extends DialogFragment implements View.OnClickListene
 			break;
 		case R.id.button_dodaj_stavku:
 			stavkaNarudzbine.setNapomena(etNapomena.getText().toString());
+			stavkaNarudzbine.setIznos(stavkaNarudzbine.getProizvod().getCenaProizvoda()*stavkaNarudzbine.getKolicina());
 			ListaProizvodaActivity.listaStavki.add(stavkaNarudzbine);
 			dismiss();
 			break;

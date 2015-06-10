@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import dijalog.stavka.DijalogStavka;
 import komunikacija.Komunikacija;
 import transfer.TransferObjekatOdgovor;
 import transfer.TransferObjekatZahtev;
@@ -17,15 +18,18 @@ import utility.Utility;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class FragmentGlavnoJelo extends Fragment {
 	private List<Proizvod> listaProizvoda;
 	ListView listaGlavnoJelo;
+	ArrayAdapter<Proizvod> adapter;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,6 +45,16 @@ public class FragmentGlavnoJelo extends Fragment {
 		new GetGlavnoJeloTask().execute();
 		listaGlavnoJelo = (ListView) getView().findViewById(
 				R.id.list_glavnojelo);
+		final FragmentManager fragmentManager = getFragmentManager();
+		listaGlavnoJelo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+									int position, long id) {
+				Proizvod p = (Proizvod) adapter.getItem(position);
+				DijalogStavka ds = DijalogStavka.newInstace(p);
+				ds.show(fragmentManager, "");
+			}
+		});
 	}
 
 	private class GetGlavnoJeloTask extends
@@ -86,7 +100,7 @@ public class FragmentGlavnoJelo extends Fragment {
 						listaProizvoda.add(proizvod);
 					}
 				}
-				ArrayAdapter<Proizvod> adapter = new ArrayAdapter<Proizvod>(
+				adapter = new ArrayAdapter<Proizvod>(
 						getActivity(), android.R.layout.simple_list_item_1,
 						listaProizvoda);
 				listaGlavnoJelo.setAdapter(adapter);

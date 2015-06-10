@@ -78,6 +78,7 @@ public class NovaNarudzbinaActivity extends AppCompatActivity {
 
 
     private class SacuvajNarudzbinuTask extends AsyncTask<Void, Void, Void> {
+        int ukupanIznosNarudzbine = 0;
         @Override
         protected void onPreExecute() {
             narudzbina = new Narudzbina();
@@ -89,8 +90,10 @@ public class NovaNarudzbinaActivity extends AppCompatActivity {
                 stavkaNarudzbine.setNarudzbina(narudzbina);
                 stavkaNarudzbine.setRbStavke(rbStavke);
                 rbStavke++;
+                ukupanIznosNarudzbine+=stavkaNarudzbine.getIznos();
             }
             narudzbina.setListaStavki(lista);
+            narudzbina.setUkupanIznos(ukupanIznosNarudzbine);
 
 
         }
