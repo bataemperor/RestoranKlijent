@@ -1,17 +1,21 @@
 package com.example.klijentandr2;
 
 
+import android.content.Context;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 
@@ -20,6 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import domen.Narudzbina;
+import domen.Proizvod;
 import komunikacija.Komunikacija;
 import transfer.TransferObjekatOdgovor;
 import transfer.TransferObjekatZahtev;
@@ -86,7 +91,7 @@ public class ListaNarudzbinaActivity extends AppCompatActivity{
 		TransferObjekatZahtev zahtev;
 		TransferObjekatOdgovor odgovor;
 		List<Narudzbina> listaNarudzbina;
-		ArrayAdapter<Narudzbina> adapter;
+		NarudzbineAdapter adapter;
 		@Override
 		protected void onPreExecute() {
 			listaNarudzbina = new ArrayList<>();
@@ -114,9 +119,38 @@ public class ListaNarudzbinaActivity extends AppCompatActivity{
 				Utility.prikaziSnackBar((FrameLayout) findViewById(R.id.activity_lista_narudzbina), Utility.SNACKBAR_NEUSPESNA_KONEKCIJA);
 			}
 			else {
-				adapter = new ArrayAdapter<Narudzbina>(ListaNarudzbinaActivity.this, android.R.layout.simple_list_item_1, listaNarudzbina);
+				adapter = new NarudzbineAdapter(ListaNarudzbinaActivity.this,listaNarudzbina);
+//				adapter = new ArrayAdapter<Narudzbina>(ListaNarudzbinaActivity.this, android.R.layout.simple_list_item_1, listaNarudzbina);
 				listView.setAdapter(adapter);
 			}
 		}
+	}
+
+
+	private class NarudzbineAdapter extends ArrayAdapter<Narudzbina> {
+		private List<Narudzbina> listaNarudzbina;
+		private Context context;
+
+		public NarudzbineAdapter(Context context, List<Narudzbina> listaNarudzbina) {
+			super(context, R.layout.single_row, listaNarudzbina);
+			this.listaNarudzbina = listaNarudzbina;
+			this.context = context;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			LayoutInflater layoutInflater = (LayoutInflater) context
+					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			View row = layoutInflater.inflate(R.layout.single_row, parent,
+					false);
+			ImageView slika = (ImageView) row.findViewById(R.id.slika);
+			TextView tvLarge = (TextView) row.findViewById(R.id.largeText);
+			TextView tvSmall = (TextView) row.findViewById(R.id.smallText);
+			tvLarge.setText(String.valueOf(listaNarudzbina.get(position).getBrojStola()));
+			tvSmall.setText(String.valueOf(listaNarudzbina.get(position).getUkupanIznos()));
+
+			return row;
+		}
+
 	}
 }

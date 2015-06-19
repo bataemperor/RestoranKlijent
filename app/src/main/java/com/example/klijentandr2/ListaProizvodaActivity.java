@@ -129,32 +129,6 @@ public class ListaProizvodaActivity extends AppCompatActivity {
 
 	}
 
-	private class ProizvodiAdapter extends ArrayAdapter<Proizvod> {
-		private List<Proizvod> listaProizvoda;
-		private Context context;
-
-		public ProizvodiAdapter(Context context, List<Proizvod> listaProizvoda) {
-			super(context, R.layout.single_row, listaProizvoda);
-			this.listaProizvoda = listaProizvoda;
-			this.context = context;
-		}
-
-		@Override
-		public View getView(int position, View convertView, ViewGroup parent) {
-			LayoutInflater layoutInflater = (LayoutInflater) context
-					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			View row = layoutInflater.inflate(R.layout.single_row, parent,
-					false);
-			ImageView slika = (ImageView) row.findViewById(R.id.slika);
-			TextView tvLarge = (TextView) row.findViewById(R.id.largeText);
-			TextView tvSmall = (TextView) row.findViewById(R.id.smallText);
-			tvLarge.setText(listaProizvoda.get(position).getNazivProizvoda());
-			tvSmall.setText(listaProizvoda.get(position).getOpisProizvoda());
-
-			return row;
-		}
-
-	}
 
 
 }
