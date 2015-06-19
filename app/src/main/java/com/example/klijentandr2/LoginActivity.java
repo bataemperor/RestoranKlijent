@@ -10,6 +10,7 @@ import domen.Konobar;
 import utility.Utility;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -25,6 +26,8 @@ import android.widget.Toast;
 public class LoginActivity extends AppCompatActivity {
     Button btnLogin;
     EditText etUserName, etPassword;
+    public static final String PREFS_NAME = "Provera logina";
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +36,20 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = (Button) findViewById(R.id.btnLogIn);
         etUserName = (EditText) findViewById(R.id.etUserName);
         etPassword = (EditText) findViewById(R.id.etPassword);
+        loginShared();
 
+    }
+
+    private void loginShared() {
+        sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        String username = sharedPreferences.getString("username", null);
+        String password = sharedPreferences.getString("password", null);
+        if (username!=null && password!=null) {
+            Intent intent = new Intent(this, ListaNarudzbinaActivity.class);
+            startActivity(intent);
+            Toast.makeText(this, Utility.SNACKBAR_USPESAN_LOGIN, Toast.LENGTH_SHORT)
+                    .show();
+        }
     }
 
     @Override
@@ -80,7 +96,10 @@ public class LoginActivity extends AppCompatActivity {
 
     public void logovanje(boolean login) {
         if (login) {
-
+            SharedPreferences.Editor editor = getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit();
+            editor.putString("username", etUserName.getText().toString());
+            editor.putString("password", etPassword.getText().toString());
+            editor.commit();
             Intent intent = new Intent(this, ListaNarudzbinaActivity.class);
             startActivity(intent);
             Toast.makeText(this, Utility.SNACKBAR_USPESAN_LOGIN, Toast.LENGTH_SHORT)
