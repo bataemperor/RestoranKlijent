@@ -11,10 +11,12 @@ import transfer.TransferObjekatZahtev;
 import util.Konstante;
 
 import com.example.klijentandr2.R;
+import com.example.klijentandr2.SettingsActivity;
 
 import domen.Proizvod;
 import utility.Utility;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -89,7 +91,13 @@ public class FragmentDesert extends Fragment {
 		@Override
 		protected void onPostExecute(List<Proizvod> result) {
 			if (odgovor == null) {
-				Utility.prikaziSnackBar((ListView) getView().findViewById(R.id.lista_desert), Utility.SNACKBAR_NEUSPESNA_KONEKCIJA, Utility.SNACKBAR_ACTION_CHANGE_IP);
+				Utility.prikaziSnackBar((ListView) getView().findViewById(R.id.lista_desert), Utility.SNACKBAR_NEUSPESNA_KONEKCIJA, Utility.SNACKBAR_ACTION_CHANGE_IP, new Utility.SnackbarCallback() {
+					@Override
+					public void callback() {
+						Intent intent =  new Intent(getActivity(), SettingsActivity.class);
+						startActivity(intent);
+					}
+				});
 			} else {
 				for (Proizvod proizvod : result) {
 					if (proizvod.getTipProizvoda().equalsIgnoreCase("Desert")) {

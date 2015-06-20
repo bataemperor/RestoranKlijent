@@ -1,6 +1,7 @@
 package utility;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -12,6 +13,7 @@ import com.example.klijentandr2.R;
  * Created by bataemperor on 10.6.15..
  */
 public class Utility {
+
     public static final String SNACKBAR_NEUSPESNA_KONEKCIJA = "Neuspesna konekcija";
     public static final String SNACKBAR_NEUSPESAN_LOGIN = "Ne postoji takav konobar";
     public static final String SNACKBAR_USPESAN_LOGIN = "Uspesno ste se ulogovali";
@@ -21,15 +23,19 @@ public class Utility {
     //SNACKBAR
 
     public static void prikaziSnackBar(View view,String poruka){
-        Snackbar snackbar = Snackbar.make(view,poruka,Snackbar.LENGTH_SHORT);
+        Snackbar snackbar = Snackbar.make(view,poruka,Snackbar.LENGTH_LONG);
         snackbar.show();
     }
-    public static void prikaziSnackBar(View view,String poruka,String action){
-        Snackbar snackbar = Snackbar.make(view,poruka,Snackbar.LENGTH_SHORT);
+    public interface SnackbarCallback{
+        public void callback();
+    }
+
+    public static void prikaziSnackBar(View view,String poruka,String action,final SnackbarCallback sc){
+        Snackbar snackbar = Snackbar.make(view,poruka,Snackbar.LENGTH_LONG);
         snackbar.setAction(action, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                sc.callback();
             }
         });
         snackbar.setActionTextColor(Color.parseColor("#009688"));

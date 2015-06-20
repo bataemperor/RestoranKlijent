@@ -45,10 +45,8 @@ public class LoginActivity extends AppCompatActivity {
         String username = sharedPreferences.getString("username", null);
         String password = sharedPreferences.getString("password", null);
         if (username!=null && password!=null) {
-            Intent intent = new Intent(this, ListaNarudzbinaActivity.class);
-            startActivity(intent);
-            Toast.makeText(this, Utility.SNACKBAR_USPESAN_LOGIN, Toast.LENGTH_SHORT)
-                    .show();
+            etUserName.setText(username);
+            etPassword.setText(password);
         }
     }
 
@@ -66,6 +64,7 @@ public class LoginActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
+
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -91,7 +90,13 @@ public class LoginActivity extends AppCompatActivity {
 
     public void greska() {
         RelativeLayout parent = (RelativeLayout)findViewById(R.id.login_layout);
-        Utility.prikaziSnackBar(parent, Utility.SNACKBAR_NEUSPESNA_KONEKCIJA, Utility.SNACKBAR_ACTION_CHANGE_IP);
+        Utility.prikaziSnackBar(parent, Utility.SNACKBAR_NEUSPESNA_KONEKCIJA, Utility.SNACKBAR_ACTION_CHANGE_IP, new Utility.SnackbarCallback() {
+            @Override
+            public void callback() {
+                Intent intent =  new Intent(LoginActivity.this,SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void logovanje(boolean login) {
