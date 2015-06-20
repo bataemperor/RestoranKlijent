@@ -2,6 +2,7 @@ package com.example.klijentandr2;
 
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
@@ -17,10 +18,15 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.amulyakhare.textdrawable.TextDrawable;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 
 import java.io.IOException;
+import java.security.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import domen.Narudzbina;
@@ -130,6 +136,7 @@ public class ListaNarudzbinaActivity extends AppCompatActivity{
 	private class NarudzbineAdapter extends ArrayAdapter<Narudzbina> {
 		private List<Narudzbina> listaNarudzbina;
 		private Context context;
+		private SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
 
 		public NarudzbineAdapter(Context context, List<Narudzbina> listaNarudzbina) {
 			super(context, R.layout.single_row, listaNarudzbina);
@@ -144,10 +151,13 @@ public class ListaNarudzbinaActivity extends AppCompatActivity{
 			View row = layoutInflater.inflate(R.layout.single_row, parent,
 					false);
 			ImageView slika = (ImageView) row.findViewById(R.id.slika);
+			TextDrawable drawable = TextDrawable.builder()
+					.buildRound("" + listaNarudzbina.get(position).getBrojStola(), Color.parseColor("#FF5722"));
+			slika.setImageDrawable(drawable);
 			TextView tvLarge = (TextView) row.findViewById(R.id.largeText);
 			TextView tvSmall = (TextView) row.findViewById(R.id.smallText);
-			tvLarge.setText(String.valueOf(listaNarudzbina.get(position).getBrojStola()));
-			tvSmall.setText(String.valueOf(listaNarudzbina.get(position).getUkupanIznos()));
+			tvLarge.setText(sdf.format(listaNarudzbina.get(position).getDatumNarudzbine()));
+			tvSmall.setText(String.valueOf("Iznos : "+listaNarudzbina.get(position).getUkupanIznos()));
 
 			return row;
 		}

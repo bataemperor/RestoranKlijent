@@ -29,16 +29,24 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:text="-" />
-
     <TextView
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:right="@+id/fl_napomena"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Kolicina : "
+        android:id="@+id/textView" />
+    <TextView
+        android:paddingTop="10dp"
         android:id="@+id/textView_proizvod"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/fl_napomena"
-        android:layout_alignTop="@+id/button_dodaj_kolicinu"
-        android:text="Proizvod x"
-
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:text="1"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignTop="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
 
     <Button
         android:id="@+id/button_dodaj_stavku"
@@ -70,4 +78,4 @@
         android:text="Odustani" />
 
 </RelativeLayout>
-<!-- From: file:/Users/desko/AndroidStudioProjects/restoran/RestoranKlijent/app/src/main/res/layout/dijalog_stavka.xml -->
+<!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/src/main/res/layout/dijalog_stavka.xml -->

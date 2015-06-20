@@ -17,7 +17,11 @@ android {
         }
     }
 }
-
+repositories{
+    maven {
+        url 'http://dl.bintray.com/amulyakhare/maven'
+    }
+}
 dependencies {
     compile 'com.android.support:support-v4:22.1.1'
     compile 'com.android.support:appcompat-v7:22.1.1'
@@ -26,4 +30,5 @@ dependencies {
     compile 'com.wrapp.floatlabelededittext:library:0.0.6'
     compile 'com.afollestad:material-dialogs:0.7.5.2'
     compile 'com.android.support:design:22.2.0'
+    compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
 }
