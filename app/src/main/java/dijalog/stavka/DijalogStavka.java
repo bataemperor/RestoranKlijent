@@ -1,7 +1,5 @@
 package dijalog.stavka;
 
-import java.util.ArrayList;
-
 import com.example.klijentandr2.ListaProizvodaActivity;
 import com.example.klijentandr2.R;
 
@@ -20,7 +18,6 @@ public class DijalogStavka extends DialogFragment implements View.OnClickListene
 	Button dodajKolicinu, oduzmiKolicinu, dodajStavku, odustani;
 	TextView tvProizvod;
 	EditText etNapomena;
-	private ArrayList<StavkaNarudzbine> listaStavki;
 	private Proizvod proizvod;
 	private StavkaNarudzbine stavkaNarudzbine;
 	
@@ -81,9 +78,5 @@ public class DijalogStavka extends DialogFragment implements View.OnClickListene
 
 	public void setProizvod(Proizvod proizvod) {
 		this.proizvod = proizvod;
-	}
-
-	public Proizvod getProizvod() {
-		return proizvod;
 	}
 }
