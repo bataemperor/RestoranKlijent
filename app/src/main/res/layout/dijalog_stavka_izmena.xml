@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <com.wrapp.floatlabelededittext.FloatLabeledEditText
+        android:id="@+id/fl_napomenaIzmena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/button_oduzmi_kolicinuIzmena"
+        android:layout_below="@+id/button_dodaj_kolicinuIzmena">
+
+        <EditText
+            android:id="@+id/editText_napomenaIzmena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Napomena"/>
+    </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+    <requestFocus />
+    <Button
+        android:id="@+id/button_oduzmi_kolicinuIzmena"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="-" />
+    <TextView
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:right="@+id/fl_napomena"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Kolicina : "
+        android:id="@+id/textViewIzmena" />
+    <TextView
+        android:paddingTop="10dp"
+        android:id="@+id/textView_proizvodIzmena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignTop="@+id/textViewIzmena"
+        android:layout_toRightOf="@+id/textViewIzmena"
+        android:layout_toEndOf="@+id/textViewIzmena" />
+
+    <Button
+        android:id="@+id/button_dodaj_stavkuIzmena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fl_napomenaIzmena"
+        android:layout_below="@+id/fl_napomenaIzmena"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="Izmeni" />
+
+    <Button
+        android:id="@+id/button_dodaj_kolicinuIzmena"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_oduzmi_kolicinuIzmena"
+        android:layout_alignBottom="@+id/button_oduzmi_kolicinuIzmena"
+        android:layout_marginRight="17dp"
+        android:layout_toLeftOf="@+id/button_oduzmi_kolicinuIzmena"
+        android:text="+" />
+
+    <Button
+        android:id="@+id/button_odustaniIzmena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/fl_napomenaIzmena"
+        android:text="Odustani" />
+
+</RelativeLayout>

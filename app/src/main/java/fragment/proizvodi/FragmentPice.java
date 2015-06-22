@@ -3,7 +3,6 @@ package fragment.proizvodi;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 import komunikacija.Komunikacija;
 import transfer.TransferObjekatOdgovor;

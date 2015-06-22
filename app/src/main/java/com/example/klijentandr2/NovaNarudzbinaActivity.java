@@ -3,18 +3,25 @@ package com.example.klijentandr2;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
+
+import dijalog.stavka.DijalogStavkaIzmena;
 import domen.Narudzbina;
 import domen.StavkaNarudzbine;
 import komunikacija.Komunikacija;
 import transfer.TransferObjekatOdgovor;
 import transfer.TransferObjekatZahtev;
 import util.Konstante;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -25,6 +32,7 @@ public class NovaNarudzbinaActivity extends AppCompatActivity {
     ListView listaStavki;
     Narudzbina narudzbina;
     ArrayList<StavkaNarudzbine> lista;
+    ArrayAdapter<StavkaNarudzbine> listAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +47,29 @@ public class NovaNarudzbinaActivity extends AppCompatActivity {
         Object o = getIntent().getSerializableExtra("listaStavki");
         lista = (ArrayList<StavkaNarudzbine>) o;
 
-        ArrayAdapter<StavkaNarudzbine> listAdapter = new ArrayAdapter<StavkaNarudzbine>(
+        listAdapter = new ArrayAdapter<StavkaNarudzbine>(
                 this, android.R.layout.simple_list_item_1, lista);
         listaStavki.setAdapter(listAdapter);
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        listaStavki = (ListView)findViewById(R.id.list_stavke_narudzbine);
+        listAdapter = new ArrayAdapter<StavkaNarudzbine>(
+                this, android.R.layout.simple_list_item_1, lista);
+        listAdapter.notifyDataSetChanged();
+        final FragmentManager fragmentManager = getSupportFragmentManager();
+        listaStavki.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+                StavkaNarudzbine s = (StavkaNarudzbine) listAdapter.getItem(position);
+                DijalogStavkaIzmena dsi = DijalogStavkaIzmena.newInstace(s,position);
+                dsi.show(fragmentManager,"");
+            }
+        });
     }
 
     @Override
