@@ -26,7 +26,8 @@ import android.widget.Toast;
 public class LoginActivity extends AppCompatActivity {
     Button btnLogin;
     EditText etUserName, etPassword;
-    public static final String PREFS_NAME = "Provera logina";
+    public static final String PREFS_LOGIN = "Provera logina";
+    public static final String PREFS_IP_ADDRESS = "IP adresa";
     SharedPreferences sharedPreferences;
 
     @Override
@@ -36,12 +37,22 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = (Button) findViewById(R.id.btnLogIn);
         etUserName = (EditText) findViewById(R.id.etUserName);
         etPassword = (EditText) findViewById(R.id.etPassword);
+        ipAddressSet();
         loginShared();
 
     }
 
+    private void ipAddressSet() {
+        sharedPreferences = getSharedPreferences(PREFS_IP_ADDRESS,MODE_PRIVATE);
+        String ipAdresa = sharedPreferences.getString("ipAddress", null);
+        if (ipAdresa!=null) {
+            Komunikacija.ipAddress = ipAdresa;
+        }
+
+    }
+
     private void loginShared() {
-        sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences(PREFS_LOGIN, MODE_PRIVATE);
         String username = sharedPreferences.getString("username", null);
         String password = sharedPreferences.getString("password", null);
         if (username!=null && password!=null) {
@@ -102,7 +113,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void logovanje(boolean login) {
         if (login) {
-            SharedPreferences.Editor editor = getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit();
+            SharedPreferences.Editor editor = getSharedPreferences(PREFS_LOGIN, MODE_PRIVATE).edit();
             editor.putString("username", etUserName.getText().toString());
             editor.putString("password", etPassword.getText().toString());
             editor.commit();

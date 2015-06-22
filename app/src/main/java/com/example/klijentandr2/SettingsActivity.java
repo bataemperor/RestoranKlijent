@@ -2,6 +2,7 @@ package com.example.klijentandr2;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -23,6 +24,9 @@ public class SettingsActivity extends Activity {
     public void postaviIP(View view){
         if (etIPAdress.getText()!= null && !"".equalsIgnoreCase(etIPAdress.getText().toString()) ){
             Komunikacija.ipAddress= etIPAdress.getText().toString();
+            SharedPreferences.Editor editor = getSharedPreferences(LoginActivity.PREFS_IP_ADDRESS, MODE_PRIVATE).edit();
+            editor.putString("ipAddress", etIPAdress.getText().toString());
+            editor.commit();
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         }
