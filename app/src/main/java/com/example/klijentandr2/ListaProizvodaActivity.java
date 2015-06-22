@@ -1,11 +1,9 @@
 package com.example.klijentandr2;
 
-import java.io.IOException;
+
 import java.util.ArrayList;
-import java.util.List;
 
 
-import domen.Proizvod;
 import domen.StavkaNarudzbine;
 import fragment.proizvodi.FragmentDesert;
 import fragment.proizvodi.FragmentDorucak;
@@ -17,24 +15,13 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
 
 
 public class ListaProizvodaActivity extends AppCompatActivity {
-	ListView list;
-	List<Proizvod> listaProizvoda;
-	ArrayList<Proizvod> listica;
 	ViewPager viewPager;
 	public static ArrayList<StavkaNarudzbine> listaStavki =  new ArrayList<StavkaNarudzbine>();
 	

@@ -3,21 +3,13 @@ package com.example.klijentandr2;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
-
 import domen.Narudzbina;
-import domen.Proizvod;
 import domen.StavkaNarudzbine;
 import komunikacija.Komunikacija;
 import transfer.TransferObjekatOdgovor;
 import transfer.TransferObjekatZahtev;
 import util.Konstante;
-
-import android.app.ActionBar;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -117,6 +109,7 @@ public class NovaNarudzbinaActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
             Toast.makeText(NovaNarudzbinaActivity.this, "Uspesno poslata narudzbina", Toast.LENGTH_SHORT).show();
+            ListaProizvodaActivity.listaStavki = new ArrayList<>();
             startActivity(new Intent(NovaNarudzbinaActivity.this, ListaNarudzbinaActivity.class));
         }
     }
