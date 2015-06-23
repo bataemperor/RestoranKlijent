@@ -17,9 +17,6 @@ public class Komunikacija {
 	public Komunikacija() throws IOException {
 		socket = new Socket();
 		socket.connect(new InetSocketAddress(ipAddress, 9998), 5000);
-//		socket.connect(new InetSocketAddress("192.168.32.79", 9998), 5000);
-//		socket = new Socket("192.168.0.12", 9998);
-//		socket = new Socket("192.168.32.79", 9998);
 		System.out.println("Uspesno povezivanje sa serverom.");
 	}
 

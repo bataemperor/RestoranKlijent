@@ -36,7 +36,7 @@ public class DijalogStavkaIzmena extends DialogFragment implements View.OnClickL
         oduzmiKolicinu.setOnClickListener(this);
         dodajStavku = (Button) view.findViewById(R.id.button_dodaj_stavkuIzmena);
         dodajStavku.setOnClickListener(this);
-        odustani = (Button) view.findViewById(R.id.button_odustaniIzmena);
+        odustani = (Button) view.findViewById(R.id.button_obrisiIzmena);
         odustani.setOnClickListener(this);
         getDialog().setTitle("" + stavkaNarudzbine.getProizvod().getNazivProizvoda());
         etNapomena.setText(stavkaNarudzbine.getNapomena());
@@ -69,13 +69,15 @@ public class DijalogStavkaIzmena extends DialogFragment implements View.OnClickL
             case R.id.button_dodaj_stavkuIzmena:
                 stavkaNarudzbine.setNapomena(etNapomena.getText().toString());
                 stavkaNarudzbine.setIznos(stavkaNarudzbine.getProizvod().getCenaProizvoda() * stavkaNarudzbine.getKolicina());
-                ListaProizvodaActivity.listaStavki.remove(position);
-                ListaProizvodaActivity.listaStavki.add(stavkaNarudzbine);
+//                ListaProizvodaActivity.listaStavki.remove(position);
+//                ListaProizvodaActivity.listaStavki.add(stavkaNarudzbine);
+                ListaProizvodaActivity.listaStavki.set(position,stavkaNarudzbine);
                 dismiss();
                 cb.callback();
 
                 break;
-            case R.id.button_odustaniIzmena:
+            case R.id.button_obrisiIzmena:
+                ListaProizvodaActivity.listaStavki.remove(position);
                 cb.callback();
                 dismiss();
                 break;
