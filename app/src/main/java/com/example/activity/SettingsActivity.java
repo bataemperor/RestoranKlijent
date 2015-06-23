@@ -1,4 +1,4 @@
-package com.example.klijentandr2;
+package com.example.activity;
 
 import android.app.Activity;
 import android.content.Intent;

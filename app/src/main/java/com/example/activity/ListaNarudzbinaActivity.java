@@ -1,4 +1,4 @@
-package com.example.klijentandr2;
+package com.example.activity;
 
 
 import android.content.Context;
@@ -22,15 +22,11 @@ import com.amulyakhare.textdrawable.TextDrawable;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 
 import java.io.IOException;
-import java.security.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import domen.Narudzbina;
-import domen.Proizvod;
 import komunikacija.Komunikacija;
 import transfer.TransferObjekatOdgovor;
 import transfer.TransferObjekatZahtev;

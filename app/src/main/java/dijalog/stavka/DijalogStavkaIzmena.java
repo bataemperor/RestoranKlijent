@@ -1,7 +1,7 @@
 package dijalog.stavka;
 
-import com.example.klijentandr2.ListaProizvodaActivity;
-import com.example.klijentandr2.R;
+import com.example.activity.ListaProizvodaActivity;
+import com.example.activity.R;
 
 
 import domen.StavkaNarudzbine;

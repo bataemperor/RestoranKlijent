@@ -70,11 +70,11 @@
         android:text="+" />
 
     <Button
-        android:id="@+id/button_odustaniIzmena"
+        android:id="@+id/button_obrisiIzmena"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/fl_napomenaIzmena"
-        android:text="Odustani" />
+        android:text="Obrisi" />
 
 </RelativeLayout>

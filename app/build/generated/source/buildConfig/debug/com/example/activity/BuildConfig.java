@@ -1,7 +1,7 @@
 /**
  * Automatically generated file. DO NOT MODIFY
  */
-package com.example.klijentandr2;
+package com.example.activity;
 
 public final class BuildConfig {
   public static final boolean DEBUG = Boolean.parseBoolean("true");

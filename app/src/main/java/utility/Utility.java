@@ -6,7 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.view.View;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.example.klijentandr2.R;
+import com.example.activity.R;
 
 /**
  * Created by bataemperor on 10.6.15..

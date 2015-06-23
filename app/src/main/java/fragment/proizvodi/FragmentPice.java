@@ -9,8 +9,8 @@ import transfer.TransferObjekatOdgovor;
 import transfer.TransferObjekatZahtev;
 import util.Konstante;
 
-import com.example.klijentandr2.R;
-import com.example.klijentandr2.SettingsActivity;
+import com.example.activity.R;
+import com.example.activity.SettingsActivity;
 
 import dijalog.stavka.DijalogStavka;
 import domen.Proizvod;
