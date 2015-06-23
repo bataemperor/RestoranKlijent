@@ -22,6 +22,7 @@ public class DijalogStavkaIzmena extends DialogFragment implements View.OnClickL
     private Proizvod proizvod;
     private StavkaNarudzbine stavkaNarudzbine;
     int position;
+    CallbackDialog cb;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,13 +48,15 @@ public class DijalogStavkaIzmena extends DialogFragment implements View.OnClickL
         return view;
     }
 
-    public static DijalogStavkaIzmena newInstace(StavkaNarudzbine stavka,int position) {
+    public static DijalogStavkaIzmena newInstace(StavkaNarudzbine stavka,int position,CallbackDialog cb) {
         DijalogStavkaIzmena dijalogStavkaIzmena = new DijalogStavkaIzmena();
-        dijalogStavkaIzmena.setStavka(stavka,position);
+        dijalogStavkaIzmena.setStavka(stavka,position,cb);
 
         return dijalogStavkaIzmena;
     }
-
+    public interface CallbackDialog{
+        public void callback();
+    }
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -73,16 +76,20 @@ public class DijalogStavkaIzmena extends DialogFragment implements View.OnClickL
                 ListaProizvodaActivity.listaStavki.remove(position);
                 ListaProizvodaActivity.listaStavki.add(stavkaNarudzbine);
                 dismiss();
+                cb.callback();
+
                 break;
             case R.id.button_odustani:
+                cb.callback();
                 dismiss();
                 break;
         }
 
     }
 
-    public void setStavka(StavkaNarudzbine stavka,int position) {
+    public void setStavka(StavkaNarudzbine stavka,int position,CallbackDialog cb) {
         this.stavkaNarudzbine = stavka;
         this.position=position;
+        this.cb = cb;
     }
 }

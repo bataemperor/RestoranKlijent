@@ -12,7 +12,7 @@ import transfer.TransferObjekatOdgovor;
 import transfer.TransferObjekatZahtev;
 import util.Konstante;
 
-import android.support.v4.app.Fragment;
+
 import android.support.v4.app.FragmentManager;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -56,17 +56,26 @@ public class NovaNarudzbinaActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        listaStavki = (ListView)findViewById(R.id.list_stavke_narudzbine);
-        listAdapter = new ArrayAdapter<StavkaNarudzbine>(
-                this, android.R.layout.simple_list_item_1, lista);
-        listAdapter.notifyDataSetChanged();
+//        listaStavki = (ListView)findViewById(R.id.list_stavke_narudzbine);
+//        listAdapter = new ArrayAdapter<StavkaNarudzbine>(
+//                this, android.R.layout.simple_list_item_1, lista);
+//        listAdapter.notifyDataSetChanged();
         final FragmentManager fragmentManager = getSupportFragmentManager();
         listaStavki.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 StavkaNarudzbine s = (StavkaNarudzbine) listAdapter.getItem(position);
-                DijalogStavkaIzmena dsi = DijalogStavkaIzmena.newInstace(s,position);
+                DijalogStavkaIzmena dsi = DijalogStavkaIzmena.newInstace(s, position, new DijalogStavkaIzmena.CallbackDialog() {
+                    @Override
+                    public void callback() {
+                        listaStavki = (ListView)findViewById(R.id.list_stavke_narudzbine);
+                        lista = ListaProizvodaActivity.listaStavki;
+                        listAdapter = new ArrayAdapter<StavkaNarudzbine>(NovaNarudzbinaActivity.this, android.R.layout.simple_list_item_1, lista);
+                        listaStavki.setAdapter(listAdapter);
+//                        listAdapter.notifyDataSetChanged();
+                    }
+                });
                 dsi.show(fragmentManager,"");
             }
         });
