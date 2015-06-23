@@ -3,7 +3,7 @@ package dijalog.stavka;
 import com.example.klijentandr2.ListaProizvodaActivity;
 import com.example.klijentandr2.R;
 
-import domen.Proizvod;
+
 import domen.StavkaNarudzbine;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
@@ -19,7 +19,6 @@ public class DijalogStavkaIzmena extends DialogFragment implements View.OnClickL
     Button dodajKolicinu, oduzmiKolicinu, dodajStavku, odustani;
     TextView tvProizvod;
     EditText etNapomena;
-    private Proizvod proizvod;
     private StavkaNarudzbine stavkaNarudzbine;
     int position;
     CallbackDialog cb;
@@ -28,9 +27,6 @@ public class DijalogStavkaIzmena extends DialogFragment implements View.OnClickL
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.dijalog_stavka_izmena, null);
-//        stavkaNarudzbine = new StavkaNarudzbine();
-//        stavkaNarudzbine.setStavka(proizvod);
-//        stavkaNarudzbine.setKolicina(1);
         tvProizvod = (TextView) view.findViewById(R.id.textView_proizvodIzmena);
         etNapomena = (EditText) view.findViewById(R.id.editText_napomenaIzmena);
         dodajKolicinu = (Button) view.findViewById(R.id.button_dodaj_kolicinuIzmena);
@@ -55,7 +51,7 @@ public class DijalogStavkaIzmena extends DialogFragment implements View.OnClickL
         return dijalogStavkaIzmena;
     }
     public interface CallbackDialog{
-        public void callback();
+        void callback();
     }
     @Override
     public void onClick(View v) {
@@ -79,7 +75,7 @@ public class DijalogStavkaIzmena extends DialogFragment implements View.OnClickL
                 cb.callback();
 
                 break;
-            case R.id.button_odustani:
+            case R.id.button_odustaniIzmena:
                 cb.callback();
                 dismiss();
                 break;

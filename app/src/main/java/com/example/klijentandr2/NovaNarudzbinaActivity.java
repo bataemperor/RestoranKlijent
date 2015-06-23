@@ -56,10 +56,6 @@ public class NovaNarudzbinaActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-//        listaStavki = (ListView)findViewById(R.id.list_stavke_narudzbine);
-//        listAdapter = new ArrayAdapter<StavkaNarudzbine>(
-//                this, android.R.layout.simple_list_item_1, lista);
-//        listAdapter.notifyDataSetChanged();
         final FragmentManager fragmentManager = getSupportFragmentManager();
         listaStavki.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -73,7 +69,6 @@ public class NovaNarudzbinaActivity extends AppCompatActivity {
                         lista = ListaProizvodaActivity.listaStavki;
                         listAdapter = new ArrayAdapter<StavkaNarudzbine>(NovaNarudzbinaActivity.this, android.R.layout.simple_list_item_1, lista);
                         listaStavki.setAdapter(listAdapter);
-//                        listAdapter.notifyDataSetChanged();
                     }
                 });
                 dsi.show(fragmentManager,"");
