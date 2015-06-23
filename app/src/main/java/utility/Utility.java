@@ -1,7 +1,6 @@
 package utility;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -27,7 +26,7 @@ public class Utility {
         snackbar.show();
     }
     public interface SnackbarCallback{
-        public void callback();
+        void callback();
     }
 
     public static void prikaziSnackBar(View view,String poruka,String action,final SnackbarCallback sc){

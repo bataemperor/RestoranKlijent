@@ -20,13 +20,11 @@ public class Komunikacija {
 		System.out.println("Uspesno povezivanje sa serverom.");
 	}
 
-
 	public void posaljiZahtev(TransferObjekatZahtev toZahtev)
 			throws IOException {
 		outSocket = new ObjectOutputStream(socket.getOutputStream());
 		outSocket.writeObject(toZahtev);
 		outSocket.flush();
-
 	}
 
 	public TransferObjekatOdgovor procitajOdgovor() throws IOException,
@@ -35,7 +33,6 @@ public class Komunikacija {
 				socket.getInputStream());
 		TransferObjekatOdgovor too = (TransferObjekatOdgovor) inSocket
 				.readObject();
-
 		return too;
 	}
 
