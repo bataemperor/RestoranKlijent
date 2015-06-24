@@ -26,7 +26,7 @@ public class DialogStavkaIzmena extends DialogFragment implements View.OnClickLi
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.dijalog_stavka_izmena, null);
+        View view = inflater.inflate(R.layout.dialog_stavka_izmena, null);
         tvProizvod = (TextView) view.findViewById(R.id.textView_proizvodIzmena);
         etNapomena = (EditText) view.findViewById(R.id.editText_napomenaIzmena);
         dodajKolicinu = (Button) view.findViewById(R.id.button_dodaj_kolicinuIzmena);

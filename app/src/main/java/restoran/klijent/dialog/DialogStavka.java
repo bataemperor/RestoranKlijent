@@ -24,7 +24,7 @@ public class DialogStavka extends DialogFragment implements View.OnClickListener
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.dijalog_stavka, null);
+		View view = inflater.inflate(R.layout.dialog_stavka, null);
 		stavkaNarudzbine = new StavkaNarudzbine();
 		stavkaNarudzbine.setProizvod(proizvod);
 		stavkaNarudzbine.setKolicina(1);
