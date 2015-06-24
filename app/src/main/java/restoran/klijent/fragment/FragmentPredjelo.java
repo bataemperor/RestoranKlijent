@@ -1,20 +1,20 @@
-package fragment.proizvodi;
+package restoran.klijent.fragment;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import dijalog.stavka.DijalogStavka;
-import komunikacija.Komunikacija;
+import restoran.klijent.dialog.DialogStavka;
+import restoran.klijent.komunikacija.Komunikacija;
 import transfer.TransferObjekatOdgovor;
 import transfer.TransferObjekatZahtev;
 import util.Konstante;
 
 import com.example.activity.R;
-import com.example.activity.SettingsActivity;
+import restoran.klijent.SettingsActivity;
 
 import domen.Proizvod;
-import utility.Utility;
+import restoran.klijent.utility.Utility;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -52,7 +52,7 @@ public class FragmentPredjelo extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 Proizvod p = (Proizvod) adapter.getItem(position);
-                DijalogStavka ds = DijalogStavka.newInstace(p);
+                DialogStavka ds = DialogStavka.newInstace(p);
                 ds.show(fragmentManager, "");
             }
         });

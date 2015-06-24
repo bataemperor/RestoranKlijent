@@ -1,13 +1,13 @@
-package com.example.activity;
+package restoran.klijent;
 
 import java.io.IOException;
 
 import transfer.TransferObjekatOdgovor;
 import transfer.TransferObjekatZahtev;
 import util.Konstante;
-import komunikacija.Komunikacija;
+import restoran.klijent.komunikacija.Komunikacija;
 import domen.Konobar;
-import utility.Utility;
+import restoran.klijent.utility.Utility;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -21,6 +21,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+
+import com.example.activity.R;
 
 
 public class LoginActivity extends AppCompatActivity {

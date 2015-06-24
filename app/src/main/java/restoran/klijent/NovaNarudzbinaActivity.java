@@ -1,13 +1,13 @@
-package com.example.activity;
+package restoran.klijent;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 
-import dijalog.stavka.DijalogStavkaIzmena;
+import restoran.klijent.dialog.DialogStavkaIzmena;
 import domen.Narudzbina;
 import domen.StavkaNarudzbine;
-import komunikacija.Komunikacija;
+import restoran.klijent.komunikacija.Komunikacija;
 import transfer.TransferObjekatOdgovor;
 import transfer.TransferObjekatZahtev;
 import util.Konstante;
@@ -26,6 +26,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.activity.R;
 
 public class NovaNarudzbinaActivity extends AppCompatActivity {
     Spinner spinner;
@@ -62,10 +64,10 @@ public class NovaNarudzbinaActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 StavkaNarudzbine s = (StavkaNarudzbine) listAdapter.getItem(position);
-                DijalogStavkaIzmena dsi = DijalogStavkaIzmena.newInstace(s, position, new DijalogStavkaIzmena.CallbackDialog() {
+                DialogStavkaIzmena dsi = DialogStavkaIzmena.newInstace(s, position, new DialogStavkaIzmena.CallbackDialog() {
                     @Override
                     public void callback() {
-                        listaStavki = (ListView)findViewById(R.id.list_stavke_narudzbine);
+                        listaStavki = (ListView) findViewById(R.id.list_stavke_narudzbine);
                         lista = ListaProizvodaActivity.listaStavki;
                         listAdapter = new ArrayAdapter<StavkaNarudzbine>(NovaNarudzbinaActivity.this, android.R.layout.simple_list_item_1, lista);
                         listaStavki.setAdapter(listAdapter);

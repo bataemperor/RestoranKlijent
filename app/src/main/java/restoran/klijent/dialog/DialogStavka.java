@@ -1,6 +1,6 @@
-package dijalog.stavka;
+package restoran.klijent.dialog;
 
-import com.example.activity.ListaProizvodaActivity;
+import restoran.klijent.ListaProizvodaActivity;
 import com.example.activity.R;
 
 import domen.Proizvod;
@@ -14,7 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class DijalogStavka extends DialogFragment implements View.OnClickListener {
+public class DialogStavka extends DialogFragment implements View.OnClickListener {
 	Button dodajKolicinu, oduzmiKolicinu, dodajStavku, odustani;
 	TextView tvProizvod;
 	EditText etNapomena;
@@ -44,8 +44,8 @@ public class DijalogStavka extends DialogFragment implements View.OnClickListene
 		return view;
 	}
 
-	public static DijalogStavka newInstace(Proizvod p) {
-		DijalogStavka dijalogStavka = new DijalogStavka();
+	public static DialogStavka newInstace(Proizvod p) {
+		DialogStavka dijalogStavka = new DialogStavka();
 		dijalogStavka.setProizvod(p);
 		return dijalogStavka;
 	}

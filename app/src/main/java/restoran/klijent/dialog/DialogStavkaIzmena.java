@@ -1,6 +1,6 @@
-package dijalog.stavka;
+package restoran.klijent.dialog;
 
-import com.example.activity.ListaProizvodaActivity;
+import restoran.klijent.ListaProizvodaActivity;
 import com.example.activity.R;
 
 
@@ -14,7 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class DijalogStavkaIzmena extends DialogFragment implements View.OnClickListener{
+public class DialogStavkaIzmena extends DialogFragment implements View.OnClickListener{
 
     Button dodajKolicinu, oduzmiKolicinu, dodajStavku, odustani;
     TextView tvProizvod;
@@ -44,8 +44,8 @@ public class DijalogStavkaIzmena extends DialogFragment implements View.OnClickL
         return view;
     }
 
-    public static DijalogStavkaIzmena newInstace(StavkaNarudzbine stavka,int position,CallbackDialog cb) {
-        DijalogStavkaIzmena dijalogStavkaIzmena = new DijalogStavkaIzmena();
+    public static DialogStavkaIzmena newInstace(StavkaNarudzbine stavka,int position,CallbackDialog cb) {
+        DialogStavkaIzmena dijalogStavkaIzmena = new DialogStavkaIzmena();
         dijalogStavkaIzmena.setStavka(stavka,position,cb);
 
         return dijalogStavkaIzmena;

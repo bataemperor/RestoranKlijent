@@ -1,4 +1,4 @@
-package com.example.activity;
+package restoran.klijent;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-import komunikacija.Komunikacija;
-import utility.Utility;
+import com.example.activity.R;
+
+import restoran.klijent.komunikacija.Komunikacija;
+import restoran.klijent.utility.Utility;
 
 
 public class SettingsActivity extends Activity {

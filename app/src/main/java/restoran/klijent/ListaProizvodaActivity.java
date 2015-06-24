@@ -1,15 +1,15 @@
-package com.example.activity;
+package restoran.klijent;
 
 
 import java.util.ArrayList;
 
 
 import domen.StavkaNarudzbine;
-import fragment.proizvodi.FragmentDesert;
-import fragment.proizvodi.FragmentDorucak;
-import fragment.proizvodi.FragmentGlavnoJelo;
-import fragment.proizvodi.FragmentPice;
-import fragment.proizvodi.FragmentPredjelo;
+import restoran.klijent.fragment.FragmentDesert;
+import restoran.klijent.fragment.FragmentDorucak;
+import restoran.klijent.fragment.FragmentGlavnoJelo;
+import restoran.klijent.fragment.FragmentPice;
+import restoran.klijent.fragment.FragmentPredjelo;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -19,6 +19,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.example.activity.R;
 
 
 public class ListaProizvodaActivity extends AppCompatActivity {

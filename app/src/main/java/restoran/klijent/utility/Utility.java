@@ -1,4 +1,4 @@
-package utility;
+package restoran.klijent.utility;
 
 import android.content.Context;
 import android.graphics.Color;

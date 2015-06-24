@@ -1,20 +1,20 @@
-package fragment.proizvodi;
+package restoran.klijent.fragment;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import komunikacija.Komunikacija;
+import restoran.klijent.dialog.DialogStavka;
+import restoran.klijent.komunikacija.Komunikacija;
 import transfer.TransferObjekatOdgovor;
 import transfer.TransferObjekatZahtev;
 import util.Konstante;
 
 import com.example.activity.R;
-import com.example.activity.SettingsActivity;
+import restoran.klijent.SettingsActivity;
 
-import dijalog.stavka.DijalogStavka;
 import domen.Proizvod;
-import utility.Utility;
+import restoran.klijent.utility.Utility;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -27,43 +27,42 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.AdapterView.OnItemClickListener;
 
-public class FragmentPice extends Fragment {
-    ListView listaPica;
-    List<Proizvod> listaProizvoda;
+public class FragmentDorucak extends Fragment {
+    private List<Proizvod> listaProizvoda;
+    ListView listaDorucak;
     ArrayAdapter<Proizvod> adapter;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_pice, container, false);
+        // TODO Auto-generated method stub
+        return inflater.inflate(R.layout.fragment_dorucak, container, false);
     }
 
     @Override
     public void onResume() {
         // TODO Auto-generated method stub
         super.onResume();
-        new GetPiceTask().execute();
-        listaPica = (ListView) getView().findViewById(R.id.list_pice);
+        new GetDorucakTask().execute();
+        listaDorucak = (ListView) getView().findViewById(R.id.list_dorucak);
         final FragmentManager fragmentManager = getFragmentManager();
-        listaPica.setOnItemClickListener(new OnItemClickListener() {
+        listaDorucak.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 Proizvod p = (Proizvod) adapter.getItem(position);
-                DijalogStavka ds = DijalogStavka.newInstace(p);
+                DialogStavka ds = DialogStavka.newInstace(p);
                 ds.show(fragmentManager, "");
             }
         });
-
     }
 
-    private class GetPiceTask extends AsyncTask<Void, Void, List<Proizvod>> {
+    private class GetDorucakTask extends AsyncTask<Void, Void, List<Proizvod>> {
         TransferObjekatZahtev zahtev;
         TransferObjekatOdgovor odgovor;
         List<Proizvod> lp;
 
+        @Override
         protected void onPreExecute() {
             // TODO Auto-generated method stub
             listaProizvoda = new ArrayList<Proizvod>();
@@ -102,14 +101,15 @@ public class FragmentPice extends Fragment {
             } else {
 
                 for (Proizvod proizvod : result) {
-                    if (proizvod.getTipProizvoda().equalsIgnoreCase("Pice")) {
+                    if (proizvod.getTipProizvoda().equalsIgnoreCase("Dorucak")) {
                         listaProizvoda.add(proizvod);
                     }
                 }
-                adapter = new ArrayAdapter<Proizvod>(getActivity(), android.R.layout.simple_list_item_1, listaProizvoda);
-                listaPica.setAdapter(adapter);
+                adapter = new ArrayAdapter<Proizvod>(
+                        getActivity(), android.R.layout.simple_list_item_1,
+                        listaProizvoda);
+                listaDorucak.setAdapter(adapter);
             }
-
         }
     }
 }

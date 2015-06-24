@@ -1,4 +1,4 @@
-package komunikacija;
+package restoran.klijent.komunikacija;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

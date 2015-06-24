@@ -1,4 +1,4 @@
-package com.example.activity;
+package restoran.klijent;
 
 
 import android.content.Context;
@@ -19,6 +19,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.amulyakhare.textdrawable.TextDrawable;
+import com.example.activity.R;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 
 import java.io.IOException;
@@ -27,11 +28,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import domen.Narudzbina;
-import komunikacija.Komunikacija;
+import restoran.klijent.komunikacija.Komunikacija;
 import transfer.TransferObjekatOdgovor;
 import transfer.TransferObjekatZahtev;
 import util.Konstante;
-import utility.Utility;
+import restoran.klijent.utility.Utility;
 
 
 public class ListaNarudzbinaActivity extends AppCompatActivity{
