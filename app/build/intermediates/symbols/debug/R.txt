@@ -838,8 +838,8 @@ int layout design_navigation_item_header 0x7f03001f
 int layout design_navigation_item_separator 0x7f030020
 int layout design_navigation_item_subheader 0x7f030021
 int layout design_navigation_menu 0x7f030022
-int layout dijalog_stavka 0x7f030023
-int layout dijalog_stavka_izmena 0x7f030024
+int layout dialog_stavka 0x7f030023
+int layout dialog_stavka_izmena 0x7f030024
 int layout fragment_desert 0x7f030025
 int layout fragment_dorucak 0x7f030026
 int layout fragment_glavnojelo 0x7f030027

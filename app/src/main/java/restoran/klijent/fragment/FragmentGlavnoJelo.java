@@ -52,7 +52,7 @@ public class FragmentGlavnoJelo extends Fragment {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 									int position, long id) {
-				Proizvod p = (Proizvod) adapter.getItem(position);
+				Proizvod p = adapter.getItem(position);
 				DialogStavka ds = DialogStavka.newInstace(p);
 				ds.show(fragmentManager, "");
 			}

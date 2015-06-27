@@ -2600,8 +2600,8 @@ containing a value of this type.
         public static final int design_navigation_item_separator=0x7f030020;
         public static final int design_navigation_item_subheader=0x7f030021;
         public static final int design_navigation_menu=0x7f030022;
-        public static final int dijalog_stavka=0x7f030023;
-        public static final int dijalog_stavka_izmena=0x7f030024;
+        public static final int dialog_stavka=0x7f030023;
+        public static final int dialog_stavka_izmena=0x7f030024;
         public static final int fragment_desert=0x7f030025;
         public static final int fragment_dorucak=0x7f030026;
         public static final int fragment_glavnojelo=0x7f030027;

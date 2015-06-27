@@ -12,11 +12,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.amulyakhare.textdrawable.TextDrawable;
 import com.example.activity.R;
@@ -125,6 +127,13 @@ public class ListaNarudzbinaActivity extends AppCompatActivity{
 				adapter = new NarudzbineAdapter(ListaNarudzbinaActivity.this,listaNarudzbina);
 //				adapter = new ArrayAdapter<Narudzbina>(ListaNarudzbinaActivity.this, android.R.layout.simple_list_item_1, listaNarudzbina);
 				listView.setAdapter(adapter);
+				listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+					@Override
+					public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+						Narudzbina nar = adapter.getItem(position);
+						Toast.makeText(ListaNarudzbinaActivity.this,""+nar.getUkupanIznos(),Toast.LENGTH_LONG).show();
+					}
+				});
 			}
 		}
 	}
