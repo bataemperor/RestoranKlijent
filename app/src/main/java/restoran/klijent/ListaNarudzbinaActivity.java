@@ -17,6 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,11 +40,13 @@ import restoran.klijent.utility.Utility;
 
 public class ListaNarudzbinaActivity extends AppCompatActivity{
 	ListView listView;
+	ProgressBar pb;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_lista_narudzbina);
 		listView = (ListView) findViewById(R.id.lista_narudzbina);
+		pb = (ProgressBar) findViewById(R.id.progressBar);
 		postaviFloatButton();
 	}
 
@@ -99,6 +102,7 @@ public class ListaNarudzbinaActivity extends AppCompatActivity{
 		NarudzbineAdapter adapter;
 		@Override
 		protected void onPreExecute() {
+			pb.setVisibility(View.VISIBLE);
 			listaNarudzbina = new ArrayList<>();
 		}
 
@@ -124,6 +128,7 @@ public class ListaNarudzbinaActivity extends AppCompatActivity{
 				Utility.prikaziSnackBar((FrameLayout) findViewById(R.id.activity_lista_narudzbina), Utility.SNACKBAR_NEUSPESNA_KONEKCIJA);
 			}
 			else {
+				pb.setVisibility(View.GONE);
 				adapter = new NarudzbineAdapter(ListaNarudzbinaActivity.this,listaNarudzbina);
 //				adapter = new ArrayAdapter<Narudzbina>(ListaNarudzbinaActivity.this, android.R.layout.simple_list_item_1, listaNarudzbina);
 				listView.setAdapter(adapter);

@@ -61,6 +61,7 @@ public class LoginActivity extends AppCompatActivity {
             etUserName.setText(username);
             etPassword.setText(password);
         }
+        etUserName.setSelection(etUserName.getText().length());
     }
 
     @Override
