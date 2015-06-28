@@ -31,6 +31,7 @@ MERGED from com.android.support:appcompat-v7:22.2.0:20:5
 MERGED from com.android.support:support-v4:22.2.0:20:5
 MERGED from com.android.support:support-v4:22.2.0:20:5
 MERGED from com.amulyakhare:com.amulyakhare.textdrawable:1.0.1:8:5
+MERGED from com.hannesdorfmann.smoothprogressbar:library:1.0.0:8:5
 	android:targetSdkVersion
 		ADDED from AndroidManifest.xml:9:9
 		INJECTED from AndroidManifest.xml:0:0
@@ -79,6 +80,7 @@ MERGED from com.android.support:appcompat-v7:22.2.0:22:5
 MERGED from com.android.support:support-v4:22.2.0:22:5
 MERGED from com.android.support:support-v4:22.2.0:22:5
 MERGED from com.amulyakhare:com.amulyakhare.textdrawable:1.0.1:12:5
+MERGED from com.hannesdorfmann.smoothprogressbar:library:1.0.0:12:5
 	android:label
 		ADDED from AndroidManifest.xml:22:9
 	android:allowBackup
@@ -95,37 +97,49 @@ ADDED from AndroidManifest.xml:24:9
 		ADDED from AndroidManifest.xml:27:13
 	android:name
 		ADDED from AndroidManifest.xml:25:13
-intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:28:13
-action#android.intent.action.MAIN
-ADDED from AndroidManifest.xml:29:17
-	android:name
-		ADDED from AndroidManifest.xml:29:25
-category#android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:31:17
-	android:name
-		ADDED from AndroidManifest.xml:31:27
 activity#restoran.klijent.ListaNarudzbinaActivity
+ADDED from AndroidManifest.xml:30:9
+	android:label
+		ADDED from AndroidManifest.xml:32:13
+	android:name
+		ADDED from AndroidManifest.xml:31:13
+activity#restoran.klijent.ListaProizvodaActivity
 ADDED from AndroidManifest.xml:34:9
 	android:label
 		ADDED from AndroidManifest.xml:36:13
 	android:name
 		ADDED from AndroidManifest.xml:35:13
-activity#restoran.klijent.ListaProizvodaActivity
+activity#restoran.klijent.NovaNarudzbinaActivity
 ADDED from AndroidManifest.xml:38:9
 	android:label
 		ADDED from AndroidManifest.xml:40:13
 	android:name
 		ADDED from AndroidManifest.xml:39:13
-activity#restoran.klijent.NovaNarudzbinaActivity
+activity#restoran.klijent.SettingsActivity
 ADDED from AndroidManifest.xml:42:9
 	android:label
 		ADDED from AndroidManifest.xml:44:13
 	android:name
 		ADDED from AndroidManifest.xml:43:13
-activity#restoran.klijent.SettingsActivity
+activity#restoran.klijent.IzmenaNarudzbineActivity
 ADDED from AndroidManifest.xml:46:9
 	android:label
 		ADDED from AndroidManifest.xml:48:13
 	android:name
 		ADDED from AndroidManifest.xml:47:13
+activity#restoran.klijent.SplashActivity
+ADDED from AndroidManifest.xml:50:9
+	android:label
+		ADDED from AndroidManifest.xml:52:13
+	android:name
+		ADDED from AndroidManifest.xml:51:13
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:53:13
+action#android.intent.action.MAIN
+ADDED from AndroidManifest.xml:54:17
+	android:name
+		ADDED from AndroidManifest.xml:54:25
+category#android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:56:17
+	android:name
+		ADDED from AndroidManifest.xml:56:27

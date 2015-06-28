@@ -31,4 +31,5 @@ dependencies {
     compile 'com.afollestad:material-dialogs:0.7.5.2'
     compile 'com.android.support:design:22.2.0'
     compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    compile 'com.hannesdorfmann.smoothprogressbar:library:1.0.0'
 }

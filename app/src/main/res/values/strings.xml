@@ -20,6 +20,10 @@
         <item>7</item>
         <item>8</item>
     </string-array>
+    <string name="restoran">Restoran</string>
+    <string name="klijent">Klijent</string>
     <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_izmena_narudzbine">IzmenaNarudzbineActivity</string>
+    <string name="title_activity_splash">SplashActivity</string>
 
 </resources>

@@ -131,7 +131,10 @@ public class ListaNarudzbinaActivity extends AppCompatActivity{
 					@Override
 					public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 						Narudzbina nar = adapter.getItem(position);
-						Toast.makeText(ListaNarudzbinaActivity.this,""+nar.getUkupanIznos(),Toast.LENGTH_LONG).show();
+//						Toast.makeText(ListaNarudzbinaActivity.this,""+nar.getUkupanIznos(),Toast.LENGTH_LONG).show();
+						Intent intent =  new Intent(ListaNarudzbinaActivity.this,IzmenaNarudzbineActivity.class);
+						intent.putExtra("narudzbina",nar);
+						startActivity(intent);
 					}
 				});
 			}
