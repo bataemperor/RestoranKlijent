@@ -19,6 +19,7 @@ import com.example.activity.R;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import domen.Narudzbina;
 import domen.StavkaNarudzbine;
@@ -34,6 +35,7 @@ public class IzmenaNarudzbineActivity extends AppCompatActivity {
     Narudzbina narudzbina;
     ArrayList<StavkaNarudzbine> lista;
     ArrayAdapter<StavkaNarudzbine> listAdapter;
+    public static List<StavkaNarudzbine> listaStavkiNarudzbine = new ArrayList<StavkaNarudzbine>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +49,10 @@ public class IzmenaNarudzbineActivity extends AppCompatActivity {
         listaStavki = (ListView) findViewById(R.id.list_stavke_narudzbine_izmena);
         Object o = getIntent().getSerializableExtra("narudzbina");
         narudzbina = (Narudzbina) o;
+        listaStavkiNarudzbine = narudzbina.getListaStavki();
         setTitle("Narudzbina ID : " + narudzbina.getNarudzbinaID());
         listAdapter = new ArrayAdapter<StavkaNarudzbine>(
-                this, android.R.layout.simple_list_item_1, narudzbina.getListaStavki());
+                this, android.R.layout.simple_list_item_1, listaStavkiNarudzbine);
         listaStavki.setAdapter(listAdapter);
         spinner.setSelection(narudzbina.getBrojStola() - 1);
 

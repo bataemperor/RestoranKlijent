@@ -102,6 +102,7 @@ public class ListaNarudzbinaActivity extends AppCompatActivity{
 		NarudzbineAdapter adapter;
 		@Override
 		protected void onPreExecute() {
+			listView.setVisibility(View.GONE);
 			pb.setVisibility(View.VISIBLE);
 			listaNarudzbina = new ArrayList<>();
 		}
@@ -124,11 +125,13 @@ public class ListaNarudzbinaActivity extends AppCompatActivity{
 
 		@Override
 		protected void onPostExecute(List<Narudzbina> narudzbinas) {
+			pb.setVisibility(View.GONE);
+			listView.setVisibility(View.VISIBLE);
 			if (odgovor == null) {
 				Utility.prikaziSnackBar((FrameLayout) findViewById(R.id.activity_lista_narudzbina), Utility.SNACKBAR_NEUSPESNA_KONEKCIJA);
 			}
 			else {
-				pb.setVisibility(View.GONE);
+
 				adapter = new NarudzbineAdapter(ListaNarudzbinaActivity.this,listaNarudzbina);
 //				adapter = new ArrayAdapter<Narudzbina>(ListaNarudzbinaActivity.this, android.R.layout.simple_list_item_1, listaNarudzbina);
 				listView.setAdapter(adapter);
