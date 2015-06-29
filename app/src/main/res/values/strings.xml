@@ -20,10 +20,19 @@
         <item>7</item>
         <item>8</item>
     </string-array>
+
+    <string-array name="drawer_lista_aktivnosti">
+        <item>Nova narudzbina</item>
+        <item>Lista narudzbina</item>
+        <item>Log out</item>
+    </string-array>
+
     <string name="restoran">Restoran</string>
     <string name="klijent">Klijent</string>
     <string name="title_activity_settings">SettingsActivity</string>
     <string name="title_activity_izmena_narudzbine">IzmenaNarudzbineActivity</string>
     <string name="title_activity_splash">SplashActivity</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
 
 </resources>

@@ -2,8 +2,11 @@ package restoran.klijent;
 
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.os.AsyncTask;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -41,13 +44,74 @@ import restoran.klijent.utility.Utility;
 public class ListaNarudzbinaActivity extends AppCompatActivity{
 	ListView listView;
 	ProgressBar pb;
+
+
+	private ListView mDrawerList;
+	private ArrayAdapter<String> mAdapter;
+	private ActionBarDrawerToggle mDrawerToggle;
+	private DrawerLayout mDrawerLayout;
+	private String mActivityTitle;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_lista_narudzbina);
 		listView = (ListView) findViewById(R.id.lista_narudzbina);
 		pb = (ProgressBar) findViewById(R.id.progressBar);
+
+		mDrawerList = (ListView)findViewById(R.id.navList);
+		addDrawerItems();
+		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+		mActivityTitle = getTitle().toString();
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setHomeButtonEnabled(true);
+		setupDrawer();
+
 		postaviFloatButton();
+	}
+
+	private void addDrawerItems() {
+		String[] osArray = { "Android", "iOS", "Windows", "OS X", "Linux" };
+		mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.drawer_lista_aktivnosti));
+		mDrawerList.setAdapter(mAdapter);
+		mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+			}
+		});
+
+	}
+
+	private void setupDrawer() {
+		mDrawerToggle = new ActionBarDrawerToggle(this,mDrawerLayout,R.string.drawer_open,R.string.drawer_close){
+			/** Called when a drawer has settled in a completely open state. */
+			public void onDrawerOpened(View drawerView) {
+				super.onDrawerOpened(drawerView);
+				getSupportActionBar().setTitle("Navigacija");
+				invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+			}
+
+			/** Called when a drawer has settled in a completely closed state. */
+			public void onDrawerClosed(View view) {
+				super.onDrawerClosed(view);
+				getSupportActionBar().setTitle(mActivityTitle);
+				invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+			}
+		};
+		mDrawerToggle.setDrawerIndicatorEnabled(true);
+		mDrawerLayout.setDrawerListener(mDrawerToggle);
+	}
+
+	@Override
+	protected void onPostCreate(Bundle savedInstanceState) {
+		super.onPostCreate(savedInstanceState);
+		mDrawerToggle.syncState();
+	}
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+		super.onConfigurationChanged(newConfig);
+		mDrawerToggle.onConfigurationChanged(newConfig);
 	}
 
 	@Override
@@ -84,6 +148,9 @@ public class ListaNarudzbinaActivity extends AppCompatActivity{
 		// Handle action bar item clicks here. The action bar will
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
+		if (mDrawerToggle.onOptionsItemSelected(item)) {
+			return true;
+		}
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
 			return true;
@@ -180,4 +247,36 @@ public class ListaNarudzbinaActivity extends AppCompatActivity{
 		}
 
 	}
+//	private class DrawerAdapter extends  ArrayAdapter{
+//		private Context context;
+//		public DrawerAdapter(Context context, int resource) {
+//			super(context, resource);
+//			this.context = context;
+//		}
+//
+//		@Override
+//		public View getView(int position, View convertView, ViewGroup parent) {
+//			LayoutInflater layoutInflater = (LayoutInflater) context
+//					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//			View row = layoutInflater.inflate(R.layout.single_row_drawer, parent,
+//					false);
+//			ImageView slika = (ImageView) row.findViewById(R.id.slika);
+//			TextView tvLarge = (TextView) row.findViewById(R.id.text_item);
+//			switch (position){
+//				case 0 :
+//					slika.setImageResource(R.drawable.ic_action_new);
+//					tvLarge.setText("a");
+//					break;
+//				case 1:
+//					slika.setImageResource(R.drawable.ic_action_new);
+//					tvLarge.setText("a");
+//					break;
+//				case 2:
+//					slika.setImageResource(R.drawable.ic_action_new);
+//					tvLarge.setText("a");
+//					break;
+//			}
+//			return row;
+//		}
+//	}
 }

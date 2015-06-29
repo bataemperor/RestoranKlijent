@@ -10,11 +10,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.activity.R;
+import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,15 +26,17 @@ import java.util.List;
 import domen.Narudzbina;
 import domen.StavkaNarudzbine;
 import restoran.klijent.dialog.DialogStavkaIzmena;
+import restoran.klijent.dialog.DialogStavkaUpdate;
 import restoran.klijent.komunikacija.Komunikacija;
 import transfer.TransferObjekatOdgovor;
 import transfer.TransferObjekatZahtev;
 import util.Konstante;
 
 public class IzmenaNarudzbineActivity extends AppCompatActivity {
+    public static boolean izmena = false;
     Spinner spinner;
     ListView listaStavki;
-    Narudzbina narudzbina;
+    public static Narudzbina narudzbina;
     ArrayList<StavkaNarudzbine> lista;
     ArrayAdapter<StavkaNarudzbine> listAdapter;
     public static List<StavkaNarudzbine> listaStavkiNarudzbine = new ArrayList<StavkaNarudzbine>();
@@ -47,15 +51,38 @@ public class IzmenaNarudzbineActivity extends AppCompatActivity {
                 android.R.layout.simple_spinner_item);
         spinner.setAdapter(adapter);
         listaStavki = (ListView) findViewById(R.id.list_stavke_narudzbine_izmena);
-        Object o = getIntent().getSerializableExtra("narudzbina");
-        narudzbina = (Narudzbina) o;
-        listaStavkiNarudzbine = narudzbina.getListaStavki();
+        if (!izmena){
+            Object o = getIntent().getSerializableExtra("narudzbina");
+            narudzbina = (Narudzbina) o;
+            listaStavkiNarudzbine = narudzbina.getListaStavki();
+        }
         setTitle("Narudzbina ID : " + narudzbina.getNarudzbinaID());
         listAdapter = new ArrayAdapter<StavkaNarudzbine>(
                 this, android.R.layout.simple_list_item_1, listaStavkiNarudzbine);
         listaStavki.setAdapter(listAdapter);
         spinner.setSelection(narudzbina.getBrojStola() - 1);
+        postaviFloatButton();
+        izmena=false;
+    }
 
+    private void postaviFloatButton() {
+
+        ImageView icon = new ImageView(this); // Create an icon
+        icon.setImageDrawable(getResources().getDrawable(R.drawable.ic_action_new));
+
+        FloatingActionButton actionButton = new FloatingActionButton.Builder(this)
+                .setContentView(icon).setBackgroundDrawable(R.drawable.selector_button)
+                .build();
+        actionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                izmena = true;
+                Intent intent = new Intent(IzmenaNarudzbineActivity.this,ListaProizvodaActivity.class);
+//                inte
+                startActivity(intent);
+
+            }
+        });
     }
 
     @Override
@@ -67,16 +94,16 @@ public class IzmenaNarudzbineActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 StavkaNarudzbine s = listAdapter.getItem(position);
-                DialogStavkaIzmena dsi = DialogStavkaIzmena.newInstace(s, position, new DialogStavkaIzmena.CallbackDialog() {
+                DialogStavkaUpdate dsu = DialogStavkaUpdate.newInstace(s, position, new DialogStavkaUpdate.CallbackDialog() {
                     @Override
                     public void callback() {
                         listaStavki = (ListView) findViewById(R.id.list_stavke_narudzbine_izmena);
-                        lista = ListaProizvodaActivity.listaStavki;
-                        listAdapter = new ArrayAdapter<StavkaNarudzbine>(IzmenaNarudzbineActivity.this, android.R.layout.simple_list_item_1, lista);
+//                        lista = ListaProizvodaActivity.listaStavki;
+                        listAdapter = new ArrayAdapter<StavkaNarudzbine>(IzmenaNarudzbineActivity.this, android.R.layout.simple_list_item_1, listaStavkiNarudzbine);
                         listaStavki.setAdapter(listAdapter);
                     }
                 });
-                dsi.show(fragmentManager, "");
+                dsu.show(fragmentManager, "");
             }
         });
     }
@@ -96,8 +123,8 @@ public class IzmenaNarudzbineActivity extends AppCompatActivity {
         int id = item.getItemId();
         if (id == R.id.action_settings) {
 
-            SacuvajNarudzbinuTask task = new SacuvajNarudzbinuTask();
-            task.execute();
+//            SacuvajNarudzbinuTask task = new SacuvajNarudzbinuTask();
+//            task.execute();
 
             return true;
         }
@@ -105,20 +132,20 @@ public class IzmenaNarudzbineActivity extends AppCompatActivity {
     }
 
 
-    private class SacuvajNarudzbinuTask extends AsyncTask<Void, Void, Void> {
+    private class IzmeniNarudzbinuTask extends AsyncTask<Void, Void, Void> {
         int ukupanIznosNarudzbine = 0;
 
         @Override
         protected void onPreExecute() {
-            narudzbina = new Narudzbina();
+//            narudzbina = new Narudzbina();
             narudzbina.setBrojStola(Integer.parseInt(spinner.getSelectedItem().toString()));
-            narudzbina.setDatumNarudzbine(new Date());
-            narudzbina.setStatus("Neplaceno");
-            int rbStavke = 1;
+//            narudzbina.setDatumNarudzbine(new Date());
+//            narudzbina.setStatus("Neplaceno");
+//            int rbStavke = 1;
             for (StavkaNarudzbine stavkaNarudzbine : lista) {
                 stavkaNarudzbine.setNarudzbina(narudzbina);
-                stavkaNarudzbine.setRbStavke(rbStavke);
-                rbStavke++;
+//                stavkaNarudzbine.setRbStavke(rbStavke);
+//                rbStavke++;
                 ukupanIznosNarudzbine += stavkaNarudzbine.getIznos();
             }
             narudzbina.setListaStavki(lista);

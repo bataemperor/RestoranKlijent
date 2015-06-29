@@ -1,6 +1,8 @@
 -- Merging decision tree log ---
 manifest
 ADDED from AndroidManifest.xml:2:1
+	xmlns:android
+		ADDED from AndroidManifest.xml:2:11
 	package
 		ADDED from AndroidManifest.xml:3:5
 		INJECTED from AndroidManifest.xml:0:0
@@ -11,8 +13,6 @@ ADDED from AndroidManifest.xml:2:1
 		ADDED from AndroidManifest.xml:4:5
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
-	xmlns:android
-		ADDED from AndroidManifest.xml:2:11
 uses-sdk
 ADDED from AndroidManifest.xml:7:5
 MERGED from com.android.support:support-v4:22.2.0:20:5
@@ -91,10 +91,10 @@ MERGED from com.hannesdorfmann.smoothprogressbar:library:1.0.0:12:5
 		ADDED from AndroidManifest.xml:23:9
 activity#restoran.klijent.LoginActivity
 ADDED from AndroidManifest.xml:24:9
-	android:label
-		ADDED from AndroidManifest.xml:26:13
 	android:windowSoftInputMode
 		ADDED from AndroidManifest.xml:27:13
+	android:label
+		ADDED from AndroidManifest.xml:26:13
 	android:name
 		ADDED from AndroidManifest.xml:25:13
 activity#restoran.klijent.ListaNarudzbinaActivity

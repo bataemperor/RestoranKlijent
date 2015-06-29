@@ -1,10 +1,13 @@
 package restoran.klijent.dialog;
 
+import restoran.klijent.IzmenaNarudzbineActivity;
 import restoran.klijent.ListaProizvodaActivity;
 import com.example.activity.R;
 
 import domen.Proizvod;
 import domen.StavkaNarudzbine;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
@@ -65,8 +68,14 @@ public class DialogStavka extends DialogFragment implements View.OnClickListener
 			break;
 		case R.id.button_dodaj_stavku:
 			stavkaNarudzbine.setNapomena(etNapomena.getText().toString());
-			stavkaNarudzbine.setIznos(stavkaNarudzbine.getProizvod().getCenaProizvoda()*stavkaNarudzbine.getKolicina());
-			ListaProizvodaActivity.listaStavki.add(stavkaNarudzbine);
+			stavkaNarudzbine.setIznos(stavkaNarudzbine.getProizvod().getCenaProizvoda() * stavkaNarudzbine.getKolicina());
+			if (IzmenaNarudzbineActivity.izmena){
+				IzmenaNarudzbineActivity.listaStavkiNarudzbine.add(stavkaNarudzbine);
+				Intent intent = new Intent(getActivity(),IzmenaNarudzbineActivity.class);
+				startActivity(intent);
+			}else {
+				ListaProizvodaActivity.listaStavki.add(stavkaNarudzbine);
+			}
 			dismiss();
 			break;
 		case R.id.button_odustani:

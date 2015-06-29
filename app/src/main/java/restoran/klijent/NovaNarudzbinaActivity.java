@@ -52,7 +52,6 @@ public class NovaNarudzbinaActivity extends AppCompatActivity {
         listAdapter = new ArrayAdapter<StavkaNarudzbine>(
                 this, android.R.layout.simple_list_item_1, lista);
         listaStavki.setAdapter(listAdapter);
-
     }
 
     @Override

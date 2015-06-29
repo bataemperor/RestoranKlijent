@@ -53,7 +53,6 @@ public class ListaProizvodaActivity extends AppCompatActivity {
 			Intent intent = new Intent(this,NovaNarudzbinaActivity.class);
 			intent.putExtra("listaStavki", listaStavki);
 			startActivity(intent);
-
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
