@@ -21,6 +21,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -28,6 +29,14 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.activity.R;
+import com.mikepenz.iconics.typeface.FontAwesome;
+import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.DrawerBuilder;
+import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
+import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
+import com.mikepenz.materialdrawer.model.SectionDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 
 public class NovaNarudzbinaActivity extends AppCompatActivity {
     Spinner spinner;
@@ -35,9 +44,13 @@ public class NovaNarudzbinaActivity extends AppCompatActivity {
     Narudzbina narudzbina;
     ArrayList<StavkaNarudzbine> lista;
     ArrayAdapter<StavkaNarudzbine> listAdapter;
+    private String mActivityTitle;
+
+    private Drawer result = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        supportRequestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nova_narudzbina);
         spinner = (Spinner) findViewById(R.id.spinner_broj_stola);
@@ -52,6 +65,50 @@ public class NovaNarudzbinaActivity extends AppCompatActivity {
         listAdapter = new ArrayAdapter<StavkaNarudzbine>(
                 this, android.R.layout.simple_list_item_1, lista);
         listaStavki.setAdapter(listAdapter);
+
+        mActivityTitle = getTitle().toString();
+
+
+        result = new DrawerBuilder()
+                .withActivity(this)
+                .withTranslucentStatusBar(false)
+                .withActionBarDrawerToggle(false)
+                .addDrawerItems(
+                        new PrimaryDrawerItem().withName("Nova narudzbina").withIcon(FontAwesome.Icon.faw_plus_circle),
+                        new PrimaryDrawerItem().withName("Lista narudzbina").withIcon(FontAwesome.Icon.faw_list),
+                        new SectionDrawerItem().withName("Settings"),
+                        new SecondaryDrawerItem().withName("IP address").withIcon(FontAwesome.Icon.faw_cog),
+                        new SecondaryDrawerItem().withName("Logout").withIcon(FontAwesome.Icon.faw_user)
+                )
+                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                    @Override
+                    public boolean onItemClick(AdapterView<?> parent, View view, int position, long id, IDrawerItem drawerItem) {
+                        if (drawerItem != null) {
+                            Intent intent = null;
+                            switch (position) {
+                                case 0:
+                                    intent = new Intent(NovaNarudzbinaActivity.this, ListaProizvodaActivity.class);
+                                    break;
+                                case 1:
+                                    intent = new Intent(NovaNarudzbinaActivity.this, ListaNarudzbinaActivity.class);
+                                    break;
+                                case 3:
+                                    intent = new Intent(NovaNarudzbinaActivity.this, SettingsActivity.class);
+                                    break;
+                                case 4:
+                                    intent = new Intent(NovaNarudzbinaActivity.this, LoginActivity.class);
+                                    break;
+
+                            }
+                            startActivity(intent);
+                        }
+
+                        return false;
+                    }
+                }).build();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(false);
     }
 
     @Override
@@ -72,7 +129,7 @@ public class NovaNarudzbinaActivity extends AppCompatActivity {
                         listaStavki.setAdapter(listAdapter);
                     }
                 });
-                dsi.show(fragmentManager,"");
+                dsi.show(fragmentManager, "");
             }
         });
     }
@@ -90,6 +147,17 @@ public class NovaNarudzbinaActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        if (id == android.R.id.home) {
+            if (result.isDrawerOpen()) {
+                result.closeDrawer();
+                getSupportActionBar().setTitle(mActivityTitle);
+            } else {
+                result.openDrawer();
+                getSupportActionBar().setTitle("Navigacija");
+            }
+
+            return true;
+        }
         if (id == R.id.action_settings) {
 
             SacuvajNarudzbinuTask task = new SacuvajNarudzbinuTask();
@@ -100,9 +168,19 @@ public class NovaNarudzbinaActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed() {
+        //handle the back press :D close the drawer first and if the drawer is closed close the activity
+        if (result != null && result.isDrawerOpen()) {
+            result.closeDrawer();
+        } else {
+            super.onBackPressed();
+        }
+    }
 
     private class SacuvajNarudzbinuTask extends AsyncTask<Void, Void, Void> {
         int ukupanIznosNarudzbine = 0;
+
         @Override
         protected void onPreExecute() {
             narudzbina = new Narudzbina();
@@ -114,7 +192,7 @@ public class NovaNarudzbinaActivity extends AppCompatActivity {
                 stavkaNarudzbine.setNarudzbina(narudzbina);
                 stavkaNarudzbine.setRbStavke(rbStavke);
                 rbStavke++;
-                ukupanIznosNarudzbine+=stavkaNarudzbine.getIznos();
+                ukupanIznosNarudzbine += stavkaNarudzbine.getIznos();
             }
             narudzbina.setListaStavki(lista);
             narudzbina.setUkupanIznos(ukupanIznosNarudzbine);
@@ -132,7 +210,7 @@ public class NovaNarudzbinaActivity extends AppCompatActivity {
                 k.posaljiZahtev(toZahtev);
                 TransferObjekatOdgovor toOdgovor = k.procitajOdgovor();
 
-            } catch (IOException|ClassNotFoundException e) {
+            } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
             }
             return null;

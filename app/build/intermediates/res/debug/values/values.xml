@@ -91,6 +91,9 @@
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
     <color name="abc_search_url_text_selected">@android:color/black</color>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <eat-comment/>
+    <color name="accent">@color/colorAccent</color>
     <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="accentColor">#2196f3</color>
@@ -110,10 +113,22 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <eat-comment/>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorPrimaryLight">#BBDEFB</color>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <eat-comment/>
+    <color name="divider">#1F000000</color>
+    <color name="drawer_background">#F9F9F9</color>
     <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="error_color">#FFDD2C00</color>
@@ -127,6 +142,12 @@
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <eat-comment/>
+    <color name="hint_text">#42000000</color>
+    <color name="icons">#FFF</color>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="link_text_material_dark">@color/material_deep_teal_200</color>
     <color name="link_text_material_light">@color/material_deep_teal_500</color>
     <color name="material_blue_grey_800">#ff37474f</color>
@@ -134,31 +155,342 @@
     <color name="material_blue_grey_950">#ff21272b</color>
     <color name="material_deep_teal_200">#ff80cbc4</color>
     <color name="material_deep_teal_500">#ff009688</color>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <eat-comment/>
+    <color name="material_drawer_accent">@color/accent</color>
+    <color name="material_drawer_background">@color/drawer_background</color>
+    <color name="material_drawer_dark_background">#303030</color>
+    <color name="material_drawer_dark_divider">#1FFFFFFF</color>
+    <color name="material_drawer_dark_header_selection_text">#FFF</color>
+    <color name="material_drawer_dark_hint_text">#42FFFFFF</color>
+    <color name="material_drawer_dark_icons">#000</color>
+    <color name="material_drawer_dark_primary_icon">#8AFFFFFF</color>
+    <color name="material_drawer_dark_primary_text">#DEFFFFFF</color>
+    <color name="material_drawer_dark_secondary_text">#8AFFFFFF</color>
+    <color name="material_drawer_dark_selected">#202020</color>
+    <color name="material_drawer_dark_selected_text">@color/material_drawer_primary</color>
+    <color name="material_drawer_divider">@color/divider</color>
+    <color name="material_drawer_header_selection_text">#FFF</color>
+    <color name="material_drawer_hint_text">@color/hint_text</color>
+    <color name="material_drawer_icons">@color/icons</color>
+    <color name="material_drawer_primary">@color/primary</color>
+    <color name="material_drawer_primary_dark">@color/primary_dark</color>
+    <color name="material_drawer_primary_icon">@color/secondary_text</color>
+    <color name="material_drawer_primary_light">@color/primary_light</color>
+    <color name="material_drawer_primary_text">@color/primary_text</color>
+    <color name="material_drawer_secondary_text">@color/secondary_text</color>
+    <color name="material_drawer_selected">#E8E8E8</color>
+    <color name="material_drawer_selected_text">@color/material_drawer_primary</color>
+    <color name="md_amber_100">#ffecb3</color>
+    <color name="md_amber_200">#ffe082</color>
+    <color name="md_amber_300">#ffd54f</color>
+    <color name="md_amber_400">#ffca28</color>
+    <color name="md_amber_50">#fff8e1</color>
+    <color name="md_amber_500">#ffc107</color>
+    <color name="md_amber_600">#ffb300</color>
+    <color name="md_amber_700">#ffa000</color>
+    <color name="md_amber_800">#ff8f00</color>
+    <color name="md_amber_900">#ff6f00</color>
+    <color name="md_amber_A100">#ffe57f</color>
+    <color name="md_amber_A200">#ffd740</color>
+    <color name="md_amber_A400">#ffc400</color>
+    <color name="md_amber_A700">#ffab00</color>
+    <color name="md_black_1000">#000000</color>
+    <color name="md_blue_100">#d0d9ff</color>
+    <color name="md_blue_200">#afbfff</color>
+    <color name="md_blue_300">#91a7ff</color>
+    <color name="md_blue_400">#738ffe</color>
+    <color name="md_blue_50">#e7e9fd</color>
+    <color name="md_blue_500">#5677fc</color>
+    <color name="md_blue_600">#4e6cef</color>
+    <color name="md_blue_700">#455ede</color>
+    <color name="md_blue_800">#3b50ce</color>
+    <color name="md_blue_900">#2a36b1</color>
+    <color name="md_blue_A100">#a6baff</color>
+    <color name="md_blue_A200">#6889ff</color>
+    <color name="md_blue_A400">#4d73ff</color>
+    <color name="md_blue_A700">#4d69ff</color>
+    <color name="md_blue_grey_100">#cfd8dc</color>
+    <color name="md_blue_grey_200">#b0bec5</color>
+    <color name="md_blue_grey_300">#90a4ae</color>
+    <color name="md_blue_grey_400">#78909c</color>
+    <color name="md_blue_grey_50">#eceff1</color>
+    <color name="md_blue_grey_500">#607d8b</color>
+    <color name="md_blue_grey_600">#546e7a</color>
+    <color name="md_blue_grey_700">#455a64</color>
+    <color name="md_blue_grey_800">#37474f</color>
+    <color name="md_blue_grey_900">#263238</color>
+    <color name="md_brown_100">#d7ccc8</color>
+    <color name="md_brown_200">#bcaaa4</color>
+    <color name="md_brown_300">#a1887f</color>
+    <color name="md_brown_400">#8d6e63</color>
+    <color name="md_brown_50">#efebe9</color>
+    <color name="md_brown_500">#795548</color>
+    <color name="md_brown_600">#6d4c41</color>
+    <color name="md_brown_700">#5d4037</color>
+    <color name="md_brown_800">#4e342e</color>
+    <color name="md_brown_900">#3e2723</color>
     <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.5.2/res/values/values.xml -->
     <eat-comment/>
     <color name="md_btn_selected">#33969696</color>
     <color name="md_btn_selected_dark">#40CBCBCB</color>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <eat-comment/>
+    <color name="md_cyan_100">#b2ebf2</color>
+    <color name="md_cyan_200">#80deea</color>
+    <color name="md_cyan_300">#4dd0e1</color>
+    <color name="md_cyan_400">#26c6da</color>
+    <color name="md_cyan_50">#e0f7fa</color>
+    <color name="md_cyan_500">#00bcd4</color>
+    <color name="md_cyan_600">#00acc1</color>
+    <color name="md_cyan_700">#0097a7</color>
+    <color name="md_cyan_800">#00838f</color>
+    <color name="md_cyan_900">#006064</color>
+    <color name="md_cyan_A100">#84ffff</color>
+    <color name="md_cyan_A200">#18ffff</color>
+    <color name="md_cyan_A400">#00e5ff</color>
+    <color name="md_cyan_A700">#00b8d4</color>
+    <color name="md_deep_orange_100">#ffccbc</color>
+    <color name="md_deep_orange_200">#ffab91</color>
+    <color name="md_deep_orange_300">#ff8a65</color>
+    <color name="md_deep_orange_400">#ff7043</color>
+    <color name="md_deep_orange_50">#fbe9e7</color>
+    <color name="md_deep_orange_500">#ff5722</color>
+    <color name="md_deep_orange_600">#f4511e</color>
+    <color name="md_deep_orange_700">#e64a19</color>
+    <color name="md_deep_orange_800">#d84315</color>
+    <color name="md_deep_orange_900">#bf360c</color>
+    <color name="md_deep_orange_A100">#ff9e80</color>
+    <color name="md_deep_orange_A200">#ff6e40</color>
+    <color name="md_deep_orange_A400">#ff3d00</color>
+    <color name="md_deep_orange_A700">#dd2c00</color>
+    <color name="md_deep_purple_100">#d1c4e9</color>
+    <color name="md_deep_purple_200">#b39ddb</color>
+    <color name="md_deep_purple_300">#9575cd</color>
+    <color name="md_deep_purple_400">#7e57c2</color>
+    <color name="md_deep_purple_50">#ede7f6</color>
+    <color name="md_deep_purple_500">#673ab7</color>
+    <color name="md_deep_purple_600">#5e35b1</color>
+    <color name="md_deep_purple_700">#512da8</color>
+    <color name="md_deep_purple_800">#4527a0</color>
+    <color name="md_deep_purple_900">#311b92</color>
+    <color name="md_deep_purple_A100">#b388ff</color>
+    <color name="md_deep_purple_A200">#7c4dff</color>
+    <color name="md_deep_purple_A400">#651fff</color>
+    <color name="md_deep_purple_A700">#6200ea</color>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.5.2/res/values/values.xml -->
+    <eat-comment/>
     <color name="md_divider_black">#10000000</color>
     <color name="md_divider_white">#10FFFFFF</color>
     <color name="md_edittext_error">#DD2C00</color>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <eat-comment/>
+    <color name="md_green_100">#a3e9a4</color>
+    <color name="md_green_200">#72d572</color>
+    <color name="md_green_300">#42bd41</color>
+    <color name="md_green_400">#2baf2b</color>
+    <color name="md_green_50">#d0f8ce</color>
+    <color name="md_green_500">#259b24</color>
+    <color name="md_green_600">#0a8f08</color>
+    <color name="md_green_700">#0a7e07</color>
+    <color name="md_green_800">#056f00</color>
+    <color name="md_green_900">#0d5302</color>
+    <color name="md_green_A100">#a2f78d</color>
+    <color name="md_green_A200">#5af158</color>
+    <color name="md_green_A400">#14e715</color>
+    <color name="md_green_A700">#12c700</color>
+    <color name="md_grey_100">#f5f5f5</color>
+    <color name="md_grey_200">#eeeeee</color>
+    <color name="md_grey_300">#e0e0e0</color>
+    <color name="md_grey_400">#bdbdbd</color>
+    <color name="md_grey_50">#fafafa</color>
+    <color name="md_grey_500">#9e9e9e</color>
+    <color name="md_grey_600">#757575</color>
+    <color name="md_grey_700">#616161</color>
+    <color name="md_grey_800">#424242</color>
+    <color name="md_grey_900">#212121</color>
+    <color name="md_indigo_100">#c5cae9</color>
+    <color name="md_indigo_200">#9fa8da</color>
+    <color name="md_indigo_300">#7986cb</color>
+    <color name="md_indigo_400">#5c6bc0</color>
+    <color name="md_indigo_50">#e8eaf6</color>
+    <color name="md_indigo_500">#3f51b5</color>
+    <color name="md_indigo_600">#3949ab</color>
+    <color name="md_indigo_700">#303f9f</color>
+    <color name="md_indigo_800">#283593</color>
+    <color name="md_indigo_900">#1a237e</color>
+    <color name="md_indigo_A100">#8c9eff</color>
+    <color name="md_indigo_A200">#536dfe</color>
+    <color name="md_indigo_A400">#3d5afe</color>
+    <color name="md_indigo_A700">#304ffe</color>
+    <color name="md_light_blue_100">#b3e5fc</color>
+    <color name="md_light_blue_200">#81d4fa</color>
+    <color name="md_light_blue_300">#4fc3f7</color>
+    <color name="md_light_blue_400">#29b6f6</color>
+    <color name="md_light_blue_50">#e1f5fe</color>
+    <color name="md_light_blue_500">#03a9f4</color>
+    <color name="md_light_blue_600">#039be5</color>
+    <color name="md_light_blue_700">#0288d1</color>
+    <color name="md_light_blue_800">#0277bd</color>
+    <color name="md_light_blue_900">#01579b</color>
+    <color name="md_light_blue_A100">#80d8ff</color>
+    <color name="md_light_blue_A200">#40c4ff</color>
+    <color name="md_light_blue_A400">#00b0ff</color>
+    <color name="md_light_blue_A700">#0091ea</color>
+    <color name="md_light_green_100">#dcedc8</color>
+    <color name="md_light_green_200">#c5e1a5</color>
+    <color name="md_light_green_300">#aed581</color>
+    <color name="md_light_green_400">#9ccc65</color>
+    <color name="md_light_green_50">#f1f8e9</color>
+    <color name="md_light_green_500">#8bc34a</color>
+    <color name="md_light_green_600">#7cb342</color>
+    <color name="md_light_green_700">#689f38</color>
+    <color name="md_light_green_800">#558b2f</color>
+    <color name="md_light_green_900">#33691e</color>
+    <color name="md_light_green_A100">#ccff90</color>
+    <color name="md_light_green_A200">#b2ff59</color>
+    <color name="md_light_green_A400">#76ff03</color>
+    <color name="md_light_green_A700">#64dd17</color>
+    <color name="md_lime_100">#f0f4c3</color>
+    <color name="md_lime_200">#e6ee9c</color>
+    <color name="md_lime_300">#dce775</color>
+    <color name="md_lime_400">#d4e157</color>
+    <color name="md_lime_50">#f9fbe7</color>
+    <color name="md_lime_500">#cddc39</color>
+    <color name="md_lime_600">#c0ca33</color>
+    <color name="md_lime_700">#afb42b</color>
+    <color name="md_lime_800">#9e9d24</color>
+    <color name="md_lime_900">#827717</color>
+    <color name="md_lime_A100">#f4ff81</color>
+    <color name="md_lime_A200">#eeff41</color>
+    <color name="md_lime_A400">#c6ff00</color>
+    <color name="md_lime_A700">#aeea00</color>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.5.2/res/values/values.xml -->
+    <eat-comment/>
     <color name="md_material_blue_600">#1E88E5</color>
     <color name="md_material_blue_800">#1565C0</color>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <eat-comment/>
+    <color name="md_orange_100">#ffe0b2</color>
+    <color name="md_orange_200">#ffcc80</color>
+    <color name="md_orange_300">#ffb74d</color>
+    <color name="md_orange_400">#ffa726</color>
+    <color name="md_orange_50">#fff3e0</color>
+    <color name="md_orange_500">#ff9800</color>
+    <color name="md_orange_600">#fb8c00</color>
+    <color name="md_orange_700">#f57c00</color>
+    <color name="md_orange_800">#ef6c00</color>
+    <color name="md_orange_900">#e65100</color>
+    <color name="md_orange_A100">#ffd180</color>
+    <color name="md_orange_A200">#ffab40</color>
+    <color name="md_orange_A400">#ff9100</color>
+    <color name="md_orange_A700">#ff6d00</color>
+    <color name="md_pink_100">#f8bbd0</color>
+    <color name="md_pink_200">#f48fb1</color>
+    <color name="md_pink_300">#f06292</color>
+    <color name="md_pink_400">#ec407a</color>
+    <color name="md_pink_50">#fce4ec</color>
+    <color name="md_pink_500">#e91e63</color>
+    <color name="md_pink_600">#d81b60</color>
+    <color name="md_pink_700">#c2185b</color>
+    <color name="md_pink_800">#ad1457</color>
+    <color name="md_pink_900">#880e4f</color>
+    <color name="md_pink_A100">#ff80ab</color>
+    <color name="md_pink_A200">#ff4081</color>
+    <color name="md_pink_A400">#f50057</color>
+    <color name="md_pink_A700">#c51162</color>
+    <color name="md_purple_100">#e1bee7</color>
+    <color name="md_purple_200">#ce93d8</color>
+    <color name="md_purple_300">#ba68c8</color>
+    <color name="md_purple_400">#ab47bc</color>
+    <color name="md_purple_50">#f3e5f5</color>
+    <color name="md_purple_500">#9c27b0</color>
+    <color name="md_purple_600">#8e24aa</color>
+    <color name="md_purple_700">#7b1fa2</color>
+    <color name="md_purple_800">#6a1b9a</color>
+    <color name="md_purple_900">#4a148c</color>
+    <color name="md_purple_A100">#ea80fc</color>
+    <color name="md_purple_A200">#e040fb</color>
+    <color name="md_purple_A400">#d500f9</color>
+    <color name="md_purple_A700">#aa00ff</color>
+    <color name="md_red_100">#f9bdbb</color>
+    <color name="md_red_200">#f69988</color>
+    <color name="md_red_300">#f36c60</color>
+    <color name="md_red_400">#e84e40</color>
+    <color name="md_red_50">#fde0dc</color>
+    <color name="md_red_500">#e51c23</color>
+    <color name="md_red_600">#dd191d</color>
+    <color name="md_red_700">#d01716</color>
+    <color name="md_red_800">#c41411</color>
+    <color name="md_red_900">#b0120a</color>
+    <color name="md_red_A100">#ff7997</color>
+    <color name="md_red_A200">#ff5177</color>
+    <color name="md_red_A400">#ff2d6f</color>
+    <color name="md_red_A700">#e00032</color>
+    <color name="md_teal_100">#b2dfdb</color>
+    <color name="md_teal_200">#80cbc4</color>
+    <color name="md_teal_300">#4db6ac</color>
+    <color name="md_teal_400">#26a69a</color>
+    <color name="md_teal_50">#e0f2f1</color>
+    <color name="md_teal_500">#009688</color>
+    <color name="md_teal_600">#00897b</color>
+    <color name="md_teal_700">#00796b</color>
+    <color name="md_teal_800">#00695c</color>
+    <color name="md_teal_900">#004d40</color>
+    <color name="md_teal_A100">#a7ffeb</color>
+    <color name="md_teal_A200">#64ffda</color>
+    <color name="md_teal_A400">#1de9b6</color>
+    <color name="md_teal_A700">#00bfa5</color>
+    <color name="md_white_1000">#ffffff</color>
+    <color name="md_yellow_100">#fff9c4</color>
+    <color name="md_yellow_200">#fff59d</color>
+    <color name="md_yellow_300">#fff176</color>
+    <color name="md_yellow_400">#ffee58</color>
+    <color name="md_yellow_50">#fffde7</color>
+    <color name="md_yellow_500">#ffeb3b</color>
+    <color name="md_yellow_600">#fdd835</color>
+    <color name="md_yellow_700">#fbc02d</color>
+    <color name="md_yellow_800">#f9a825</color>
+    <color name="md_yellow_900">#f57f17</color>
+    <color name="md_yellow_A100">#ffff8d</color>
+    <color name="md_yellow_A200">#ffff00</color>
+    <color name="md_yellow_A400">#ffea00</color>
+    <color name="md_yellow_A700">#ffd600</color>
+    <color name="primary">@color/colorPrimary</color>
     <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="primaryColor">#2196f3</color>
     <color name="primaryColorDark">#1976d2</color>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <eat-comment/>
+    <color name="primary_dark">@color/colorPrimaryDark</color>
     <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="primary_dark_material_dark">#ff000000</color>
     <color name="primary_dark_material_light">#ff757575</color>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <eat-comment/>
+    <color name="primary_light">@color/colorPrimaryLight</color>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="primary_material_dark">#ff212121</color>
     <color name="primary_material_light">#ffefefef</color>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <eat-comment/>
+    <color name="primary_text">#DE000000</color>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="primary_text_default_material_dark">#ffffffff</color>
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
     <color name="ripple_material_dark">#4dffffff</color>
     <color name="ripple_material_light">#1f000000</color>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <eat-comment/>
+    <color name="secondary_text">#8A000000</color>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
@@ -178,6 +510,9 @@
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <eat-comment/>
+    <color name="window_background">#F9F9F9</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
     <declare-styleable name="ActionBarLayout"><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ActionMenuItemView"><attr name="android:minWidth"/></declare-styleable>
@@ -188,6 +523,7 @@
     <declare-styleable name="AppBarLayout"><attr name="elevation"/><attr name="android:background"/></declare-styleable>
     <declare-styleable name="AppBarLayout_LayoutParams"><attr name="layout_scrollFlags"><flag name="scroll" value="0x1"/><flag name="exitUntilCollapsed" value="0x2"/><flag name="enterAlways" value="0x4"/><flag name="enterAlwaysCollapsed" value="0x8"/></attr><attr format="reference" name="layout_scrollInterpolator"/></declare-styleable>
     <declare-styleable name="AppCompatTextView"><attr format="reference|boolean" name="textAllCaps"/><attr name="android:textAppearance"/></declare-styleable>
+    <declare-styleable name="BezelImageView"><attr format="reference" name="biv_maskDrawable"/><attr format="color|reference" name="biv_selectorOnPress"/></declare-styleable>
     <declare-styleable name="CollapsingAppBarLayout_LayoutParams"><attr name="layout_collapseMode"><enum name="none" value="0"/><enum name="pin" value="1"/><enum name="parallax" value="2"/></attr><attr format="float" name="layout_collapseParallaxMultiplier"/></declare-styleable>
     <declare-styleable name="CollapsingToolbarLayout"><attr format="dimension" name="expandedTitleMargin"/><attr format="dimension" name="expandedTitleMarginStart"/><attr format="dimension" name="expandedTitleMarginTop"/><attr format="dimension" name="expandedTitleMarginEnd"/><attr format="dimension" name="expandedTitleMarginBottom"/><attr format="reference" name="expandedTitleTextAppearance"/><attr format="reference" name="collapsedTitleTextAppearance"/><attr format="color" name="contentScrim"/><attr format="color" name="statusBarScrim"/><attr format="reference" name="toolbarId"/></declare-styleable>
     <declare-styleable name="CoordinatorLayout"><attr format="reference" name="keylines"/><attr format="reference" name="statusBarBackground"/></declare-styleable>
@@ -195,10 +531,12 @@
     <declare-styleable name="DrawerArrowToggle"><attr format="color" name="color"/><attr format="boolean" name="spinBars"/><attr format="dimension" name="drawableSize"/><attr format="dimension" name="gapBetweenBars"/><attr format="dimension" name="topBottomBarArrowSize"/><attr format="dimension" name="middleBarArrowSize"/><attr format="dimension" name="barSize"/><attr format="dimension" name="thickness"/></declare-styleable>
     <declare-styleable name="FloatLabeledEditText"><attr format="reference" name="fletTextAppearance"/><attr format="reference|dimension" name="fletPadding"/><attr format="reference|dimension" name="fletPaddingLeft"/><attr format="reference|dimension" name="fletPaddingTop"/><attr format="reference|dimension" name="fletPaddingRight"/><attr format="reference|dimension" name="fletPaddingBottom"/><attr format="reference|color" name="fletBackground"/></declare-styleable>
     <declare-styleable name="FloatingActionButton"><attr name="android:background"/><attr name="backgroundTint"/><attr name="backgroundTintMode"/><attr format="color" name="rippleColor"/><attr name="fabSize"><enum name="normal" value="0"/><enum name="mini" value="1"/></attr><attr name="elevation"/><attr format="dimension" name="pressedTranslationZ"/><attr format="dimension" name="borderWidth"/></declare-styleable>
+    <declare-styleable name="IconicsImageView"><attr format="string" name="iiv_icon"/><attr format="color|reference" name="iiv_color"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat"><attr name="android:orientation"/><attr name="android:gravity"/><attr name="android:baselineAligned"/><attr name="android:baselineAlignedChildIndex"/><attr name="android:weightSum"/><attr format="boolean" name="measureWithLargestChild"/><attr name="divider"/><attr name="showDividers"><flag name="none" value="0"/><flag name="beginning" value="1"/><flag name="middle" value="2"/><flag name="end" value="4"/></attr><attr format="dimension" name="dividerPadding"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat_Layout"><attr name="android:layout_width"/><attr name="android:layout_height"/><attr name="android:layout_weight"/><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ListPopupWindow"><attr name="android:dropDownVerticalOffset"/><attr name="android:dropDownHorizontalOffset"/></declare-styleable>
     <declare-styleable name="MDRootLayout"><attr format="boolean" name="md_reduce_padding_no_title_no_buttons"/></declare-styleable>
+    <declare-styleable name="MaterialDrawer"><attr format="color|reference" name="material_drawer_window_background"/><attr format="color|reference" name="material_drawer_background"/><attr format="color|reference" name="material_drawer_icons"/><attr format="color|reference" name="material_drawer_primary_text"/><attr format="color|reference" name="material_drawer_primary_icon"/><attr format="color|reference" name="material_drawer_secondary_text"/><attr format="color|reference" name="material_drawer_hint_text"/><attr format="color|reference" name="material_drawer_divider"/><attr format="color|reference" name="material_drawer_selected"/><attr format="color|reference" name="material_drawer_selected_text"/><attr format="color|reference" name="material_drawer_header_selection_text"/></declare-styleable>
     <declare-styleable name="MenuGroup"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:checkableBehavior"/><attr name="android:visible"/><attr name="android:enabled"/></declare-styleable>
     <declare-styleable name="MenuItem"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:title"/><attr name="android:titleCondensed"/><attr name="android:icon"/><attr name="android:alphabeticShortcut"/><attr name="android:numericShortcut"/><attr name="android:checkable"/><attr name="android:checked"/><attr name="android:visible"/><attr name="android:enabled"/><attr name="android:onClick"/><attr name="showAsAction"><flag name="never" value="0"/><flag name="ifRoom" value="1"/><flag name="always" value="2"/><flag name="withText" value="4"/><flag name="collapseActionView" value="8"/></attr><attr format="reference" name="actionLayout"/><attr format="string" name="actionViewClass"/><attr format="string" name="actionProviderClass"/></declare-styleable>
     <declare-styleable name="MenuView"><attr name="android:itemTextAppearance"/><attr name="android:horizontalDivider"/><attr name="android:verticalDivider"/><attr name="android:headerBackground"/><attr name="android:itemBackground"/><attr name="android:windowAnimationStyle"/><attr name="android:itemIconDisabledAlpha"/><attr format="boolean" name="preserveIconSpacing"/></declare-styleable>
@@ -207,6 +545,7 @@
     <declare-styleable name="PopupWindowBackgroundState"><attr format="boolean" name="state_above_anchor"/></declare-styleable>
     <declare-styleable name="RecyclerView"><attr format="string" name="layoutManager"/><attr name="android:orientation"/><attr format="integer" name="spanCount"/><attr format="boolean" name="reverseLayout"/><attr format="boolean" name="stackFromEnd"/></declare-styleable>
     <declare-styleable name="ScrimInsetsFrameLayout"><attr format="color|reference" name="insetForeground"/></declare-styleable>
+    <declare-styleable name="ScrimInsetsView"><attr format="reference|color" name="siv_insetForeground"/></declare-styleable>
     <declare-styleable name="ScrollingViewBehavior_Params"><attr format="dimension" name="behavior_overlapTop"/></declare-styleable>
     <declare-styleable name="SearchView"><attr format="reference" name="layout"/><attr format="boolean" name="iconifiedByDefault"/><attr name="android:maxWidth"/><attr format="string" name="queryHint"/><attr format="string" name="defaultQueryHint"/><attr name="android:imeOptions"/><attr name="android:inputType"/><attr format="reference" name="closeIcon"/><attr format="reference" name="goIcon"/><attr format="reference" name="searchIcon"/><attr format="reference" name="searchHintIcon"/><attr format="reference" name="voiceIcon"/><attr format="reference" name="commitIcon"/><attr format="reference" name="suggestionRowLayout"/><attr format="reference" name="queryBackground"/><attr format="reference" name="submitBackground"/><attr name="android:focusable"/></declare-styleable>
     <declare-styleable name="SmoothProgressBar"><attr format="reference" name="spbStyle"/><attr format="color" name="spb_color"/><attr format="dimension" name="spb_stroke_width"/><attr format="dimension" name="spb_stroke_separator_length"/><attr format="integer" name="spb_sections_count"/><attr format="float" name="spb_speed"/><attr format="float" name="spb_progressiveStart_speed"/><attr format="float" name="spb_progressiveStop_speed"/><attr format="enum" name="spb_interpolator"><enum name="spb_interpolator_accelerate" value="0"/><enum name="spb_interpolator_linear" value="1"/><enum name="spb_interpolator_acceleratedecelerate" value="2"/><enum name="spb_interpolator_decelerate" value="3"/></attr><attr format="boolean" name="spb_reversed"/><attr format="boolean" name="spb_mirror_mode"/><attr format="reference" name="spb_colors"/><attr format="boolean" name="spb_progressiveStart_activated"/><attr format="reference" name="spb_background"/><attr format="boolean" name="spb_generate_background_with_colors"/><attr format="boolean" name="spb_gradients"/></declare-styleable>
@@ -220,6 +559,8 @@
     <declare-styleable name="Toolbar"><attr format="reference" name="titleTextAppearance"/><attr format="reference" name="subtitleTextAppearance"/><attr name="title"/><attr name="subtitle"/><attr name="android:gravity"/><attr format="dimension" name="titleMargins"/><attr format="dimension" name="titleMarginStart"/><attr format="dimension" name="titleMarginEnd"/><attr format="dimension" name="titleMarginTop"/><attr format="dimension" name="titleMarginBottom"/><attr name="contentInsetStart"/><attr name="contentInsetEnd"/><attr name="contentInsetLeft"/><attr name="contentInsetRight"/><attr format="dimension" name="maxButtonHeight"/><attr format="reference" name="collapseIcon"/><attr format="string" name="collapseContentDescription"/><attr name="popupTheme"/><attr format="reference" name="navigationIcon"/><attr format="string" name="navigationContentDescription"/><attr name="android:minHeight"/></declare-styleable>
     <declare-styleable name="View"><attr format="dimension" name="paddingStart"/><attr format="dimension" name="paddingEnd"/><attr name="android:focusable"/><attr format="reference" name="theme"/><attr name="android:theme"/><attr format="color" name="backgroundTint"/><attr name="backgroundTintMode"><enum name="src_over" value="3"/><enum name="src_in" value="5"/><enum name="src_atop" value="9"/><enum name="multiply" value="14"/><enum name="screen" value="15"/></attr></declare-styleable>
     <declare-styleable name="ViewStubCompat"><attr name="android:layout"/><attr name="android:inflatedId"/><attr name="android:id"/></declare-styleable>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <eat-comment/>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
     <dimen name="abc_action_bar_default_padding_material">4dp</dimen>
@@ -315,6 +656,44 @@
     <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <eat-comment/>
+    <dimen name="material_drawer_account_header_compact">56dp</dimen>
+    <dimen name="material_drawer_account_header_dropdown">22dp</dimen>
+    <dimen name="material_drawer_account_header_dropdown_margin_bottom">14dp</dimen>
+    <dimen name="material_drawer_account_header_height">148dp</dimen>
+    <dimen name="material_drawer_account_header_height_compact">72dp</dimen>
+    <dimen name="material_drawer_account_header_horizontal_bottom">4dp</dimen>
+    <dimen name="material_drawer_account_header_horizontal_top">16dp</dimen>
+    <dimen name="material_drawer_account_header_secondary">40dp</dimen>
+    <dimen name="material_drawer_account_header_selected">64dp</dimen>
+    <dimen name="material_drawer_account_header_text">14sp</dimen>
+    <dimen name="material_drawer_item_padding">8dp</dimen>
+    <dimen name="material_drawer_item_primary">48dp</dimen>
+    <dimen name="material_drawer_item_primary_description">14sp</dimen>
+    <dimen name="material_drawer_item_primary_icon_margin_right">32dp</dimen>
+    <dimen name="material_drawer_item_primary_icon_padding">12dp</dimen>
+    <dimen name="material_drawer_item_primary_text">14sp</dimen>
+    <dimen name="material_drawer_item_primary_width">24dp</dimen>
+    <dimen name="material_drawer_item_profile">72dp</dimen>
+    <dimen name="material_drawer_item_profile_description">14sp</dimen>
+    <dimen name="material_drawer_item_profile_icon">40dp</dimen>
+    <dimen name="material_drawer_item_profile_icon_padding">16dp</dimen>
+    <dimen name="material_drawer_item_profile_icon_padding_right">8dp</dimen>
+    <dimen name="material_drawer_item_profile_setting_icon">24dp</dimen>
+    <dimen name="material_drawer_item_profile_setting_icon_padding">24dp</dimen>
+    <dimen name="material_drawer_item_profile_setting_icon_padding_right">32dp</dimen>
+    <dimen name="material_drawer_item_profile_text">14sp</dimen>
+    <dimen name="material_drawer_item_secondary">42dp</dimen>
+    <dimen name="material_drawer_item_secondary_icon">24dp</dimen>
+    <dimen name="material_drawer_item_secondary_icon_margin_right">32dp</dimen>
+    <dimen name="material_drawer_item_secondary_icon_padding">12dp</dimen>
+    <dimen name="material_drawer_item_secondary_text">14sp</dimen>
+    <dimen name="material_drawer_item_section_text">14sp</dimen>
+    <dimen name="material_drawer_margin">0dp</dimen>
+    <dimen name="material_drawer_padding">8dp</dimen>
+    <dimen name="material_drawer_vertical_padding">16dp</dimen>
+    <dimen name="material_drawer_width">320dp</dimen>
     <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.5.2/res/values/values.xml -->
     <eat-comment/>
     <dimen name="md_action_corner_radius">2dp</dimen>
@@ -386,6 +765,9 @@
     <eat-comment/>
     <dimen name="tab_max_width">264dp</dimen>
     <dimen name="tab_min_width">72dp</dimen>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <eat-comment/>
+    <dimen name="tool_bar_top_padding">0dp</dimen>
     <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
@@ -393,15 +775,29 @@
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <eat-comment/>
+    <item name="animation" type="id"/>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <eat-comment/>
     <item name="home" type="id"/>
     <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <item name="item_touch_helper_previous_elevation" type="id"/>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <eat-comment/>
+    <item name="profile_header" type="id"/>
     <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
     <item name="split_action_bar" type="id"/>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <eat-comment/>
+    <item name="sticky_footer" type="id"/>
+    <item name="sticky_header" type="id"/>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <eat-comment/>
     <item name="up" type="id"/>
     <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
@@ -452,6 +848,12 @@
     <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/iconics/1.1.0/res/values/values.xml -->
+    <eat-comment/>
+    <string name="define_AndroidIconics">year;owner</string>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <eat-comment/>
+    <string name="define_materialdrawer">year;owner</string>
     <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.hannesdorfmann.smoothprogressbar/library/1.0.0/res/values/values.xml -->
     <eat-comment/>
     <string name="define_smoothprogressbar"/>
@@ -471,6 +873,42 @@
     <eat-comment/>
     <string name="hello_world">Hello world!</string>
     <string name="klijent">Klijent</string>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/iconics/1.1.0/res/values/values.xml -->
+    <eat-comment/>
+    <string name="library_AndroidIconics_author">Mike Penz</string>
+    <string name="library_AndroidIconics_authorWebsite">http://mikepenz.com/</string>
+    <string name="library_AndroidIconics_isOpenSource">true</string>
+    <string name="library_AndroidIconics_libraryDescription">
+        <![CDATA[
+        <b>Android-Iconics</b> will blow your mind :D
+        <br /><br />
+        Android-Iconics is a library to use (almost) any alternative icon-font in your projects. It allows you to add any Android-Iconics compatible typeface-library-addon to your project and you are able to start using that font.
+        ]]>
+    </string>
+    <string name="library_AndroidIconics_libraryName">Android-Iconics</string>
+    <string name="library_AndroidIconics_libraryVersion">1.1.0</string>
+    <string name="library_AndroidIconics_libraryWebsite">https://github.com/mikepenz/Android-Iconics</string>
+    <string name="library_AndroidIconics_licenseId">apache_2_0</string>
+    <string name="library_AndroidIconics_owner">Mike Penz</string>
+    <string name="library_AndroidIconics_repositoryLink">https://github.com/mikepenz/Android-Iconics</string>
+    <string name="library_AndroidIconics_year">2014</string>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <eat-comment/>
+    <string name="library_materialdrawer_author">Mike Penz</string>
+    <string name="library_materialdrawer_authorWebsite">http://mikepenz.com/</string>
+    <string name="library_materialdrawer_isOpenSource">true</string>
+    <string name="library_materialdrawer_libraryDescription">
+        <![CDATA[
+        The <b>MaterialDrawer</b> library aims to provide the easiest possible implementation of a navigation drawer for your application.
+        ]]>
+    </string>
+    <string name="library_materialdrawer_libraryName">MaterialDrawer</string>
+    <string name="library_materialdrawer_libraryVersion">3.0.8</string>
+    <string name="library_materialdrawer_libraryWebsite">https://github.com/mikepenz/MaterialDrawer</string>
+    <string name="library_materialdrawer_licenseId">apache_2_0</string>
+    <string name="library_materialdrawer_owner">Mike Penz</string>
+    <string name="library_materialdrawer_repositoryLink">https://github.com/mikepenz/MaterialDrawer</string>
+    <string name="library_materialdrawer_year">2015</string>
     <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.hannesdorfmann.smoothprogressbar/library/1.0.0/res/values/values.xml -->
     <eat-comment/>
     <string name="library_smoothprogressbar_author">Antoine Merle</string>
@@ -503,9 +941,9 @@
     <string name="title_activity_izmena_narudzbine">IzmenaNarudzbineActivity</string>
     <string name="title_activity_login">Login</string>
     <string name="title_activity_nova_narudzbina">Meni</string>
-    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_settings">IP address</string>
     <string name="title_activity_splash">SplashActivity</string>
-    <string name="title_activity_stavke_narudzbine">Nova narudzbina</string>
+    <string name="title_activity_stavke_narudzbine">Posalji narudzbinu</string>
     <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
@@ -1509,6 +1947,117 @@
         <item name="android:windowEnterAnimation">@anim/popup_enter</item>
         <item name="android:windowExitAnimation">@anim/popup_exit</item>
     </style>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <eat-comment/>
+    <style name="MaterialDrawer.DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">false</item>
+        <item name="color">@android:color/white</item>
+    </style>
+    <style name="MaterialDrawer.Light.DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">false</item>
+        <item name="color">@android:color/black</item>
+    </style>
+    <style name="MaterialDrawerBaseBaseTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Here we setting appcompat’s actionBarStyle -->
+        <item name="drawerArrowStyle">@style/MaterialDrawer.DrawerArrowStyle</item>
+
+        <!-- ...and here we setting appcompat’s color theming attrs -->
+        <item name="colorPrimary">@color/material_drawer_primary</item>
+        <item name="colorPrimaryDark">@color/material_drawer_primary_dark</item>
+        <item name="colorAccent">@color/material_drawer_accent</item>
+
+        <!-- MaterialDrawer specific values -->
+        <item name="material_drawer_background">@color/material_drawer_dark_background</item>
+        <item name="material_drawer_icons">@color/material_drawer_dark_icons</item>
+        <item name="material_drawer_primary_text">@color/material_drawer_dark_primary_text</item>
+        <item name="material_drawer_primary_icon">@color/material_drawer_dark_primary_icon</item>
+        <item name="material_drawer_secondary_text">@color/material_drawer_dark_secondary_text
+        </item>
+        <item name="material_drawer_hint_text">@color/material_drawer_dark_hint_text</item>
+        <item name="material_drawer_divider">@color/material_drawer_dark_divider</item>
+        <item name="material_drawer_selected">@color/material_drawer_dark_selected</item>
+        <item name="material_drawer_selected_text">@color/material_drawer_dark_selected_text</item>
+        <item name="material_drawer_header_selection_text">
+            @color/material_drawer_header_selection_text
+        </item>
+    </style>
+    <style name="MaterialDrawerBaseBaseTheme.Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Here we setting appcompat’s actionBarStyle -->
+        <item name="drawerArrowStyle">@style/MaterialDrawer.Light.DrawerArrowStyle</item>
+
+        <!-- ...and here we setting appcompat’s color theming attrs -->
+        <item name="colorPrimary">@color/material_drawer_primary</item>
+        <item name="colorPrimaryDark">@color/material_drawer_primary_dark</item>
+        <item name="colorAccent">@color/material_drawer_accent</item>
+
+        <!-- MaterialDrawer specific values -->
+        <item name="material_drawer_background">@color/material_drawer_background</item>
+        <item name="material_drawer_icons">@color/material_drawer_icons</item>
+        <item name="material_drawer_primary_text">@color/material_drawer_primary_text</item>
+        <item name="material_drawer_primary_icon">@color/material_drawer_primary_icon</item>
+        <item name="material_drawer_secondary_text">@color/material_drawer_secondary_text</item>
+        <item name="material_drawer_hint_text">@color/material_drawer_hint_text</item>
+        <item name="material_drawer_divider">@color/material_drawer_divider</item>
+        <item name="material_drawer_selected">@color/material_drawer_selected</item>
+        <item name="material_drawer_selected_text">@color/material_drawer_selected_text</item>
+        <item name="material_drawer_header_selection_text">
+            @color/material_drawer_header_selection_text
+        </item>
+    </style>
+    <style name="MaterialDrawerBaseBaseTheme.Light.DarkToolbar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- Here we setting appcompat’s actionBarStyle -->
+        <item name="drawerArrowStyle">@style/MaterialDrawer.DrawerArrowStyle</item>
+
+
+        <!-- ...and here we setting appcompat’s color theming attrs -->
+        <item name="colorPrimary">@color/material_drawer_primary</item>
+        <item name="colorPrimaryDark">@color/material_drawer_primary_dark</item>
+        <item name="colorAccent">@color/material_drawer_accent</item>
+
+        <!-- MaterialDrawer specific values -->
+        <item name="material_drawer_background">@color/material_drawer_background</item>
+        <item name="material_drawer_icons">@color/material_drawer_icons</item>
+        <item name="material_drawer_primary_text">@color/material_drawer_primary_text</item>
+        <item name="material_drawer_primary_icon">@color/material_drawer_primary_icon</item>
+        <item name="material_drawer_secondary_text">@color/material_drawer_secondary_text</item>
+        <item name="material_drawer_hint_text">@color/material_drawer_hint_text</item>
+        <item name="material_drawer_divider">@color/material_drawer_divider</item>
+        <item name="material_drawer_selected">@color/material_drawer_selected</item>
+        <item name="material_drawer_selected_text">@color/material_drawer_selected_text</item>
+        <item name="material_drawer_header_selection_text">
+            @color/material_drawer_header_selection_text
+        </item>
+    </style>
+    <style name="MaterialDrawerBaseTheme" parent="MaterialDrawerBaseBaseTheme"/>
+    <style name="MaterialDrawerBaseTheme.Light" parent="MaterialDrawerBaseBaseTheme.Light"/>
+    <style name="MaterialDrawerBaseTheme.Light.DarkToolbar" parent="MaterialDrawerBaseBaseTheme.Light.DarkToolbar"/>
+    <style name="MaterialDrawerTheme" parent="MaterialDrawerBaseTheme"/>
+    <style name="MaterialDrawerTheme.ActionBar" parent="MaterialDrawerTheme">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+    </style>
+    <style name="MaterialDrawerTheme.ActionBar.TranslucentStatus" parent="MaterialDrawerTheme.ActionBar"/>
+    <style name="MaterialDrawerTheme.Light" parent="MaterialDrawerBaseTheme.Light"/>
+    <style name="MaterialDrawerTheme.Light.ActionBar" parent="MaterialDrawerTheme.Light">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+    </style>
+    <style name="MaterialDrawerTheme.Light.ActionBar.TranslucentStatus" parent="MaterialDrawerTheme.Light.ActionBar"/>
+    <style name="MaterialDrawerTheme.Light.DarkToolbar" parent="MaterialDrawerBaseTheme.Light.DarkToolbar"/>
+    <style name="MaterialDrawerTheme.Light.DarkToolbar.ActionBar" parent="MaterialDrawerTheme.Light.DarkToolbar">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+
+        <!-- only set this if we use an ActionBar -->
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark</item>
+    </style>
+    <style name="MaterialDrawerTheme.Light.DarkToolbar.ActionBar.TranslucentStatus" parent="MaterialDrawerTheme.Light.DarkToolbar"/>
+    <style name="MaterialDrawerTheme.Light.DarkToolbar.TranslucentStatus" parent="MaterialDrawerTheme.Light.DarkToolbar"/>
+    <style name="MaterialDrawerTheme.Light.TranslucentStatus" parent="MaterialDrawerTheme.Light"/>
+    <style name="MaterialDrawerTheme.TranslucentStatus" parent="MaterialDrawerTheme"/>
     <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme">

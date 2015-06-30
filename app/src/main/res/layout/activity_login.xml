@@ -26,7 +26,10 @@
     <com.wrapp.floatlabelededittext.FloatLabeledEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2">
+        android:id="@+id/editText2"
+        android:layout_above="@+id/editText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
         <EditText
             android:id="@+id/etUserName"
@@ -42,7 +45,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText"
-        android:layout_below="@+id/editText2">
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
         <EditText
             android:id="@+id/etPassword"
             android:layout_width="fill_parent"
@@ -53,5 +58,30 @@
             android:layout_alignParentStart="true" />
     </com.wrapp.floatlabelededittext.FloatLabeledEditText>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/layout_restoran_klijent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/restoran"
+        android:textColor="@color/primaryColor"
+        android:textSize="40dp"
+        android:layout_gravity="center"
+        android:id="@+id/textView2"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/klijent"
+        android:textSize="25dp"
+        android:layout_gravity="center"
+        android:textColor="@color/primaryColor"
+        android:id="@+id/textView3" />
+    </LinearLayout>
 
 </RelativeLayout>

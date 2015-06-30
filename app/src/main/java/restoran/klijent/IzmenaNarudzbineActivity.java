@@ -16,6 +16,13 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.activity.R;
+import com.mikepenz.iconics.typeface.FontAwesome;
+import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.DrawerBuilder;
+import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
+import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
+import com.mikepenz.materialdrawer.model.SectionDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 
 import java.io.IOException;
@@ -40,6 +47,9 @@ public class IzmenaNarudzbineActivity extends AppCompatActivity {
     ArrayList<StavkaNarudzbine> lista;
     ArrayAdapter<StavkaNarudzbine> listAdapter;
     public static List<StavkaNarudzbine> listaStavkiNarudzbine = new ArrayList<StavkaNarudzbine>();
+    private String mActivityTitle;
+
+    private Drawer result = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +72,50 @@ public class IzmenaNarudzbineActivity extends AppCompatActivity {
         listaStavki.setAdapter(listAdapter);
         spinner.setSelection(narudzbina.getBrojStola() - 1);
         postaviFloatButton();
+        mActivityTitle = getTitle().toString();
         izmena=false;
+
+        result = new DrawerBuilder()
+                .withActivity(this)
+                .withTranslucentStatusBar(false)
+                .withActionBarDrawerToggle(false)
+                .addDrawerItems(
+                        new PrimaryDrawerItem().withName("Nova narudzbina").withIcon(FontAwesome.Icon.faw_plus_circle),
+                        new PrimaryDrawerItem().withName("Lista narudzbina").withIcon(FontAwesome.Icon.faw_list),
+                        new SectionDrawerItem().withName("Settings"),
+                        new SecondaryDrawerItem().withName("IP address").withIcon(FontAwesome.Icon.faw_cog),
+                        new SecondaryDrawerItem().withName("Logout").withIcon(FontAwesome.Icon.faw_user)
+                )
+                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                    @Override
+                    public boolean onItemClick(AdapterView<?> parent, View view, int position, long id, IDrawerItem drawerItem) {
+                        if (drawerItem != null) {
+                            Intent intent = null;
+                            switch (position) {
+                                case 0:
+                                    intent = new Intent(IzmenaNarudzbineActivity.this, ListaProizvodaActivity.class);
+                                    break;
+                                case 1:
+                                    intent = new Intent(IzmenaNarudzbineActivity.this, ListaNarudzbinaActivity.class);
+                                    break;
+                                case 3:
+                                    intent = new Intent(IzmenaNarudzbineActivity.this, SettingsActivity.class);
+                                    break;
+                                case 4:
+                                    intent = new Intent(IzmenaNarudzbineActivity.this, LoginActivity.class);
+                                    break;
+
+                            }
+                            startActivity(intent);
+                        }
+
+                        return false;
+                    }
+                }).build();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(false);
+
     }
 
     private void postaviFloatButton() {
@@ -121,6 +174,18 @@ public class IzmenaNarudzbineActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        if  (id == android.R.id.home){
+            if (result.isDrawerOpen()){
+                result.closeDrawer();
+                getSupportActionBar().setTitle(mActivityTitle);
+            }else {
+                result.openDrawer();
+
+                getSupportActionBar().setTitle("Navigacija");
+            }
+
+            return true;
+        }
         if (id == R.id.action_settings) {
 
 //            SacuvajNarudzbinuTask task = new SacuvajNarudzbinuTask();
@@ -132,6 +197,15 @@ public class IzmenaNarudzbineActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onBackPressed() {
+        //handle the back press :D close the drawer first and if the drawer is closed close the activity
+        if (result != null && result.isDrawerOpen()) {
+            result.closeDrawer();
+        } else {
+            super.onBackPressed();
+        }
+    }
     private class IzmeniNarudzbinuTask extends AsyncTask<Void, Void, Void> {
         int ukupanIznosNarudzbine = 0;
 

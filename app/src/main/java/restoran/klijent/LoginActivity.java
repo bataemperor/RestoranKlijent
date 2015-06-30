@@ -17,12 +17,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.example.activity.R;
+import com.mikepenz.iconics.typeface.FontAwesome;
+import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.DrawerBuilder;
+import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
+import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
+import com.mikepenz.materialdrawer.model.SectionDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -31,6 +42,10 @@ public class LoginActivity extends AppCompatActivity {
     public static final String PREFS_LOGIN = "Provera logina";
     public static final String PREFS_IP_ADDRESS = "IP adresa";
     SharedPreferences sharedPreferences;
+    private String mActivityTitle;
+
+    private Drawer result = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +56,56 @@ public class LoginActivity extends AppCompatActivity {
         etPassword = (EditText) findViewById(R.id.etPassword);
         ipAddressSet();
         loginShared();
+        mActivityTitle = getTitle().toString();
 
+        result = new DrawerBuilder()
+                .withActivity(this)
+                .withTranslucentStatusBar(false)
+                .withActionBarDrawerToggle(false)
+                .addDrawerItems(
+                        new PrimaryDrawerItem().withName("Nova narudzbina").withIcon(FontAwesome.Icon.faw_plus_circle).setEnabled(false),
+                        new PrimaryDrawerItem().withName("Lista narudzbina").withIcon(FontAwesome.Icon.faw_list).setEnabled(false),
+                        new SectionDrawerItem().withName("Settings"),
+                        new SecondaryDrawerItem().withName("IP address").withIcon(FontAwesome.Icon.faw_cog),
+                        new SecondaryDrawerItem().withName("Logout").withIcon(FontAwesome.Icon.faw_user).setEnabled(false)
+                )
+                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                    @Override
+                    public boolean onItemClick(AdapterView<?> parent, View view, int position, long id, IDrawerItem drawerItem) {
+                        if (drawerItem != null) {
+                            Intent intent = null;
+                            switch (position) {
+                                case 0:
+                                    intent = new Intent(LoginActivity.this, ListaProizvodaActivity.class);
+                                    break;
+                                case 1:
+                                    intent = new Intent(LoginActivity.this, ListaNarudzbinaActivity.class);
+                                    break;
+                                case 3:
+                                    intent = new Intent(LoginActivity.this, SettingsActivity.class);
+                                    break;
+                                case 4:
+                                    intent = new Intent(LoginActivity.this, LoginActivity.class);
+                                    break;
+
+                            }
+                            startActivity(intent);
+                        }
+
+                        return false;
+                    }
+                }).withSelectedItem(3).build();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(false);
+
+        animation();
     }
+
+    private void animation() {
+        YoYo.with(Techniques.FadeInDown).duration(3000).playOn(findViewById(R.id.layout_restoran_klijent));
+    }
+
 
     private void ipAddressSet() {
         sharedPreferences = getSharedPreferences(PREFS_IP_ADDRESS,MODE_PRIVATE);
@@ -65,24 +128,38 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.login, menu);
-        return true;
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        if  (id == android.R.id.home){
+            if (result.isDrawerOpen()){
+                result.closeDrawer();
+                getSupportActionBar().setTitle(mActivityTitle);
+            }else {
+                result.openDrawer();
+                getSupportActionBar().setTitle("Navigacija");
+            }
+
+            return true;
+        }
         if (id == R.id.action_settings) {
             Intent intent = new Intent(this,SettingsActivity.class);
             startActivity(intent);
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        //handle the back press :D close the drawer first and if the drawer is closed close the activity
+        if (result != null && result.isDrawerOpen()) {
+            result.closeDrawer();
+        } else {
+            super.onBackPressed();
+        }
     }
 
     public void provera(View view) {

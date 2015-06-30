@@ -10,6 +10,10 @@
     <dimen name="abc_config_prefDialogWidth">580dp</dimen>
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values-sw600dp/values-sw600dp.xml -->
+    <eat-comment/>
+    <dimen name="material_drawer_vertical_padding">24dp</dimen>
+    <dimen name="material_drawer_width">400dp</dimen>
     <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values-sw600dp/values-sw600dp.xml -->
     <eat-comment/>
     <dimen name="snackbar_action_inline_max_width">0dp</dimen>

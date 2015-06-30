@@ -24,7 +24,7 @@
         <activity
             android:name="restoran.klijent.LoginActivity"
             android:label="@string/title_activity_login"
-            android:windowSoftInputMode="adjustResize|stateHidden" >
+            android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
             android:name="restoran.klijent.ListaNarudzbinaActivity"

@@ -7,7 +7,7 @@
     <string name="title_activity_login">Login</string>
     <string name="title_activity_first">Lista narudzbina</string>
     <string name="title_activity_nova_narudzbina">Meni</string>
-    <string name="title_activity_stavke_narudzbine">Nova narudzbina</string>
+    <string name="title_activity_stavke_narudzbine">Posalji narudzbinu</string>
     <string name="dialog_title_login">Login</string>
     <string name="dialog_tekst_login">Molimo sacekajte...</string>
     <string-array name="brojeviStolova">
@@ -29,7 +29,7 @@
 
     <string name="restoran">Restoran</string>
     <string name="klijent">Klijent</string>
-    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_settings">IP address</string>
     <string name="title_activity_izmena_narudzbine">IzmenaNarudzbineActivity</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="drawer_open">Open navigation drawer</string>
