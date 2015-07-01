@@ -1,5 +1,6 @@
 package restoran.klijent.utility;
 
+
 import android.content.Context;
 import android.graphics.Color;
 import android.support.design.widget.Snackbar;
@@ -7,6 +8,11 @@ import android.view.View;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.example.activity.R;
+
+import java.text.SimpleDateFormat;
+
+import domen.Narudzbina;
+import domen.StavkaNarudzbine;
 
 /**
  * Created by bataemperor on 10.6.15..
@@ -41,13 +47,15 @@ public class Utility {
         snackbar.show();
     }
 
-    //DIALOG
+    // PROGRESS DIALOG
 
     public static MaterialDialog getProgressDialogMaterial(Context context) {
         md = new MaterialDialog.Builder(context)
                 .title(R.string.dialog_title_login)
                 .content(R.string.dialog_tekst_login)
                 .progress(true, 0).show();
+
+
         return md;
     }
 
@@ -56,6 +64,30 @@ public class Utility {
             md.setCancelable(false);
             md.dismiss();
         }
+    }
+
+    // NARUDZBINA DIALOG
+    public static MaterialDialog getDialogNarudzbina(Context context, Narudzbina nar){
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+        StringBuilder stringBuilderStavke = new StringBuilder();
+
+        md = new MaterialDialog.Builder(context)
+                .title("Broj stola : " + nar.getBrojStola())
+                .content(stringBuilderStavke + "\nUkupan iznos : " + nar.getUkupanIznos() + "\nVreme : " + sdf.format(nar.getDatumNarudzbine()))
+                .positiveText("Naplati")
+                .negativeText("Izmeni")
+                .neutralText("Obrisi")
+                .show();
+        for(StavkaNarudzbine stavka : nar.getListaStavki()){
+            stringBuilderStavke.append(stavka.getProizvod().getNazivProizvoda()+" : "+stavka.getKolicina()+"\n");
+        }
+        StringBuilder linija = new StringBuilder();
+        String s = "Ukupan iznos : " + nar.getUkupanIznos();
+        for (int i=2;i<s.length();i++){
+            linija.append("--");
+        }
+        md.setContent(stringBuilderStavke + linija.toString() + "\nUkupan iznos : " + nar.getUkupanIznos() + "\nVreme : " + sdf.format(nar.getDatumNarudzbine()));
+        return md;
     }
 
 }

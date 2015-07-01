@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="brojeviStolova">
         <item>1</item>
@@ -17,12 +17,12 @@
         <item>Lista narudzbina</item>
         <item>Log out</item>
     </string-array>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.5.2/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.5.2/res/values/values.xml -->
     <eat-comment/>
     <attr format="color" name="md_background_color"/>
     <attr format="reference" name="md_btn_negative_selector"/>
@@ -70,7 +70,7 @@
         <enum name="end" value="2"/>
     </attr>
     <attr format="color" name="md_widget_color"/>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <attr format="string" name="title"/>
     <bool name="abc_action_bar_embed_tabs">true</bool>
@@ -80,24 +80,24 @@
     <bool name="abc_config_allowActionMenuItemTextWithIcon">false</bool>
     <bool name="abc_config_closeDialogWhenTouchOutside">true</bool>
     <bool name="abc_config_showMenuShortcutsWhenKeyboardPresent">false</bool>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.hannesdorfmann.smoothprogressbar/library/1.0.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.hannesdorfmann.smoothprogressbar/library/1.0.0/res/values/values.xml -->
     <eat-comment/>
     <bool name="spb_default_mirror_mode">false</bool>
     <bool name="spb_default_progressiveStart_activated">false</bool>
     <bool name="spb_default_reversed">false</bool>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="abc_input_method_navigation_guard">@android:color/black</color>
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
     <color name="abc_search_url_text_selected">@android:color/black</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
     <eat-comment/>
     <color name="accent">@color/colorAccent</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="accentColor">#2196f3</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
@@ -113,40 +113,40 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
     <eat-comment/>
     <color name="colorAccent">#FF4081</color>
     <color name="colorPrimary">#2196F3</color>
     <color name="colorPrimaryDark">#1976D2</color>
     <color name="colorPrimaryLight">#BBDEFB</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
     <eat-comment/>
     <color name="divider">#1F000000</color>
     <color name="drawer_background">#F9F9F9</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="error_color">#FFDD2C00</color>
     <color name="fab_stroke_end_inner_color">#0A000000</color>
     <color name="fab_stroke_end_outer_color">#0F000000</color>
     <color name="fab_stroke_top_inner_color">#1AFFFFFF</color>
     <color name="fab_stroke_top_outer_color">#2EFFFFFF</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
     <eat-comment/>
     <color name="hint_text">#42000000</color>
     <color name="icons">#FFF</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="link_text_material_dark">@color/material_deep_teal_200</color>
     <color name="link_text_material_light">@color/material_deep_teal_500</color>
@@ -155,7 +155,7 @@
     <color name="material_blue_grey_950">#ff21272b</color>
     <color name="material_deep_teal_200">#ff80cbc4</color>
     <color name="material_deep_teal_500">#ff009688</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
     <eat-comment/>
     <color name="material_drawer_accent">@color/accent</color>
     <color name="material_drawer_background">@color/drawer_background</color>
@@ -230,11 +230,11 @@
     <color name="md_brown_700">#5d4037</color>
     <color name="md_brown_800">#4e342e</color>
     <color name="md_brown_900">#3e2723</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.5.2/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.5.2/res/values/values.xml -->
     <eat-comment/>
     <color name="md_btn_selected">#33969696</color>
     <color name="md_btn_selected_dark">#40CBCBCB</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
     <eat-comment/>
     <color name="md_cyan_100">#b2ebf2</color>
     <color name="md_cyan_200">#80deea</color>
@@ -278,12 +278,12 @@
     <color name="md_deep_purple_A200">#7c4dff</color>
     <color name="md_deep_purple_A400">#651fff</color>
     <color name="md_deep_purple_A700">#6200ea</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.5.2/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.5.2/res/values/values.xml -->
     <eat-comment/>
     <color name="md_divider_black">#10000000</color>
     <color name="md_divider_white">#10FFFFFF</color>
     <color name="md_edittext_error">#DD2C00</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
     <eat-comment/>
     <color name="md_green_100">#a3e9a4</color>
     <color name="md_green_200">#72d572</color>
@@ -365,11 +365,11 @@
     <color name="md_lime_A200">#eeff41</color>
     <color name="md_lime_A400">#c6ff00</color>
     <color name="md_lime_A700">#aeea00</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.5.2/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.5.2/res/values/values.xml -->
     <eat-comment/>
     <color name="md_material_blue_600">#1E88E5</color>
     <color name="md_material_blue_800">#1565C0</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
     <eat-comment/>
     <color name="md_orange_100">#ffe0b2</color>
     <color name="md_orange_200">#ffcc80</color>
@@ -457,28 +457,28 @@
     <color name="md_yellow_A400">#ffea00</color>
     <color name="md_yellow_A700">#ffd600</color>
     <color name="primary">@color/colorPrimary</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="primaryColor">#2196f3</color>
     <color name="primaryColorDark">#1976d2</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
     <eat-comment/>
     <color name="primary_dark">@color/colorPrimaryDark</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="primary_dark_material_dark">#ff000000</color>
     <color name="primary_dark_material_light">#ff757575</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
     <eat-comment/>
     <color name="primary_light">@color/colorPrimaryLight</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="primary_material_dark">#ff212121</color>
     <color name="primary_material_light">#ffefefef</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
     <eat-comment/>
     <color name="primary_text">#DE000000</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="primary_text_default_material_dark">#ffffffff</color>
     <color name="primary_text_default_material_light">#de000000</color>
@@ -486,31 +486,31 @@
     <color name="primary_text_disabled_material_light">#39000000</color>
     <color name="ripple_material_dark">#4dffffff</color>
     <color name="ripple_material_light">#1f000000</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
     <eat-comment/>
     <color name="secondary_text">#8A000000</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="shadow_end_color">@android:color/transparent</color>
     <color name="shadow_mid_color">#14000000</color>
     <color name="shadow_start_color">#44000000</color>
     <color name="snackbar_background_color">#323232</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.hannesdorfmann.smoothprogressbar/library/1.0.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.hannesdorfmann.smoothprogressbar/library/1.0.0/res/values/values.xml -->
     <eat-comment/>
     <color name="spb_default_color">#33b5e5</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
     <eat-comment/>
     <color name="window_background">#F9F9F9</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
@@ -559,7 +559,7 @@
     <declare-styleable name="Toolbar"><attr format="reference" name="titleTextAppearance"/><attr format="reference" name="subtitleTextAppearance"/><attr name="title"/><attr name="subtitle"/><attr name="android:gravity"/><attr format="dimension" name="titleMargins"/><attr format="dimension" name="titleMarginStart"/><attr format="dimension" name="titleMarginEnd"/><attr format="dimension" name="titleMarginTop"/><attr format="dimension" name="titleMarginBottom"/><attr name="contentInsetStart"/><attr name="contentInsetEnd"/><attr name="contentInsetLeft"/><attr name="contentInsetRight"/><attr format="dimension" name="maxButtonHeight"/><attr format="reference" name="collapseIcon"/><attr format="string" name="collapseContentDescription"/><attr name="popupTheme"/><attr format="reference" name="navigationIcon"/><attr format="string" name="navigationContentDescription"/><attr name="android:minHeight"/></declare-styleable>
     <declare-styleable name="View"><attr format="dimension" name="paddingStart"/><attr format="dimension" name="paddingEnd"/><attr name="android:focusable"/><attr format="reference" name="theme"/><attr name="android:theme"/><attr format="color" name="backgroundTint"/><attr name="backgroundTintMode"><enum name="src_over" value="3"/><enum name="src_in" value="5"/><enum name="src_atop" value="9"/><enum name="multiply" value="14"/><enum name="screen" value="15"/></attr></declare-styleable>
     <declare-styleable name="ViewStubCompat"><attr name="android:layout"/><attr name="android:inflatedId"/><attr name="android:id"/></declare-styleable>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
@@ -621,23 +621,23 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.oguzdev/CircularFloatingActionMenu/1.0.2/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.oguzdev/CircularFloatingActionMenu/1.0.2/res/values/values.xml -->
     <eat-comment/>
     <dimen name="action_button_content_margin">16dp</dimen>
     <dimen name="action_button_margin">12dp</dimen>
     <dimen name="action_button_size">72dp</dimen>
     <dimen name="action_menu_radius">96dp</dimen>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="appbar_elevation">4dp</dimen>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.5.2/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.5.2/res/values/values.xml -->
     <eat-comment/>
     <dimen name="circular_progress_border">4dp</dimen>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
@@ -645,7 +645,7 @@
     <item name="dialog_fixed_width_minor" type="dimen">320dp</item>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="fab_border_width">0.5dp</dimen>
     <dimen name="fab_content_size">24dp</dimen>
@@ -653,10 +653,10 @@
     <dimen name="fab_size_mini">40dp</dimen>
     <dimen name="fab_size_normal">56dp</dimen>
     <dimen name="fab_translation_z_pressed">6dp</dimen>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
     <eat-comment/>
     <dimen name="material_drawer_account_header_compact">56dp</dimen>
     <dimen name="material_drawer_account_header_dropdown">22dp</dimen>
@@ -694,7 +694,7 @@
     <dimen name="material_drawer_padding">8dp</dimen>
     <dimen name="material_drawer_vertical_padding">16dp</dimen>
     <dimen name="material_drawer_width">320dp</dimen>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.5.2/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.5.2/res/values/values.xml -->
     <eat-comment/>
     <dimen name="md_action_corner_radius">2dp</dimen>
     <dimen name="md_bg_corner_radius">2dp</dimen>
@@ -727,7 +727,7 @@
     <dimen name="md_simplelistitem_padding_top">8dp</dimen>
     <dimen name="md_title_frame_margin_bottom">12dp</dimen>
     <dimen name="md_title_textsize">20sp</dimen>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="navigation_elevation">12dp</dimen>
     <dimen name="navigation_icon_padding">32dp</dimen>
@@ -736,12 +736,12 @@
     <dimen name="navigation_padding_bottom">8dp</dimen>
     <dimen name="navigation_padding_top_default">0dp</dimen>
     <dimen name="navigation_separator_vertical_padding">8dp</dimen>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="snackbar_action_inline_max_width">128dp</dimen>
     <dimen name="snackbar_background_corner_radius">0dp</dimen>
@@ -753,69 +753,69 @@
     <dimen name="snackbar_padding_vertical">14dp</dimen>
     <dimen name="snackbar_padding_vertical_2lines">24dp</dimen>
     <dimen name="snackbar_text_size">14sp</dimen>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.hannesdorfmann.smoothprogressbar/library/1.0.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.hannesdorfmann.smoothprogressbar/library/1.0.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="spb_default_stroke_separator_length">4dp</dimen>
     <dimen name="spb_default_stroke_width">4dp</dimen>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.oguzdev/CircularFloatingActionMenu/1.0.2/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.oguzdev/CircularFloatingActionMenu/1.0.2/res/values/values.xml -->
     <eat-comment/>
     <dimen name="sub_action_button_content_margin">6dp</dimen>
     <dimen name="sub_action_button_size">36dp</dimen>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="tab_max_width">264dp</dimen>
     <dimen name="tab_min_width">72dp</dimen>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
     <eat-comment/>
     <dimen name="tool_bar_top_padding">0dp</dimen>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
     <eat-comment/>
     <item name="animation" type="id"/>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <item name="home" type="id"/>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <item name="item_touch_helper_previous_elevation" type="id"/>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
     <eat-comment/>
     <item name="profile_header" type="id"/>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
     <item name="split_action_bar" type="id"/>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
     <eat-comment/>
     <item name="sticky_footer" type="id"/>
     <item name="sticky_header" type="id"/>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <item name="up" type="id"/>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <item name="view_offset_helper" type="id"/>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <integer name="abc_config_activityDefaultDur">220</integer>
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="abc_max_action_buttons">2</integer>
     <integer name="cancel_button_image_alpha">127</integer>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <integer name="snackbar_text_max_lines">2</integer>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.hannesdorfmann.smoothprogressbar/library/1.0.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.hannesdorfmann.smoothprogressbar/library/1.0.0/res/values/values.xml -->
     <eat-comment/>
     <integer name="spb_default_interpolator">0</integer>
     <integer name="spb_default_sections_count">4</integer>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <string name="abc_action_bar_home_description">Navigate home</string>
@@ -835,45 +835,45 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/src/main/res/values/strings_activity_login.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/src/main/res/values/strings_activity_login.xml -->
     <eat-comment/>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="app_name">Konobar klijent</string>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/iconics/1.1.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/iconics/1.1.0/res/values/values.xml -->
     <eat-comment/>
     <string name="define_AndroidIconics">year;owner</string>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
     <eat-comment/>
     <string name="define_materialdrawer">year;owner</string>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.hannesdorfmann.smoothprogressbar/library/1.0.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.hannesdorfmann.smoothprogressbar/library/1.0.0/res/values/values.xml -->
     <eat-comment/>
     <string name="define_smoothprogressbar"/>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="dialog_tekst_login">Molimo sacekajte...</string>
     <string name="dialog_title_login">Login</string>
     <string name="drawer_close">Close navigation drawer</string>
     <string name="drawer_open">Open navigation drawer</string>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/src/main/res/values/strings_activity_login.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/src/main/res/values/strings_activity_login.xml -->
     <eat-comment/>
     <string name="error_field_required">This field is required</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="hello_world">Hello world!</string>
     <string name="klijent">Klijent</string>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/iconics/1.1.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/iconics/1.1.0/res/values/values.xml -->
     <eat-comment/>
     <string name="library_AndroidIconics_author">Mike Penz</string>
     <string name="library_AndroidIconics_authorWebsite">http://mikepenz.com/</string>
@@ -892,7 +892,7 @@
     <string name="library_AndroidIconics_owner">Mike Penz</string>
     <string name="library_AndroidIconics_repositoryLink">https://github.com/mikepenz/Android-Iconics</string>
     <string name="library_AndroidIconics_year">2014</string>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
     <eat-comment/>
     <string name="library_materialdrawer_author">Mike Penz</string>
     <string name="library_materialdrawer_authorWebsite">http://mikepenz.com/</string>
@@ -909,7 +909,7 @@
     <string name="library_materialdrawer_owner">Mike Penz</string>
     <string name="library_materialdrawer_repositoryLink">https://github.com/mikepenz/MaterialDrawer</string>
     <string name="library_materialdrawer_year">2015</string>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.hannesdorfmann.smoothprogressbar/library/1.0.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.hannesdorfmann.smoothprogressbar/library/1.0.0/res/values/values.xml -->
     <eat-comment/>
     <string name="library_smoothprogressbar_author">Antoine Merle</string>
     <string name="library_smoothprogressbar_authorWebsite">https://github.com/castorflex</string>
@@ -920,22 +920,22 @@
     <string name="library_smoothprogressbar_libraryWebsite">https://github.com/castorflex/SmoothProgressBar</string>
     <string name="library_smoothprogressbar_licenseId">apache_2_0</string>
     <string name="library_smoothprogressbar_repositoryLink">https://github.com/castorflex/SmoothProgressBar.git</string>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/src/main/res/values/strings_activity_login.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/src/main/res/values/strings_activity_login.xml -->
     <eat-comment/>
     <string name="plus_disconnect">Disconnect from Google+</string>
     <string name="plus_sign_out">Switch Google+ account</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="restoran">Restoran</string>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.hannesdorfmann.smoothprogressbar/library/1.0.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.hannesdorfmann.smoothprogressbar/library/1.0.0/res/values/values.xml -->
     <eat-comment/>
     <item format="float" name="spb_default_speed" type="string">1.0</item>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="title_activity_first">Lista narudzbina</string>
     <string name="title_activity_izmena_narudzbine">IzmenaNarudzbineActivity</string>
@@ -944,13 +944,13 @@
     <string name="title_activity_settings">IP address</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="title_activity_stavke_narudzbine">Posalji narudzbinu</string>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
         <!--
@@ -965,7 +965,7 @@
         <item name="colorPrimaryDark">@color/primaryColorDark</item>
         <item name="colorAccent">@color/accentColor</item>
     </style>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
@@ -1881,7 +1881,7 @@
         <item name="android:scaleType">center</item>
         <item name="android:background">?attr/selectableItemBackground</item>
     </style>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.Widget.Design.TabLayout" parent="android:Widget">
         <item name="tabMaxWidth">@dimen/tab_max_width</item>
@@ -1893,7 +1893,7 @@
         <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
         <item name="tabSelectedTextColor">?android:textColorPrimary</item>
     </style>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.5.2/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.afollestad/material-dialogs/0.7.5.2/res/values/values.xml -->
     <eat-comment/>
     <style name="MD_ActionButton">
         <item name="android:layout_width">wrap_content</item>
@@ -1947,7 +1947,7 @@
         <item name="android:windowEnterAnimation">@anim/popup_enter</item>
         <item name="android:windowExitAnimation">@anim/popup_exit</item>
     </style>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.mikepenz/materialdrawer/3.0.8/res/values/values.xml -->
     <eat-comment/>
     <style name="MaterialDrawer.DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="spinBars">false</item>
@@ -2058,7 +2058,7 @@
     <style name="MaterialDrawerTheme.Light.DarkToolbar.TranslucentStatus" parent="MaterialDrawerTheme.Light.DarkToolbar"/>
     <style name="MaterialDrawerTheme.Light.TranslucentStatus" parent="MaterialDrawerTheme.Light"/>
     <style name="MaterialDrawerTheme.TranslucentStatus" parent="MaterialDrawerTheme"/>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
@@ -2201,7 +2201,7 @@
     <style name="RtlOverlay.Widget.AppCompat.Toolbar.Button.Navigation" parent="Base.Widget.AppCompat.Toolbar.Button.Navigation">
         <item name="android:paddingLeft">@dimen/abc_action_bar_navigation_padding_start_material</item>
     </style>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.hannesdorfmann.smoothprogressbar/library/1.0.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.hannesdorfmann.smoothprogressbar/library/1.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="SmoothProgressBar" parent="android:Widget.ProgressBar.Horizontal">
         <item name="spb_color">@color/spb_default_color</item>
@@ -2215,7 +2215,7 @@
         <item name="android:minHeight">48dp</item>
         <item name="android:maxHeight">48dp</item>
     </style>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="TextAppearance.AppCompat" parent="Base.TextAppearance.AppCompat"/>
     <style name="TextAppearance.AppCompat.Body1" parent="Base.TextAppearance.AppCompat.Body1"/>
@@ -2273,7 +2273,7 @@
     </style>
     <style name="TextAppearance.AppCompat.Widget.Switch" parent="Base.TextAppearance.AppCompat.Widget.Switch"/>
     <style name="TextAppearance.AppCompat.Widget.TextView.SpinnerItem" parent="Base.TextAppearance.AppCompat.Widget.TextView.SpinnerItem"/>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="TextAppearance.Design.Error" parent="TextAppearance.AppCompat.Caption">
         <item name="android:textColor">@color/error_color</item>
@@ -2293,7 +2293,7 @@
         <item name="android:textColor">?android:textColorSecondary</item>
         <item name="textAllCaps">true</item>
     </style>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="TextAppearance.StatusBar.EventContent" parent=""/>
     <style name="TextAppearance.StatusBar.EventContent.Info" parent=""/>
@@ -2328,12 +2328,12 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.hannesdorfmann.smoothprogressbar/library/1.0.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.hannesdorfmann.smoothprogressbar/library/1.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Theme.SmoothProgressBarDefaults" parent="android:Theme">
         <item name="spbStyle">@style/SmoothProgressBar</item>
     </style>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="ThemeOverlay.AppCompat" parent="Base.ThemeOverlay.AppCompat"/>
     <style name="ThemeOverlay.AppCompat.ActionBar" parent="Base.ThemeOverlay.AppCompat.ActionBar"/>
@@ -2431,7 +2431,7 @@
     <style name="Widget.AppCompat.TextView.SpinnerItem" parent="Base.Widget.AppCompat.TextView.SpinnerItem"/>
     <style name="Widget.AppCompat.Toolbar" parent="Base.Widget.AppCompat.Toolbar"/>
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="RtlOverlay.Widget.AppCompat.Toolbar.Button.Navigation"/>
-    <!-- From: file:/home/bataemperor/StudioProjects/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
+    <!-- From: file:/home/boris/AndroidStudioProjects/restoran/RestoranKlijent/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Widget.Design.AppBarLayout" parent="android:Widget">
         <item name="elevation">@dimen/appbar_elevation</item>

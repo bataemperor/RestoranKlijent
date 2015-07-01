@@ -25,6 +25,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.afollestad.materialdialogs.GravityEnum;
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.amulyakhare.textdrawable.TextDrawable;
 import com.example.activity.R;
 import com.mikepenz.iconics.typeface.FontAwesome;
@@ -39,9 +41,11 @@ import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import domen.Narudzbina;
+import domen.StavkaNarudzbine;
 import restoran.klijent.komunikacija.Komunikacija;
 import transfer.TransferObjekatOdgovor;
 import transfer.TransferObjekatZahtev;
@@ -50,11 +54,12 @@ import restoran.klijent.utility.Utility;
 
 
 public class ListaNarudzbinaActivity extends AppCompatActivity {
-    ListView listView;
-    ProgressBar pb;
+    private ListView listView;
+    private ProgressBar pb;
     private ActionBarDrawerToggle mDrawerToggle;
     private String mActivityTitle;
     private Drawer result = null;
+    public Narudzbina nar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -140,11 +145,11 @@ public class ListaNarudzbinaActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if  (id == android.R.id.home){
-            if (result.isDrawerOpen()){
+        if (id == android.R.id.home) {
+            if (result.isDrawerOpen()) {
                 result.closeDrawer();
                 getSupportActionBar().setTitle(mActivityTitle);
-            }else {
+            } else {
                 result.openDrawer();
                 getSupportActionBar().setTitle("Navigacija");
             }
@@ -205,11 +210,51 @@ public class ListaNarudzbinaActivity extends AppCompatActivity {
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        Narudzbina nar = adapter.getItem(position);
-//						Toast.makeText(ListaNarudzbinaActivity.this,""+nar.getUkupanIznos(),Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(ListaNarudzbinaActivity.this, IzmenaNarudzbineActivity.class);
-                        intent.putExtra("narudzbina", nar);
-                        startActivity(intent);
+                        nar = adapter.getItem(position);
+                        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+                        StringBuilder stringBuilderStavke = new StringBuilder();
+
+                        MaterialDialog md = new MaterialDialog.Builder(ListaNarudzbinaActivity.this)
+                                .title("Broj stola : " + nar.getBrojStola())
+                                .content(stringBuilderStavke + "\nUkupan iznos : " + nar.getUkupanIznos() + "\nVreme : " + sdf.format(nar.getDatumNarudzbine()))
+                                .positiveText("Naplati")
+                                .negativeText("Izmeni")
+                                .neutralText("Obrisi")
+                                .callback(new MaterialDialog.ButtonCallback() {
+                                    @Override
+                                    public void onPositive(MaterialDialog dialog) {
+                                        super.onPositive(dialog);
+                                        nar.setStatus("Placena");
+                                        new NaplatiNarudzbinuTask().execute();
+                                    }
+
+                                    @Override
+                                    public void onNegative(MaterialDialog dialog) {
+                                        super.onNegative(dialog);
+                                        Intent intent = new Intent(ListaNarudzbinaActivity.this, IzmenaNarudzbineActivity.class);
+                                        intent.putExtra("narudzbina", nar);
+                                        startActivity(intent);
+
+                                    }
+
+                                    @Override
+                                    public void onNeutral(MaterialDialog dialog) {
+                                        super.onNeutral(dialog);
+
+                                    }
+                                })
+                                .show();
+                        for (StavkaNarudzbine stavka : nar.getListaStavki()) {
+                            stringBuilderStavke.append(stavka.getProizvod().getNazivProizvoda() + " : " + stavka.getKolicina() + "\n");
+                        }
+                        StringBuilder linija = new StringBuilder();
+                        String s = "Ukupan iznos : " + nar.getUkupanIznos();
+                        for (int i = 2; i < s.length(); i++) {
+                            linija.append("--");
+                        }
+                        md.setContent(stringBuilderStavke + linija.toString() + "\nUkupan iznos : " + nar.getUkupanIznos() + "\nVreme : " + sdf.format(nar.getDatumNarudzbine()));
+                        md.show();
+
                     }
                 });
             }
@@ -246,6 +291,52 @@ public class ListaNarudzbinaActivity extends AppCompatActivity {
             return row;
         }
 
+    }
+
+    private class NaplatiNarudzbinuTask extends AsyncTask<Void, Void, Void> {
+        int ukupanIznosNarudzbine = 0;
+        TransferObjekatOdgovor toOdgovor;
+        @Override
+        protected void onPreExecute() {
+//            narudzbina = new Narudzbina();
+//            narudzbina.setBrojStola(Integer.parseInt(spinner.getSelectedItem().toString()));
+//            narudzbina.setDatumNarudzbine(new Date());
+//            narudzbina.setStatus("Neplaceno");
+//            int rbStavke = 1;
+//            for (StavkaNarudzbine stavkaNarudzbine : lista) {
+//                stavkaNarudzbine.setNarudzbina(narudzbina);
+//                stavkaNarudzbine.setRbStavke(rbStavke);
+//                rbStavke++;
+//                ukupanIznosNarudzbine += stavkaNarudzbine.getIznos();
+//            }
+//            narudzbina.setListaStavki(lista);
+//            narudzbina.setUkupanIznos(ukupanIznosNarudzbine);
+
+
+        }
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            try {
+                Komunikacija k = new Komunikacija();
+                TransferObjekatZahtev toZahtev = new TransferObjekatZahtev();
+                toZahtev.setOperacija(Konstante.NAPLATI_NARUDZBINU);
+                toZahtev.setParametar(nar);
+                k.posaljiZahtev(toZahtev);
+                toOdgovor = k.procitajOdgovor();
+
+            } catch (IOException | ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            Toast.makeText(ListaNarudzbinaActivity.this, toOdgovor.getOdgovor(), Toast.LENGTH_SHORT).show();
+//            ListaProizvodaActivity.listaStavki = new ArrayList<>();
+//            startActivity(new Intent(NovaNarudzbinaActivity.this, ListaNarudzbinaActivity.class));
+        }
     }
 
 }
