@@ -27,12 +27,12 @@ import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
+
 import java.util.List;
 
 import domen.Narudzbina;
 import domen.StavkaNarudzbine;
-import restoran.klijent.dialog.DialogStavkaIzmena;
+
 import restoran.klijent.dialog.DialogStavkaUpdate;
 import restoran.klijent.komunikacija.Komunikacija;
 import transfer.TransferObjekatOdgovor;
@@ -44,7 +44,7 @@ public class IzmenaNarudzbineActivity extends AppCompatActivity {
     Spinner spinner;
     ListView listaStavki;
     public static Narudzbina narudzbina;
-    ArrayList<StavkaNarudzbine> lista;
+//    ArrayList<StavkaNarudzbine> lista;
     ArrayAdapter<StavkaNarudzbine> listAdapter;
     public static List<StavkaNarudzbine> listaStavkiNarudzbine = new ArrayList<StavkaNarudzbine>();
     private String mActivityTitle;
@@ -61,7 +61,7 @@ public class IzmenaNarudzbineActivity extends AppCompatActivity {
                 android.R.layout.simple_spinner_item);
         spinner.setAdapter(adapter);
         listaStavki = (ListView) findViewById(R.id.list_stavke_narudzbine_izmena);
-        if (!izmena){
+        if (!izmena) {
             Object o = getIntent().getSerializableExtra("narudzbina");
             narudzbina = (Narudzbina) o;
             listaStavkiNarudzbine = narudzbina.getListaStavki();
@@ -71,14 +71,14 @@ public class IzmenaNarudzbineActivity extends AppCompatActivity {
                 this, android.R.layout.simple_list_item_1, listaStavkiNarudzbine);
         listaStavki.setAdapter(listAdapter);
         spinner.setSelection(narudzbina.getBrojStola() - 1);
-        postaviFloatButton();
+
         mActivityTitle = getTitle().toString();
-        izmena=false;
+        izmena = false;
 
         result = new DrawerBuilder()
                 .withActivity(this)
                 .withTranslucentStatusBar(false)
-                .withActionBarDrawerToggle(false)
+                .withActionBarDrawerToggle(true)
                 .addDrawerItems(
                         new PrimaryDrawerItem().withName("Nova narudzbina").withIcon(FontAwesome.Icon.faw_plus_circle),
                         new PrimaryDrawerItem().withName("Lista narudzbina").withIcon(FontAwesome.Icon.faw_list),
@@ -115,7 +115,7 @@ public class IzmenaNarudzbineActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(false);
-
+        postaviFloatButton();
     }
 
     private void postaviFloatButton() {
@@ -130,10 +130,8 @@ public class IzmenaNarudzbineActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 izmena = true;
-                Intent intent = new Intent(IzmenaNarudzbineActivity.this,ListaProizvodaActivity.class);
-//                inte
+                Intent intent = new Intent(IzmenaNarudzbineActivity.this, ListaProizvodaActivity.class);
                 startActivity(intent);
-
             }
         });
     }
@@ -174,11 +172,11 @@ public class IzmenaNarudzbineActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if  (id == android.R.id.home){
-            if (result.isDrawerOpen()){
+        if (id == android.R.id.home) {
+            if (result.isDrawerOpen()) {
                 result.closeDrawer();
                 getSupportActionBar().setTitle(mActivityTitle);
-            }else {
+            } else {
                 result.openDrawer();
 
                 getSupportActionBar().setTitle("Navigacija");
@@ -188,8 +186,8 @@ public class IzmenaNarudzbineActivity extends AppCompatActivity {
         }
         if (id == R.id.action_settings) {
 
-//            SacuvajNarudzbinuTask task = new SacuvajNarudzbinuTask();
-//            task.execute();
+            IzmeniNarudzbinuTask task = new IzmeniNarudzbinuTask();
+            task.execute();
 
             return true;
         }
@@ -206,23 +204,24 @@ public class IzmenaNarudzbineActivity extends AppCompatActivity {
             super.onBackPressed();
         }
     }
+
     private class IzmeniNarudzbinuTask extends AsyncTask<Void, Void, Void> {
         int ukupanIznosNarudzbine = 0;
-
+        TransferObjekatOdgovor toOdgovor;
         @Override
         protected void onPreExecute() {
 //            narudzbina = new Narudzbina();
             narudzbina.setBrojStola(Integer.parseInt(spinner.getSelectedItem().toString()));
 //            narudzbina.setDatumNarudzbine(new Date());
 //            narudzbina.setStatus("Neplaceno");
-//            int rbStavke = 1;
-            for (StavkaNarudzbine stavkaNarudzbine : lista) {
+            int rbStavke = 1;
+            for (StavkaNarudzbine stavkaNarudzbine : listaStavkiNarudzbine) {
                 stavkaNarudzbine.setNarudzbina(narudzbina);
-//                stavkaNarudzbine.setRbStavke(rbStavke);
-//                rbStavke++;
+                stavkaNarudzbine.setRbStavke(rbStavke);
+                rbStavke++;
                 ukupanIznosNarudzbine += stavkaNarudzbine.getIznos();
             }
-            narudzbina.setListaStavki(lista);
+            narudzbina.setListaStavki(listaStavkiNarudzbine);
             narudzbina.setUkupanIznos(ukupanIznosNarudzbine);
 
 
@@ -233,10 +232,10 @@ public class IzmenaNarudzbineActivity extends AppCompatActivity {
             try {
                 Komunikacija k = new Komunikacija();
                 TransferObjekatZahtev toZahtev = new TransferObjekatZahtev();
-                toZahtev.setOperacija(Konstante.SACUVAJ_NARUDZBINU);
+                toZahtev.setOperacija(Konstante.IZMENI_NARUDZBINU);
                 toZahtev.setParametar(narudzbina);
                 k.posaljiZahtev(toZahtev);
-                TransferObjekatOdgovor toOdgovor = k.procitajOdgovor();
+                toOdgovor = k.procitajOdgovor();
 
             } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
@@ -246,7 +245,7 @@ public class IzmenaNarudzbineActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Void aVoid) {
-            Toast.makeText(IzmenaNarudzbineActivity.this, "Uspesno poslata narudzbina", Toast.LENGTH_SHORT).show();
+            Toast.makeText(IzmenaNarudzbineActivity.this, toOdgovor.getOdgovor(), Toast.LENGTH_SHORT).show();
             ListaProizvodaActivity.listaStavki = new ArrayList<>();
             startActivity(new Intent(IzmenaNarudzbineActivity.this, ListaNarudzbinaActivity.class));
         }

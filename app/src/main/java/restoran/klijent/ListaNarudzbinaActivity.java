@@ -52,7 +52,7 @@ import restoran.klijent.utility.Utility;
 public class ListaNarudzbinaActivity extends AppCompatActivity {
     ListView listView;
     ProgressBar pb;
-
+    private ActionBarDrawerToggle mDrawerToggle;
     private String mActivityTitle;
     private Drawer result = null;
 
@@ -61,6 +61,7 @@ public class ListaNarudzbinaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_lista_narudzbina);
+
         listView = (ListView) findViewById(R.id.lista_narudzbina);
         pb = (ProgressBar) findViewById(R.id.progressBar);
         mActivityTitle = getTitle().toString();
@@ -105,6 +106,8 @@ public class ListaNarudzbinaActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
+
+
         postaviFloatButton();
     }
 
