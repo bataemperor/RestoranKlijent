@@ -1,18 +1,16 @@
 package restoran.klijent;
 
-
 import android.content.Context;
-import android.content.res.Configuration;
+
 import android.graphics.Color;
 import android.os.AsyncTask;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
+
 import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+
 import android.view.LayoutInflater;
-import android.view.Menu;
+
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +23,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.afollestad.materialdialogs.GravityEnum;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.amulyakhare.textdrawable.TextDrawable;
 import com.example.activity.R;
@@ -41,7 +38,6 @@ import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import domen.Narudzbina;
@@ -52,11 +48,9 @@ import transfer.TransferObjekatZahtev;
 import util.Konstante;
 import restoran.klijent.utility.Utility;
 
-
 public class ListaNarudzbinaActivity extends AppCompatActivity {
     private ListView listView;
     private ProgressBar pb;
-    private ActionBarDrawerToggle mDrawerToggle;
     private String mActivityTitle;
     private Drawer result = null;
     public Narudzbina nar;
@@ -294,26 +288,8 @@ public class ListaNarudzbinaActivity extends AppCompatActivity {
     }
 
     private class NaplatiNarudzbinuTask extends AsyncTask<Void, Void, Void> {
-        int ukupanIznosNarudzbine = 0;
+
         TransferObjekatOdgovor toOdgovor;
-        @Override
-        protected void onPreExecute() {
-//            narudzbina = new Narudzbina();
-//            narudzbina.setBrojStola(Integer.parseInt(spinner.getSelectedItem().toString()));
-//            narudzbina.setDatumNarudzbine(new Date());
-//            narudzbina.setStatus("Neplaceno");
-//            int rbStavke = 1;
-//            for (StavkaNarudzbine stavkaNarudzbine : lista) {
-//                stavkaNarudzbine.setNarudzbina(narudzbina);
-//                stavkaNarudzbine.setRbStavke(rbStavke);
-//                rbStavke++;
-//                ukupanIznosNarudzbine += stavkaNarudzbine.getIznos();
-//            }
-//            narudzbina.setListaStavki(lista);
-//            narudzbina.setUkupanIznos(ukupanIznosNarudzbine);
-
-
-        }
 
         @Override
         protected Void doInBackground(Void... params) {
@@ -334,8 +310,6 @@ public class ListaNarudzbinaActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
             Toast.makeText(ListaNarudzbinaActivity.this, toOdgovor.getOdgovor(), Toast.LENGTH_SHORT).show();
-//            ListaProizvodaActivity.listaStavki = new ArrayList<>();
-//            startActivity(new Intent(NovaNarudzbinaActivity.this, ListaNarudzbinaActivity.class));
         }
     }
 
