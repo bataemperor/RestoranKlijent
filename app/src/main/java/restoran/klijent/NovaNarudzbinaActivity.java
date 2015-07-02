@@ -28,6 +28,7 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.example.activity.R;
 import com.mikepenz.iconics.typeface.FontAwesome;
 import com.mikepenz.materialdrawer.Drawer;
@@ -218,9 +219,23 @@ public class NovaNarudzbinaActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Void aVoid) {
-            Toast.makeText(NovaNarudzbinaActivity.this, "Uspesno poslata narudzbina", Toast.LENGTH_SHORT).show();
-            ListaProizvodaActivity.listaStavki = new ArrayList<>();
-            startActivity(new Intent(NovaNarudzbinaActivity.this, ListaNarudzbinaActivity.class));
+//            Toast.makeText(NovaNarudzbinaActivity.this, "Uspesno poslata narudzbina", Toast.LENGTH_SHORT).show();
+            new MaterialDialog.Builder(NovaNarudzbinaActivity.this)
+                    .content("Uspesno poslata narudzbina!")
+                    .negativeText("OK")
+                    .positiveText("")
+                    .cancelable(false)
+                    .callback(new MaterialDialog.ButtonCallback() {
+                        @Override
+                        public void onNegative(MaterialDialog dialog) {
+                            super.onNegative(dialog);
+                            ListaProizvodaActivity.listaStavki = new ArrayList<>();
+                            startActivity(new Intent(NovaNarudzbinaActivity.this, ListaNarudzbinaActivity.class));
+                        }
+                    })
+                    .show();
+//            ListaProizvodaActivity.listaStavki = new ArrayList<>();
+//            startActivity(new Intent(NovaNarudzbinaActivity.this, ListaNarudzbinaActivity.class));
         }
     }
 }

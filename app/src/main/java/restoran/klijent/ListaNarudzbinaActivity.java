@@ -220,6 +220,7 @@ public class ListaNarudzbinaActivity extends AppCompatActivity {
                                         super.onPositive(dialog);
                                         nar.setStatus("Placena");
                                         new NaplatiNarudzbinuTask().execute();
+                                        new GetNarudzbineTask().execute();
                                     }
 
                                     @Override
@@ -234,7 +235,8 @@ public class ListaNarudzbinaActivity extends AppCompatActivity {
                                     @Override
                                     public void onNeutral(MaterialDialog dialog) {
                                         super.onNeutral(dialog);
-
+                                        new ObrisiNarudzbinuTask().execute();
+                                        new GetNarudzbineTask().execute();
                                     }
                                 })
                                 .show();
@@ -307,6 +309,28 @@ public class ListaNarudzbinaActivity extends AppCompatActivity {
             return null;
         }
 
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            Toast.makeText(ListaNarudzbinaActivity.this, toOdgovor.getOdgovor(), Toast.LENGTH_SHORT).show();
+        }
+    }
+    private class ObrisiNarudzbinuTask extends AsyncTask<Void,Void,Void>{
+        TransferObjekatOdgovor toOdgovor;
+        @Override
+        protected Void doInBackground(Void... params) {
+            try {
+                Komunikacija k = new Komunikacija();
+                TransferObjekatZahtev toZahtev = new TransferObjekatZahtev();
+                toZahtev.setOperacija(Konstante.OBRISI_NARUDZBINU);
+                toZahtev.setParametar(nar);
+                k.posaljiZahtev(toZahtev);
+                toOdgovor = k.procitajOdgovor();
+
+            } catch (IOException | ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
         @Override
         protected void onPostExecute(Void aVoid) {
             Toast.makeText(ListaNarudzbinaActivity.this, toOdgovor.getOdgovor(), Toast.LENGTH_SHORT).show();
