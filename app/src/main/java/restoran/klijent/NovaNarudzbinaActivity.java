@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 
+import domen.Konobar;
 import restoran.klijent.dialog.DialogStavkaIzmena;
 import domen.Narudzbina;
 import domen.StavkaNarudzbine;
@@ -13,6 +14,7 @@ import transfer.TransferObjekatZahtev;
 import util.Konstante;
 
 
+import android.content.SharedPreferences;
 import android.support.v4.app.FragmentManager;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -48,7 +50,7 @@ public class NovaNarudzbinaActivity extends AppCompatActivity {
     private String mActivityTitle;
 
     private Drawer result = null;
-
+    SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         supportRequestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
@@ -187,7 +189,13 @@ public class NovaNarudzbinaActivity extends AppCompatActivity {
             narudzbina = new Narudzbina();
             narudzbina.setBrojStola(Integer.parseInt(spinner.getSelectedItem().toString()));
             narudzbina.setDatumNarudzbine(new Date());
-            narudzbina.setStatus("Neplaceno");
+            narudzbina.setStatus("Neplacena");
+            Konobar k = new Konobar();
+            //postavljanje konobara iz shared-a
+            sharedPreferences = getSharedPreferences(LoginActivity.PREFS_LOGIN, MODE_PRIVATE);
+            String username = sharedPreferences.getString("username", null);
+            k.setUsername(username);
+            narudzbina.setKonobar(k);
             int rbStavke = 1;
             for (StavkaNarudzbine stavkaNarudzbine : lista) {
                 stavkaNarudzbine.setNarudzbina(narudzbina);

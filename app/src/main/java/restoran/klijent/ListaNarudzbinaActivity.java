@@ -182,7 +182,13 @@ public class ListaNarudzbinaActivity extends AppCompatActivity {
                 Komunikacija k = new Komunikacija();
                 k.posaljiZahtev(zahtev);
                 odgovor = k.procitajOdgovor();
-                listaNarudzbina = (List<Narudzbina>) odgovor.getRezultat();
+                List<Narudzbina> ln = (List<Narudzbina>)odgovor.getRezultat();
+                if  (ln==null){
+                    listaNarudzbina = new ArrayList<>();
+                }else{
+                    listaNarudzbina = ln;
+                }
+
             } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
             }
