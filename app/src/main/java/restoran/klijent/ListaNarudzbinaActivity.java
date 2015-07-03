@@ -226,7 +226,7 @@ public class ListaNarudzbinaActivity extends AppCompatActivity {
                                         super.onPositive(dialog);
                                         nar.setStatus("Placena");
                                         new NaplatiNarudzbinuTask().execute();
-                                        new GetNarudzbineTask().execute();
+
                                     }
 
                                     @Override
@@ -242,7 +242,7 @@ public class ListaNarudzbinaActivity extends AppCompatActivity {
                                     public void onNeutral(MaterialDialog dialog) {
                                         super.onNeutral(dialog);
                                         new ObrisiNarudzbinuTask().execute();
-                                        new GetNarudzbineTask().execute();
+//                                        new GetNarudzbineTask().execute();
                                     }
                                 })
                                 .show();
@@ -317,7 +317,25 @@ public class ListaNarudzbinaActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Void aVoid) {
-            Toast.makeText(ListaNarudzbinaActivity.this, toOdgovor.getOdgovor(), Toast.LENGTH_SHORT).show();
+//            Toast.makeText(ListaNarudzbinaActivity.this, toOdgovor.getOdgovor(), Toast.LENGTH_SHORT).show();
+            new MaterialDialog.Builder(ListaNarudzbinaActivity.this)
+                    .content("Narudzbina je placena ! ")
+                    .negativeText("OK")
+                    .title("Naplata narudzbine")
+                    .iconRes(R.drawable.ok)
+                    .limitIconToDefaultSize()
+                    .positiveText("")
+                    .cancelable(false)
+                    .callback(new MaterialDialog.ButtonCallback() {
+                        @Override
+                        public void onNegative(MaterialDialog dialog) {
+                            super.onNegative(dialog);
+//                            ListaProizvodaActivity.listaStavki = new ArrayList<>();
+//                            startActivity(new Intent(IzmenaNarudzbineActivity.this, ListaNarudzbinaActivity.class));
+                            new GetNarudzbineTask().execute();
+                        }
+                    })
+                    .show();
         }
     }
     private class ObrisiNarudzbinuTask extends AsyncTask<Void,Void,Void>{
@@ -339,7 +357,25 @@ public class ListaNarudzbinaActivity extends AppCompatActivity {
         }
         @Override
         protected void onPostExecute(Void aVoid) {
-            Toast.makeText(ListaNarudzbinaActivity.this, toOdgovor.getOdgovor(), Toast.LENGTH_SHORT).show();
+//            Toast.makeText(ListaNarudzbinaActivity.this, toOdgovor.getOdgovor(), Toast.LENGTH_SHORT).show();
+            new MaterialDialog.Builder(ListaNarudzbinaActivity.this)
+                    .content("Narudzbina je uspesno obrisana ! ")
+                    .negativeText("OK")
+                    .title("Brisanje narudzbine")
+                    .iconRes(R.drawable.ok)
+                    .limitIconToDefaultSize()
+                    .positiveText("")
+                    .cancelable(false)
+                    .callback(new MaterialDialog.ButtonCallback() {
+                        @Override
+                        public void onNegative(MaterialDialog dialog) {
+                            super.onNegative(dialog);
+//                            ListaProizvodaActivity.listaStavki = new ArrayList<>();
+//                            startActivity(new Intent(IzmenaNarudzbineActivity.this, ListaNarudzbinaActivity.class));
+                            new GetNarudzbineTask().execute();
+                        }
+                    })
+                    .show();
         }
     }
 

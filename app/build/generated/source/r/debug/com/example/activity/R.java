@@ -2941,10 +2941,11 @@ containing a value of this type.
         public static final int md_selector=0x7f02005b;
         public static final int md_selector_dark=0x7f02005c;
         public static final int md_transparent=0x7f02005d;
-        public static final int notification_template_icon_bg=0x7f020061;
-        public static final int rounded_edittext1=0x7f02005e;
-        public static final int selector_button=0x7f02005f;
-        public static final int snackbar_background=0x7f020060;
+        public static final int notification_template_icon_bg=0x7f020062;
+        public static final int ok=0x7f02005e;
+        public static final int rounded_edittext1=0x7f02005f;
+        public static final int selector_button=0x7f020060;
+        public static final int snackbar_background=0x7f020061;
     }
     public static final class id {
         public static final int account_header_drawer=0x7f0c00a9;

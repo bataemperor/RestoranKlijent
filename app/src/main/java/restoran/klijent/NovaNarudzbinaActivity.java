@@ -231,6 +231,9 @@ public class NovaNarudzbinaActivity extends AppCompatActivity {
             new MaterialDialog.Builder(NovaNarudzbinaActivity.this)
                     .content("Uspesno poslata narudzbina!")
                     .negativeText("OK")
+                    .title("Nova narudzbina")
+                    .iconRes(R.drawable.ok)
+                    .limitIconToDefaultSize()
                     .positiveText("")
                     .cancelable(false)
                     .callback(new MaterialDialog.ButtonCallback() {

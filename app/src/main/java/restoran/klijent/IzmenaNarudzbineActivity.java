@@ -251,6 +251,9 @@ public class IzmenaNarudzbineActivity extends AppCompatActivity {
             new MaterialDialog.Builder(IzmenaNarudzbineActivity.this)
                     .content("Uspesno ste izmenili narudzbinu!")
                     .negativeText("OK")
+                    .title("Izmena narudzbine")
+                    .iconRes(R.drawable.ok)
+                    .limitIconToDefaultSize()
                     .positiveText("")
                     .cancelable(false)
                     .callback(new MaterialDialog.ButtonCallback() {
