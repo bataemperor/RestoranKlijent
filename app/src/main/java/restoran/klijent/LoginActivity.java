@@ -14,6 +14,7 @@ import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -37,6 +38,9 @@ import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 
 
 public class LoginActivity extends AppCompatActivity {
+    public static final long BACK_PRESS_TIMEFRAME = 5 * 1000;
+    private long lastBackPressTs = 0;
+    Toast backToast;
     Button btnLogin;
     EditText etUserName, etPassword;
     public static final String PREFS_LOGIN = "Provera logina";
@@ -157,8 +161,20 @@ public class LoginActivity extends AppCompatActivity {
         //handle the back press :D close the drawer first and if the drawer is closed close the activity
         if (result != null && result.isDrawerOpen()) {
             result.closeDrawer();
-        } else {
-            super.onBackPressed();
+            return;
+        }
+        if (!(System.currentTimeMillis() - lastBackPressTs <= BACK_PRESS_TIMEFRAME))
+        {
+            backToast = Toast.makeText(LoginActivity.this,"Pritisnite ponovo Nazad da bi ste izašli", Toast.LENGTH_LONG);
+            backToast.show();
+            lastBackPressTs = System.currentTimeMillis();
+        }
+        else
+        {
+            lastBackPressTs = 0;
+            if (backToast != null) backToast.cancel();
+            setResult(RESULT_OK);
+            finish();
         }
     }
 
