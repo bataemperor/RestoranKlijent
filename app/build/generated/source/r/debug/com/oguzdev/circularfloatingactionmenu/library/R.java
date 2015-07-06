@@ -16,17 +16,17 @@ public final class R {
 		public static final int sub_action_button_size = 0x7f0600ad;
 	}
 	public static final class drawable {
-		public static final int button_action = 0x7f02003b;
-		public static final int button_action_dark = 0x7f02003c;
-		public static final int button_action_dark_selector = 0x7f02003d;
-		public static final int button_action_dark_touch = 0x7f02003e;
-		public static final int button_action_selector = 0x7f020041;
-		public static final int button_action_touch = 0x7f020042;
-		public static final int button_sub_action = 0x7f020043;
-		public static final int button_sub_action_dark = 0x7f020044;
-		public static final int button_sub_action_dark_selector = 0x7f020045;
-		public static final int button_sub_action_dark_touch = 0x7f020046;
-		public static final int button_sub_action_selector = 0x7f020047;
-		public static final int button_sub_action_touch = 0x7f020048;
+		public static final int button_action = 0x7f02003c;
+		public static final int button_action_dark = 0x7f02003d;
+		public static final int button_action_dark_selector = 0x7f02003e;
+		public static final int button_action_dark_touch = 0x7f02003f;
+		public static final int button_action_selector = 0x7f020042;
+		public static final int button_action_touch = 0x7f020043;
+		public static final int button_sub_action = 0x7f020044;
+		public static final int button_sub_action_dark = 0x7f020045;
+		public static final int button_sub_action_dark_selector = 0x7f020046;
+		public static final int button_sub_action_dark_touch = 0x7f020047;
+		public static final int button_sub_action_selector = 0x7f020048;
+		public static final int button_sub_action_touch = 0x7f020049;
 	}
 }
